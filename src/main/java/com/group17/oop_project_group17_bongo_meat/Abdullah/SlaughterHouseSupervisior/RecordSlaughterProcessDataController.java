@@ -1,5 +1,8 @@
 package com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+
 public class RecordSlaughterProcessDataController
 {
     @javafx.fxml.FXML
