@@ -8,6 +8,28 @@ public class AssignLivestockforSlaughterController
 
     @javafx.fxml.FXML
     private Label assignLivestockLabel;
+    @javafx.fxml.FXML
+    private Label outputLable;
+    @javafx.fxml.FXML
+    private ComboBox selectBatchComboBox;
+    @javafx.fxml.FXML
+    private TextField dailyCapacityTextField;
+    @javafx.fxml.FXML
+    private TextField batchSizeTextField;
+    @javafx.fxml.FXML
+    private TableView assignLivestockTableView;
+    @javafx.fxml.FXML
+    private TableColumn animalsBatchIdColumn;
+    @javafx.fxml.FXML
+    private TableColumn weightColumn;
+    @javafx.fxml.FXML
+    private ComboBox slaughterStatusComboBox;
+    @javafx.fxml.FXML
+    private TableColumn slaughterStatusColumn;
+    @javafx.fxml.FXML
+    private TableColumn typeColumn;
+    @javafx.fxml.FXML
+    private TableColumn qaStatusColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -23,5 +45,9 @@ public class AssignLivestockforSlaughterController
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void validateBatchButton(ActionEvent actionEvent) {
     }
 }

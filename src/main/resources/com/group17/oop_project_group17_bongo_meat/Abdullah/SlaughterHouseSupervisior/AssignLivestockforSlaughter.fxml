@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.AssignLivestockforSlaughterController">
+<AnchorPane prefHeight="540.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.AssignLivestockforSlaughterController">
    <children>
-      <Label fx:id="assignLivestockLabel" layoutX="197.0" layoutY="28.0" prefHeight="53.0" prefWidth="205.0" text="Assign Livestock For Slaughter" textFill="#dc942f">
+      <Label fx:id="assignLivestockLabel" layoutX="14.0" layoutY="48.0" prefHeight="53.0" prefWidth="205.0" text="Assign Livestock For Slaughter" textFill="#dc942f">
          <font>
             <Font size="14.0" />
          </font>
@@ -17,7 +21,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
+      <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
          <font>
             <Font size="14.0" />
          </font>
@@ -27,5 +31,24 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <TableView fx:id="assignLivestockTableView" layoutY="361.0" prefHeight="175.0" prefWidth="485.0">
+        <columns>
+          <TableColumn fx:id="animalsBatchIdColumn" prefWidth="122.6666259765625" text="Animales batch Id " />
+          <TableColumn fx:id="typeColumn" minWidth="8.66668701171875" text="Type" />
+            <TableColumn fx:id="weightColumn" minWidth="8.66668701171875" text="Weight" />
+            <TableColumn fx:id="slaughterStatusColumn" minWidth="8.66668701171875" prefWidth="103.33331298828125" text="Slaughter Status" />
+            <TableColumn fx:id="qaStatusColumn" minWidth="8.66668701171875" prefWidth="98.00002034505206" text="QA Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="161.0" text="Select Batch" />
+      <TextField fx:id="batchSizeTextField" layoutX="98.0" layoutY="201.0" />
+      <ComboBox fx:id="selectBatchComboBox" layoutX="98.0" layoutY="157.0" prefWidth="150.0" />
+      <Label layoutX="24.0" layoutY="205.0" text="Batch Size" />
+      <Label layoutX="14.0" layoutY="114.0" text="Daily Capacity" />
+      <Button layoutX="15.0" layoutY="286.0" mnemonicParsing="false" onAction="#validateBatchButton" text="Validate Batch" />
+      <TextField fx:id="dailyCapacityTextField" layoutX="98.0" layoutY="110.0" promptText="200" />
+      <Label fx:id="outputLable" layoutX="289.0" layoutY="252.0" text="Assign Successfully/Unsuccessfully" />
+      <ComboBox fx:id="slaughterStatusComboBox" layoutX="397.0" layoutY="110.0" prefWidth="150.0" />
+      <Label layoutX="289.0" layoutY="114.0" text="Slaughter Status" />
    </children>
 </AnchorPane>
