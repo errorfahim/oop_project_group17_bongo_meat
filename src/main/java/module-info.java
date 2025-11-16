@@ -5,4 +5,8 @@ module com.group17.oop_project_group17_bongo_meat {
 
     opens com.group17.oop_project_group17_bongo_meat to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat;
+    opens com.group17.oop_project_group17_bongo_meat.shaika.Customer to javafx.fxml;
+    exports com.group17.oop_project_group17_bongo_meat.shaika.Customer;
+    opens com.group17.oop_project_group17_bongo_meat.shaika.DeliveryStaff to javafx.fxml;
+    exports com.group17.oop_project_group17_bongo_meat.shaika.DeliveryStaff;
 }

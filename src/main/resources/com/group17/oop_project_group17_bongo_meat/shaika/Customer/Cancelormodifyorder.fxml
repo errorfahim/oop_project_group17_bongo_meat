@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.shaika.shaikaController"
+            fx:controller="com.group17.oop_project_group17_bongo_meat.shaika.Customer.cancelOrderController"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.shaika.Customer.customerdashboardController">
+   <children>
+      <Label layoutX="235.0" layoutY="34.0" prefHeight="35.0" prefWidth="197.0" text="Select Your Role" textFill="#dc942f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="102.0" layoutY="144.0" mnemonicParsing="false" onAction="#registerAccountOA" prefHeight="72.0" prefWidth="162.0" style="-fx-background-color: #dc942f;" text="Register Account" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="416.0" layoutY="144.0" mnemonicParsing="false" onAction="#browseandaddproductOA" prefHeight="72.0" prefWidth="144.0" style="-fx-background-color: #dc942f;" text="Browse and Add Products to Cart  " wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="102.0" layoutY="254.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="72.0" prefWidth="162.0" style="-fx-background-color: #dc942f;" text="Place an Order:" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="114.0" layoutY="368.0" mnemonicParsing="false" onAction="#trackorderOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Track Order:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="114.0" layoutY="472.0" mnemonicParsing="false" onAction="#manageprofileOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Manage Customer Profile:" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="419.0" layoutY="254.0" mnemonicParsing="false" onAction="#vieworderOA" prefHeight="72.0" prefWidth="138.0" style="-fx-background-color: #dc942f;" text="View Order History" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="421.0" layoutY="362.0" mnemonicParsing="false" onAction="#cancelorderOA" prefHeight="72.0" prefWidth="138.0" style="-fx-background-color: #dc942f;" text="Cancel or Modify Order:" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="421.0" layoutY="472.0" mnemonicParsing="false" onAction="#providefeedbackOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Provide Feedback">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="252.0" layoutY="94.0" prefHeight="18.0" prefWidth="175.0" text="Choose a position to Continue" />
+      <Label layoutX="214.0" layoutY="541.0" text="\@2025 BongoMeat Management System" />
+   </children>
+</AnchorPane>

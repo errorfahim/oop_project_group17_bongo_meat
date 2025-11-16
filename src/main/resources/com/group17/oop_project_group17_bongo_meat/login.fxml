@@ -31,7 +31,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="108.0" layoutY="387.0" prefHeight="18.0" prefWidth="70.0" text="New User?" />
+      <Label layoutX="84.0" layoutY="387.0" prefHeight="18.0" prefWidth="89.0" text="New Customer?" />
       <Button layoutX="171.0" layoutY="384.0" mnemonicParsing="false" onAction="#registerHereButton" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #C8E6FF;" text="Register Here" textAlignment="CENTER" textFill="#1b1515" />
       <Button layoutX="484.0" layoutY="384.0" mnemonicParsing="false" onAction="#forgetPasswordButton" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #C8E6FF;" text="Forget Password?" textAlignment="CENTER" textFill="#1b1515" />
       <Button layoutX="231.0" layoutY="456.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="42.0" prefWidth="247.0" style="-fx-background-color: #dc942f;" text="Login" textAlignment="CENTER">
