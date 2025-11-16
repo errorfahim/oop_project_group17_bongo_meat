@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.RecordIncomingLivestockController">
+   <children>
+      <Button layoutX="25.0" layoutY="27.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="510.0" layoutY="27.0" mnemonicParsing="false" onAction="#logOutButton" text="Log Out" textFill="#dc942f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="526.0" layoutY="346.0" mnemonicParsing="false" onAction="#nextButton" text="Next" textFill="#dc942f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="recordIncomingTextField" layoutX="214.0" layoutY="76.0" prefHeight="29.0" prefWidth="191.0" text="Record Incoming Livestock" textFill="#dc942f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

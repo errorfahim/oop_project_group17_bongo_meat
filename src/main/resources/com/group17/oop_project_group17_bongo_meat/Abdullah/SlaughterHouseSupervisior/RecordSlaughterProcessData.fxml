@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.RecordSlaughterProcessDataController">
+   <children>
+      <Button layoutX="30.0" layoutY="23.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="518.0" layoutY="351.0" mnemonicParsing="false" onAction="#nextButton" text="Next" textFill="#dc942f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="518.0" layoutY="23.0" mnemonicParsing="false" onAction="#logOutButton" text="Log Out" textFill="#dc942f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="recordSlaughterProcessTextField" layoutX="158.0" layoutY="92.0" prefHeight="59.0" prefWidth="211.0" text="   Record Slaughter Process Data" textFill="#dc942f">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
