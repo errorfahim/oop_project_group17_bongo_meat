@@ -1,7 +1,7 @@
 package com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 public class AssignLivestockforSlaughterController
 {
@@ -19,17 +19,23 @@ public class AssignLivestockforSlaughterController
     @javafx.fxml.FXML
     private TableView assignLivestockTableView;
     @javafx.fxml.FXML
-    private TableColumn animalsBatchIdColumn;
-    @javafx.fxml.FXML
-    private TableColumn weightColumn;
-    @javafx.fxml.FXML
     private ComboBox slaughterStatusComboBox;
     @javafx.fxml.FXML
     private TableColumn slaughterStatusColumn;
     @javafx.fxml.FXML
-    private TableColumn typeColumn;
-    @javafx.fxml.FXML
     private TableColumn qaStatusColumn;
+    @javafx.fxml.FXML
+    private TableColumn batchIDColumn;
+    @javafx.fxml.FXML
+    private TextField batchIDTextField;
+    @javafx.fxml.FXML
+    private TableColumn slaughterDateColumn;
+    @javafx.fxml.FXML
+    private ComboBox qaStatusComboBox;
+    @javafx.fxml.FXML
+    private DatePicker slaughterDatePicker;
+    @javafx.fxml.FXML
+    private TableColumn batchSizeColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -49,5 +55,9 @@ public class AssignLivestockforSlaughterController
 
     @javafx.fxml.FXML
     public void validateBatchButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void assignBatchButton(ActionEvent actionEvent) {
     }
 }

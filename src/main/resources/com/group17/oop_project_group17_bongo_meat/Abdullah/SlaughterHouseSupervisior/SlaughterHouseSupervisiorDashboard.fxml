@@ -6,64 +6,68 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="411.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.SlaughterHouseSupervisiorDashboardController">
    <children>
-      <Button layoutX="222.0" layoutY="200.0" mnemonicParsing="false" onAction="#recordIncomingButton" text="Record Incoming Livestock" textFill="#dc942f">
+      <Button layoutX="199.0" layoutY="192.0" mnemonicParsing="false" onAction="#incomingLivestockButton" text="Incoming Livestock" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="200.0" mnemonicParsing="false" onAction="#confirmFarmDeliveryButton" text="Confirm Farm Delivery Details" textFill="#dc942f">
+      <Button layoutX="46.0" layoutY="192.0" mnemonicParsing="false" onAction="#farmDeliveriesButton" text="Farm Deliveries" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="467.0" layoutY="200.0" mnemonicParsing="false" onAction="#assignLivestockButton" text="Assign Livestock for Slaughter" textFill="#dc942f">
+      <Button layoutX="409.0" layoutY="192.0" mnemonicParsing="false" onAction="#assignSlaughterBatchesButton" text="Assign Slaughter Batches" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="331.0" layoutY="301.0" mnemonicParsing="false" onAction="#deliverMeatForPackagingButton" text="Deliver Meat for Packaging" textFill="#dc942f">
+      <Button layoutX="380.0" layoutY="306.0" mnemonicParsing="false" onAction="#packagingTransferButton" text="Packaging Transfer" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="222.0" layoutY="252.0" mnemonicParsing="false" onAction="#verifyBatchButton" text="Verify Batch Approval from QA Officer" textFill="#dc942f">
+      <Button layoutX="263.0" layoutY="252.0" mnemonicParsing="false" onAction="#batchApprovalButton" text="Batch Approval" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="252.0" mnemonicParsing="false" onAction="#recordSlaughterButton" text="Record Slaughter Process Data " textFill="#dc942f">
+      <Button layoutX="46.0" layoutY="252.0" mnemonicParsing="false" onAction="#slaughterOperationsButton" text="Slaughter Operations" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="301.0" mnemonicParsing="false" onAction="#approveDispatchRequestButton" text="Approve Dispatch Request from Logistics Team" textFill="#dc942f">
+      <Button layoutX="156.0" layoutY="306.0" mnemonicParsing="false" onAction="#dispatchRequestsButton" text="Dispatch Requests" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="467.0" layoutY="252.0" mnemonicParsing="false" onAction="#updayePackagingButton" text="Update Packaging Stock Information" textFill="#dc942f">
+      <Button layoutX="434.0" layoutY="252.0" mnemonicParsing="false" onAction="#packagingStockButton" text="Packaging Stock" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
-      <Label fx:id="slaughterHouseSupervisiorDashboardTextField" layoutX="147.0" layoutY="61.0" prefHeight="93.0" prefWidth="382.0" text="       Slaughterhouse Supervisior Dashboard" textFill="#dc942f">
+      <Label fx:id="slaughterHouseSupervisiorDashboardTextField" layoutX="11.0" layoutY="61.0" prefHeight="93.0" prefWidth="382.0" text="       Slaughterhouse Supervisior Dashboard" textFill="#dc942f">
          <font>
-            <Font size="18.0" />
+            <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
       <Button layoutX="618.0" layoutY="355.0" mnemonicParsing="false" onAction="#nextButton" text="Next" textFill="#dc942f">
          <font>
-            <Font size="13.0" />
+            <Font name="Britannic Bold" size="13.0" />
          </font>
       </Button>
       <Button layoutX="609.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOutButton" text="Log Out" textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="Britannic Bold" size="14.0" />
          </font>
       </Button>
       <Line endX="502.33331298828125" endY="1.52587890625E-5" layoutX="147.0" layoutY="154.0" startX="-100.0" stroke="#dc942f" />
+      <Button layoutX="46.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
+         <font>
+            <Font name="Britannic Bold" size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

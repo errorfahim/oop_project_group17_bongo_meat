@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.ApproveDispatchRequestfromLogisticsTeamController">
    <children>
-      <Label fx:id="approveDispatchReqFromLTLabel" layoutX="14.0" layoutY="63.0" prefHeight="25.0" prefWidth="298.0" text="Approve Dispatch Request from Logistics Team" textFill="#dc942f">
+      <Label fx:id="approveDispatchReqFromLTLabel" layoutX="14.0" layoutY="66.0" prefHeight="25.0" prefWidth="123.0" text="Dispatch Requests" textFill="#dc942f">
          <font>
             <Font size="14.0" />
          </font>

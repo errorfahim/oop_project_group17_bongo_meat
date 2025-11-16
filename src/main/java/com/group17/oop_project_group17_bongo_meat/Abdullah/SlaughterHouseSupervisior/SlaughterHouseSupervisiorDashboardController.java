@@ -16,15 +16,15 @@ public class SlaughterHouseSupervisiorDashboardController
     public void nextButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void recordSlaughterButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void verifyBatchButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void approveDispatchRequestButton(ActionEvent actionEvent) {
     }
 
@@ -32,23 +32,59 @@ public class SlaughterHouseSupervisiorDashboardController
     public void logOutButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void deliverMeatForPackagingButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void updayePackagingButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void assignLivestockButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void recordIncomingButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void confirmFarmDeliveryButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void dispatchRequestsButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void slaughterOperationsButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void packagingStockButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void packagingTransferButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void farmDeliveriesButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void incomingLivestockButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void batchApprovalButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void assignSlaughterBatchesButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }
