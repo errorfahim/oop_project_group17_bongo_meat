@@ -7,28 +7,24 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="561.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.RecordIncomingLivestockController">
    <children>
       <Button layoutX="25.0" layoutY="27.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
          <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="515.0" layoutY="27.0" mnemonicParsing="false" onAction="#logOutButton" text="Log Out" textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Button>
       <Button layoutX="526.0" layoutY="346.0" mnemonicParsing="false" onAction="#nextButton" text="Next" textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label fx:id="recordIncomingTextField" layoutX="40.0" layoutY="81.0" prefHeight="29.0" prefWidth="191.0" text="Record Incoming Livestock" textFill="#dc942f">
+      <Label fx:id="recordIncomingTextField" layoutX="40.0" layoutY="81.0" prefHeight="29.0" prefWidth="191.0" text="Incoming Livestock" textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <TextField fx:id="numberOfAnimalsTextField" layoutX="179.0" layoutY="142.0" />
@@ -36,26 +32,29 @@
       <ComboBox fx:id="healthObservationComboBox" layoutX="179.0" layoutY="279.0" prefWidth="150.0" />
       <Label layoutX="39.0" layoutY="146.0" text="Number Of Animals : " textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
       <Label layoutX="40.0" layoutY="235.0" text="Type /Breed" textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
       <Label layoutX="39.0" layoutY="283.0" text="Health Observation: " textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
       <TextField fx:id="weightTextField" layoutX="180.0" layoutY="188.0" />
       <Label layoutX="40.0" layoutY="192.0" text="Weight: " textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="outputLabel" layoutX="386.0" layoutY="146.0" text="Add succefully / unsuccessfully" />
+      <Label fx:id="outputLabel" layoutX="386.0" layoutY="146.0" text="Add succefully / unsuccessfully" textFill="#dc942f">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
       <ComboBox fx:id="batchNumberComboBox" layoutX="180.0" layoutY="321.0" prefWidth="150.0" />
       <Label layoutX="40.0" layoutY="325.0" text="Batch Number: " textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <TableView fx:id="recorderIncomingTableView" layoutY="406.0" prefHeight="153.0" prefWidth="600.0">
@@ -71,8 +70,9 @@
       <TextField fx:id="batchIdTextField" layoutX="180.0" layoutY="361.0" />
       <Label layoutX="43.0" layoutY="365.0" text="Batch Id: " textFill="#dc942f">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <Line endX="400.33331298828125" endY="-7.62939453125E-6" layoutX="143.0" layoutY="118.0" startX="-100.0" stroke="#dc942f" />
    </children>
 </AnchorPane>

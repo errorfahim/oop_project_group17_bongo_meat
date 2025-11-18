@@ -47,7 +47,7 @@ public class RecordIncomingLivestockController
     public void nextButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void logOutButton(ActionEvent actionEvent) {
     }
 
