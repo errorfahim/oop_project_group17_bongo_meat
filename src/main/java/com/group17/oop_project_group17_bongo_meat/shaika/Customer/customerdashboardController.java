@@ -32,11 +32,11 @@ public class customerdashboardController
     public void trackorderOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void registerAccountOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void placeorderOA(ActionEvent actionEvent) {
     }
 }

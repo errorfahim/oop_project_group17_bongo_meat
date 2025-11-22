@@ -2,7 +2,7 @@ package com.group17.oop_project_group17_bongo_meat.shaika.Customer;
 
 import javafx.event.ActionEvent;
 
-public class browseproductController
+public class rateDeliveryStaffController
 {
     @javafx.fxml.FXML
     public void initialize() {

@@ -12,37 +12,32 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="231.0" layoutY="142.0" mnemonicParsing="false" onAction="#browseandaddproductOA" prefHeight="88.0" prefWidth="238.0" style="-fx-background-color: #dc942f;" text="Browse and Add Products to Cart  " wrapText="true">
+      <Button layoutX="220.0" layoutY="146.0" mnemonicParsing="false" onAction="#browseandaddproductOA" prefHeight="88.0" prefWidth="238.0" style="-fx-background-color: #dc942f;" text="Browse and Add Products to Cart  " wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="102.0" layoutY="254.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="72.0" prefWidth="162.0" style="-fx-background-color: #dc942f;" text="Place an Order:" wrapText="true">
+      <Button layoutX="185.0" layoutY="368.0" mnemonicParsing="false" onAction="#trackorderOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Rate Delivery Staff">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="114.0" layoutY="368.0" mnemonicParsing="false" onAction="#trackorderOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Track Order:">
+      <Button layoutX="23.0" layoutY="368.0" mnemonicParsing="false" onAction="#manageprofileOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Manage Customer Profile:" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="114.0" layoutY="472.0" mnemonicParsing="false" onAction="#manageprofileOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Manage Customer Profile:" wrapText="true">
+      <Button layoutX="220.0" layoutY="250.0" mnemonicParsing="false" onAction="#vieworderOA" prefHeight="80.0" prefWidth="238.0" style="-fx-background-color: #dc942f;" text="View Order History and Track Order Status" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="419.0" layoutY="254.0" mnemonicParsing="false" onAction="#vieworderOA" prefHeight="72.0" prefWidth="138.0" style="-fx-background-color: #dc942f;" text="View Order History" wrapText="true">
+      <Button layoutX="352.0" layoutY="368.0" mnemonicParsing="false" onAction="#cancelorderOA" prefHeight="60.0" prefWidth="138.0" style="-fx-background-color: #dc942f;" text="Cancel or Modify Order:" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="421.0" layoutY="362.0" mnemonicParsing="false" onAction="#cancelorderOA" prefHeight="72.0" prefWidth="138.0" style="-fx-background-color: #dc942f;" text="Cancel or Modify Order:" wrapText="true">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="421.0" layoutY="472.0" mnemonicParsing="false" onAction="#providefeedbackOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Provide Feedback">
+      <Button layoutX="525.0" layoutY="368.0" mnemonicParsing="false" onAction="#providefeedbackOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Provide Feedback">
          <font>
             <Font size="14.0" />
          </font>
