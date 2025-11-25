@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -9,6 +8,47 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.CertifyExportQualityforLogisticsManagerController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="420.0" prefWidth="620.0">
+
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <VBox spacing="12" layoutX="40" layoutY="25" prefWidth="540">
+
+        <!-- PAGE TITLE -->
+        <Label text="Export Quality Certification"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+
+        <!-- EXPORT ORDERS -->
+        <Label text="Select Export Order:"
+               style="-fx-text-fill: #dc942f;" />
+        <ComboBox fx:id="exportOrderCombo" promptText="Choose export order" />
+
+        <!-- DOCUMENTATION SECTION -->
+        <Label text="Required Quality Documents:"
+               style="-fx-text-fill: #dc942f;" />
+        <ListView fx:id="documentList" prefHeight="120" />
+
+        <!-- REVIEW BUTTON & CERTIFICATE BUTTON -->
+        <HBox spacing="10">
+            <Button text="Review Documentation"
+                    fx:id="reviewBtn"
+                    style="-fx-background-color: #dc942f; -fx-text-fill: white;" />
+            <Button text="Generate Certificate"
+                    fx:id="generateCertBtn"
+                    style="-fx-background-color: #dc942f; -fx-text-fill: white;" />
+        </HBox>
+
+        <!-- NEW: PDF DOWNLOAD BUTTON -->
+        <Button text="Download PDF Certificate"
+                fx:id="downloadPdfBtn"
+                style="-fx-background-color: #dc942f; -fx-text-fill: white;" />
+
+        <!-- STATUS LABEL -->
+        <Label fx:id="statusLabel"
+               text=""
+               style="-fx-text-fill: #dc942f; -fx-font-weight: bold;" />
+    </VBox>
 
 </AnchorPane>
