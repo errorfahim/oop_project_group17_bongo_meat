@@ -26,10 +26,10 @@ public class RequestLogisticsForMeatTransferController
     }
 
     @javafx.fxml.FXML
-    public void submitRequestButton(ActionEvent actionEvent) {
+    public void backButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void sendRequestButton(ActionEvent actionEvent) {
     }
 }

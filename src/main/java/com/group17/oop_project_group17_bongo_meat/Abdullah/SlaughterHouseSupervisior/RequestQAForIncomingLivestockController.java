@@ -1,26 +1,29 @@
 package com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class ConfirmFarmDeliveriesController
+public class RequestQAForIncomingLivestockController
 {
     @javafx.fxml.FXML
-    private TableColumn quantityColumn;
+    private TableView livestockTable;
     @javafx.fxml.FXML
     private Label outputLabel;
     @javafx.fxml.FXML
-    private TableColumn dispatchTimeColumn;
+    private TableColumn ageColumn;
     @javafx.fxml.FXML
-    private TableColumn animalsIDColumn;
+    private TableColumn typeColum;
     @javafx.fxml.FXML
-    private TableColumn typeColumn;
+    private TableColumn statusColumn;
     @javafx.fxml.FXML
-    private TableColumn healthColumn;
+    private ComboBox filterComboBox;
     @javafx.fxml.FXML
-    private TableView deliveriesTableView;
+    private TableColumn animalIDColumn;
+    @javafx.fxml.FXML
+    private TableColumn qualityColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -31,11 +34,11 @@ public class ConfirmFarmDeliveriesController
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void requestQAButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void confirmDeliveryButton(ActionEvent actionEvent) {
+    public void backButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

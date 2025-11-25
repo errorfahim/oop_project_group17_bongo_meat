@@ -12,8 +12,8 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.SlaughterDailyReportController">
    <children>
-      <Line endX="200.33334350585938" layoutX="129.0" layoutY="121.0" startX="-100.0" stroke="#dc942f" />
-      <Label layoutX="29.0" layoutY="84.0" text="Daily Report -" textFill="#dc942f">
+      <Line endX="313.6666564941406" layoutX="129.0" layoutY="121.0" startX="-100.0" stroke="#dc942f" />
+      <Label layoutX="29.0" layoutY="84.0" text="Generate Daily Report On -" textFill="#dc942f">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
@@ -23,14 +23,15 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
-      <TableView layoutX="26.0" layoutY="250.0" prefHeight="146.0" prefWidth="589.0">
+      <TableView fx:id="reportTableView" layoutX="14.0" layoutY="249.0" prefHeight="146.0" prefWidth="589.0">
         <columns>
-          <TableColumn fx:id="batchIDColumn" prefWidth="75.0" text="Batch ID" />
-          <TableColumn fx:id="typeColumn" prefWidth="79.99999237060547" text="Type" />
-            <TableColumn fx:id="arrivalTime" prefWidth="100.66661071777344" text="Arrival Time" />
-            <TableColumn fx:id="slaughterTimeColumn" prefWidth="93.33331298828125" text="Slaughter Time" />
-            <TableColumn fx:id="qaAndVertinaryColumn" prefWidth="153.33334350585938" text=" QA &amp; Vetinary Inspection" />
-            <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="batchIDColumn" prefWidth="64.00000286102295" text="Batch ID" />
+          <TableColumn fx:id="typeColumn" prefWidth="54.666648864746094" text="Type" />
+            <TableColumn fx:id="arrivalTime" prefWidth="86.66665649414062" text="Arrival Time" />
+            <TableColumn fx:id="slaughterTimeColumn" prefWidth="98.00001525878906" text="Slaughter Time" />
+            <TableColumn fx:id="qaAndVertinaryColumn" prefWidth="162.66668701171875" text=" QA &amp; Vetinary Inspection" />
+            <TableColumn fx:id="statusColumn" prefWidth="41.333282470703125" text="Status" />
+            <TableColumn fx:id="weightColumn" prefWidth="80.66668701171875" text="Weight(kg)" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -57,6 +58,6 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <DatePicker fx:id="dailyReportDatePicker" layoutX="155.0" layoutY="85.0" />
+      <DatePicker fx:id="dailyReportDatePicker" layoutX="269.0" layoutY="85.0" />
    </children>
 </AnchorPane>

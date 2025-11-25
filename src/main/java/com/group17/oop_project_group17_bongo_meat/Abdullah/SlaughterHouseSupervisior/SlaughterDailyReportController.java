@@ -1,10 +1,7 @@
 package com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.*;
 
 public class SlaughterDailyReportController
 {
@@ -26,6 +23,10 @@ public class SlaughterDailyReportController
     private TableColumn slaughterTimeColumn;
     @javafx.fxml.FXML
     private TableColumn typeColumn;
+    @javafx.fxml.FXML
+    private TableView reportTableView;
+    @javafx.fxml.FXML
+    private TableColumn weightColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

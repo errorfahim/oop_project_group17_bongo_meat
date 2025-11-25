@@ -4,70 +4,35 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="411.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.SlaughterHouseSupervisiorDashboardController">
-   <children>
-      <Button layoutX="199.0" layoutY="192.0" mnemonicParsing="false" onAction="#incomingLivestockButton" text="Incoming Livestock" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="46.0" layoutY="192.0" mnemonicParsing="false" onAction="#farmDeliveriesButton" text="Farm Deliveries" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="409.0" layoutY="192.0" mnemonicParsing="false" onAction="#assignSlaughterBatchesButton" text="Assign Slaughter Batches" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="380.0" layoutY="306.0" mnemonicParsing="false" onAction="#packagingTransferButton" text="Packaging Transfer" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="263.0" layoutY="252.0" mnemonicParsing="false" onAction="#batchApprovalButton" text="Batch Approval" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="46.0" layoutY="252.0" mnemonicParsing="false" onAction="#slaughterOperationsButton" text="Slaughter Operations" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="156.0" layoutY="306.0" mnemonicParsing="false" onAction="#dispatchRequestsButton" text="Dispatch Requests" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="434.0" layoutY="252.0" mnemonicParsing="false" onAction="#packagingStockButton" text="Packaging Stock" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-      <Label fx:id="slaughterHouseSupervisiorDashboardTextField" layoutX="11.0" layoutY="61.0" prefHeight="93.0" prefWidth="382.0" text="       Slaughterhouse Supervisior Dashboard" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="18.0" />
-         </font>
-      </Label>
-      <Button layoutX="618.0" layoutY="355.0" mnemonicParsing="false" onAction="#nextButton" text="Next" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="609.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOutButton" text="Log Out" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="14.0" />
-         </font>
-      </Button>
-      <Line endX="502.33331298828125" endY="1.52587890625E-5" layoutX="147.0" layoutY="154.0" startX="-100.0" stroke="#dc942f" />
-      <Button layoutX="46.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
-         <font>
-            <Font name="Britannic Bold" size="13.0" />
-         </font>
-      </Button>
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.SlaughterHouseSupervisiorDashboardController">
+
+
+    <Label layoutX="38.0" layoutY="98.0" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Slaughter House Supervisor Dashboard" />
+
+    <Label layoutX="38.0" layoutY="60.0" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Welcome back," />
+
+
+    <Button layoutX="38.0" layoutY="163.0" onAction="#confirmFarmDeliveriesButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Confirm Farm Deliveries" />
+
+    <Button layoutX="230.0" layoutY="163.0" onAction="#vetCheckRequestButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Vet Check Request" />
+
+    <Button layoutX="400.0" layoutY="163.0" onAction="#qaInspectionRequestButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="QA Inspection Request" />
+
+    <Button layoutX="32.0" layoutY="218.0" onAction="#recordIncomingLivestockButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Record Incoming Livestock" />
+
+    <Button layoutX="217.0" layoutY="218.0" onAction="#assignSlaughterBatchButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Assign Slaughter Batch" />
+
+    <Button layoutX="391.0" layoutY="218.0" onAction="#recordSlaughterOperationsButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Slaughter Operations" />
+
+    <Button layoutX="31.0" layoutY="279.0" onAction="#dispatchRequestButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Meat Dispatch Request " />
+
+    <Button layoutX="268.0" layoutY="279.0" onAction="#generateDailyReport" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Generate Daily Report" />
+
+    <Button layoutX="520.0" layoutY="348.0" onAction="#nextButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Next" />
+
+    <Button layoutX="500.0" layoutY="20.0" onAction="#logOutButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Log Out" />
+
+  
+    <Line endX="236.33331298828125" endY="7.62939453125E-6" layoutX="19.0" layoutY="125.0" startX="20.0" startY="0.0" stroke="#dc942f" />
 </AnchorPane>

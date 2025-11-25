@@ -60,4 +60,8 @@ public class RecordIncomingLivestockController
     @javafx.fxml.FXML
     public void generateBatchIDButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void showButton(ActionEvent actionEvent) {
+    }
 }

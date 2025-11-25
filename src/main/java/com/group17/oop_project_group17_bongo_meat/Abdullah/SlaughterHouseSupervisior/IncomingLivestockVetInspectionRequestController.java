@@ -26,4 +26,8 @@ public class IncomingLivestockVetInspectionRequestController
     @javafx.fxml.FXML
     public void sendRequestButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+    }
 }
