@@ -15,35 +15,33 @@ public class RecordIncomingLivestockController
     @javafx.fxml.FXML
     private Label outputLabel;
     @javafx.fxml.FXML
-    private TextField numberOfAnimalsTextField;
-    @javafx.fxml.FXML
-    private ComboBox healthObservationComboBox;
-    @javafx.fxml.FXML
     private TextField weightTextField;
     @javafx.fxml.FXML
-    private ComboBox batchNumberComboBox;
-    @javafx.fxml.FXML
-    private TableColumn numberOfAnimalsColumn;
-    @javafx.fxml.FXML
     private TableColumn typeColumn;
-    @javafx.fxml.FXML
-    private TableColumn batchNumberColumn;
-    @javafx.fxml.FXML
-    private TableColumn weightColoumn;
-    @javafx.fxml.FXML
-    private TextField batchIdTextField;
     @javafx.fxml.FXML
     private TableColumn healthObservationColumn;
     @javafx.fxml.FXML
     private TableView recorderIncomingTableView;
     @javafx.fxml.FXML
-    private TableColumn batchIdColumn;
+    private TableColumn batchIDColoumn;
+    @javafx.fxml.FXML
+    private TableColumn weightColumn;
+    @javafx.fxml.FXML
+    private TextField breedTextField;
+    @javafx.fxml.FXML
+    private TextField healthOBservationTextField;
+    @javafx.fxml.FXML
+    private TableColumn quantityColumn;
+    @javafx.fxml.FXML
+    private Label batchOutputLabel;
+    @javafx.fxml.FXML
+    private TextField quantityTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void nextButton(ActionEvent actionEvent) {
     }
 
@@ -53,5 +51,13 @@ public class RecordIncomingLivestockController
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void saveRecordButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void generateBatchIDButton(ActionEvent actionEvent) {
     }
 }

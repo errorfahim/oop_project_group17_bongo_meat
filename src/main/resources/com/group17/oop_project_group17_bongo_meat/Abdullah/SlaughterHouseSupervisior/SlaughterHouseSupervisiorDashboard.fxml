@@ -55,7 +55,7 @@
       </Label>
       <Button layoutX="618.0" layoutY="355.0" mnemonicParsing="false" onAction="#nextButton" text="Next" textFill="#dc942f">
          <font>
-            <Font name="Britannic Bold" size="13.0" />
+            <Font name="Britannic Bold" size="14.0" />
          </font>
       </Button>
       <Button layoutX="609.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOutButton" text="Log Out" textFill="#dc942f">
