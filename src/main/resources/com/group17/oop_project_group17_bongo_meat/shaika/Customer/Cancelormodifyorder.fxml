@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -16,47 +17,45 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="24.0" layoutY="22.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #dc942f;" text="Back" wrapText="true">
+      <Button layoutX="24.0" layoutY="22.0" mnemonicParsing="false" onAction="#backOA" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #dc942f;" text="Back" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="586.0" layoutY="21.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #dc942f;" text="Log Out" wrapText="true">
+      <Button layoutX="586.0" layoutY="21.0" mnemonicParsing="false" onAction="#logoutOA" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #dc942f;" text="Log Out" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TableView layoutX="1.0" layoutY="136.0" prefHeight="214.0" prefWidth="387.0">
+      <TableView fx:id="orderTable" layoutX="1.0" layoutY="136.0" prefHeight="214.0" prefWidth="387.0">
          <columns>
-            <TableColumn prefWidth="117.59997403621674" text="Order ID" />
-            <TableColumn prefWidth="114.40003204345703" text="Product" />
-            <TableColumn prefWidth="71.199951171875" text="Qty" />
-            <TableColumn prefWidth="84.800048828125" text="Price" />
+            <TableColumn fx:id="orderidcol" prefWidth="117.59997403621674" text="Order ID" />
+            <TableColumn fx:id="productcol" prefWidth="114.40003204345703" text="Product" />
+            <TableColumn fx:id="qtycol" prefWidth="71.199951171875" text="Qty" />
+            <TableColumn fx:id="pricecol" prefWidth="84.800048828125" text="Price" />
          </columns>
       </TableView>
       <Line endX="-99.99996948242188" endY="368.6000061035156" layoutX="497.0" layoutY="97.0" startX="-99.99996948242188" startY="0.5999984741210938" stroke="#dc942f" />
-      <Label layoutX="463.0" layoutY="96.0" prefHeight="35.0" prefWidth="174.0" text="Modification" textFill="#dc942f">
+      <Label layoutX="419.0" layoutY="96.0" prefHeight="35.0" prefWidth="263.0" text="Cancel or Modification" textFill="#dc942f">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="122.0" layoutY="419.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="35.0" prefWidth="113.0" style="-fx-background-color: #dc942f;" text="Cancel Order" wrapText="true">
+      <Button layoutX="419.0" layoutY="360.0" mnemonicParsing="false" onAction="#cancelorderOA" prefHeight="35.0" prefWidth="113.0" style="-fx-background-color: #dc942f;" text="Cancel Order" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="530.0" layoutY="303.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #dc942f;" text="Modify" wrapText="true">
+      <Button layoutX="567.0" layoutY="360.0" mnemonicParsing="false" onAction="#modifyOA" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #dc942f;" text="Modify" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TextField layoutX="495.0" layoutY="180.0" />
-      <TextField layoutX="495.0" layoutY="240.0" />
+      <TextField fx:id="newqtyTF" layoutX="495.0" layoutY="230.0" />
       <Label layoutX="434.0" layoutY="235.0" />
-      <Label layoutX="407.0" layoutY="244.0" text="New Quantity:" />
-      <Label layoutX="251.0" layoutY="487.0" prefHeight="75.0" prefWidth="258.0" text="Output Message" />
-      <Label layoutX="421.0" layoutY="184.0" text="Order ID:" />
-      <Label layoutX="28.0" layoutY="378.0" prefHeight="18.0" prefWidth="54.0" text="Order ID:" />
-      <TextField layoutX="104.0" layoutY="375.0" />
+      <Label layoutX="407.0" layoutY="235.0" text="New Quantity:" />
+      <Label fx:id="outputmsgLabel" alignment="CENTER" layoutX="164.0" layoutY="487.0" prefHeight="75.0" prefWidth="403.0" text="Output Message" />
+      <ComboBox fx:id="orderItemCB" layoutX="492.0" layoutY="164.0" prefWidth="150.0" />
+      <Label layoutX="414.0" layoutY="168.0" text="Select Item:" />
    </children>
 </AnchorPane>

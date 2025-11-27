@@ -39,7 +39,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <ComboBox fx:id="userTypeCB" layoutX="107.0" layoutY="180.0" prefHeight="26.0" prefWidth="486.0" promptText="Customer" />
+      <ComboBox fx:id="userTypeCB" layoutX="107.0" layoutY="180.0" prefHeight="26.0" prefWidth="486.0" promptText="select user" />
       <Label layoutX="108.0" layoutY="153.0" prefHeight="18.0" prefWidth="154.0" text="Seletect User Type">
          <font>
             <Font size="14.0" />

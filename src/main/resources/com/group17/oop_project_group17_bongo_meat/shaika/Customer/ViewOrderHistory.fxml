@@ -4,19 +4,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.shaika.Customer.vieworderhistoryController">
    <children>
-      <Button layoutX="27.0" layoutY="24.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #dc942f;" text="Back" wrapText="true">
+      <Button layoutX="27.0" layoutY="24.0" mnemonicParsing="false" onAction="#backOA" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #dc942f;" text="Back" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="589.0" layoutY="32.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: #dc942f;" text="Log Out" wrapText="true">
+      <Button layoutX="589.0" layoutY="32.0" mnemonicParsing="false" onAction="#logoutOA" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: #dc942f;" text="Log Out" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
@@ -26,16 +24,13 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TableView layoutX="145.0" layoutY="130.0" prefHeight="250.0" prefWidth="436.0">
+      <TableView fx:id="orderHistorytable" layoutX="145.0" layoutY="130.0" prefHeight="250.0" prefWidth="436.0">
          <columns>
-            <TableColumn prefWidth="117.59997403621674" text="Order ID" />
-            <TableColumn prefWidth="114.40003204345703" text="Date" />
-            <TableColumn prefWidth="92.800048828125" text="Total" />
-            <TableColumn prefWidth="109.59994506835938" text="Status" />
+            <TableColumn fx:id="orderIDcol" prefWidth="153.5999755859375" text="Order ID" />
+            <TableColumn fx:id="subtotalcol" prefWidth="122.4000244140625" text="Total" />
+            <TableColumn fx:id="StatusCol" prefWidth="159.99996948242188" text="Status" />
          </columns>
       </TableView>
-      <Label layoutX="75.0" layoutY="398.0" text="Order ID:" />
-      <TextField layoutX="145.0" layoutY="394.0" />
-      <Label layoutX="72.0" layoutY="430.0" prefHeight="134.0" prefWidth="580.0" text="Label" />
+      <Label fx:id="outputdetailsLabel" alignment="CENTER" layoutX="29.0" layoutY="430.0" prefHeight="134.0" prefWidth="650.0" text="output" />
    </children>
 </AnchorPane>

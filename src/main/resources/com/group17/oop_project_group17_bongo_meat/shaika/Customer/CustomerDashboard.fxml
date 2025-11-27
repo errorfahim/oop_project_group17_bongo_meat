@@ -17,7 +17,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="185.0" layoutY="368.0" mnemonicParsing="false" onAction="#trackorderOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Rate Delivery Staff">
+      <Button layoutX="185.0" layoutY="368.0" mnemonicParsing="false" onAction="#rateDeliverystaffOA" prefHeight="60.0" prefWidth="137.0" style="-fx-background-color: #dc942f;" text="Rate Delivery Staff">
          <font>
             <Font size="14.0" />
          </font>
@@ -44,7 +44,7 @@
       </Button>
       <Label layoutX="252.0" layoutY="94.0" prefHeight="18.0" prefWidth="175.0" text="Choose a position to Continue" />
       <Label layoutX="214.0" layoutY="541.0" text="\@2025 BongoMeat Management System" />
-      <Button layoutX="568.0" layoutY="36.0" mnemonicParsing="false" onAction="#vieworderOA" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #dc942f;" text="Log Out" wrapText="true">
+      <Button layoutX="568.0" layoutY="36.0" mnemonicParsing="false" onAction="#logoutOA" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #dc942f;" text="Log Out" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
