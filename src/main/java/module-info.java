@@ -2,6 +2,7 @@ module com.group17.oop_project_group17_bongo_meat {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
+    requires javafx.graphics;
 
 
     opens com.group17.oop_project_group17_bongo_meat to javafx.fxml;
