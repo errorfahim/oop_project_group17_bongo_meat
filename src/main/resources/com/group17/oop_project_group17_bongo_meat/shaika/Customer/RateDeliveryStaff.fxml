@@ -5,47 +5,41 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.shaika.Customer.rateDeliveryStaffController">
    <children>
-      <Label layoutX="246.0" layoutY="67.0" prefHeight="35.0" prefWidth="207.0" text="Product Feedback" textFill="#dc942f">
+      <Label layoutX="234.0" layoutY="66.0" prefHeight="35.0" prefWidth="216.0" text="Rate Delivery Staff" textFill="#dc942f">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="28.0" layoutY="37.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #dc942f;" text="Back" wrapText="true">
+      <Button layoutX="28.0" layoutY="37.0" mnemonicParsing="false" onAction="#backOA" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #dc942f;" text="Back" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="584.0" layoutY="36.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #dc942f;" text="Log Out" wrapText="true">
+      <Button layoutX="584.0" layoutY="36.0" mnemonicParsing="false" onAction="#logoutOA" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #dc942f;" text="Log Out" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TableView layoutX="115.0" layoutY="125.0" prefHeight="246.0" prefWidth="467.0">
+      <TableView fx:id="ratedeliveryTable" layoutX="115.0" layoutY="125.0" prefHeight="246.0" prefWidth="467.0">
          <columns>
-            <TableColumn prefWidth="156.80005645751953" text="Order ID" />
-            <TableColumn prefWidth="140.79998779296875" text="Delivery Staff ID" />
-            <TableColumn prefWidth="86.39996337890625" text="Qty" />
-            <TableColumn prefWidth="84.0" text="Total" />
+            <TableColumn fx:id="orderIDcol" prefWidth="156.80005645751953" text="Order ID" />
+            <TableColumn fx:id="deliverystaffidcol" prefWidth="140.79998779296875" text="Delivery Staff ID" />
+            <TableColumn fx:id="qtyidcol" prefWidth="86.39996337890625" text="Qty" />
+            <TableColumn fx:id="totalcol" prefWidth="84.0" text="Total" />
          </columns>
       </TableView>
-      <Label layoutX="73.0" layoutY="396.0" text="Order ID:" />
-      <Label layoutX="65.0" layoutY="498.0" prefHeight="18.0" prefWidth="49.0" text="Rating:" />
-      <TextField layoutX="150.0" layoutY="392.0" />
-      <ComboBox layoutX="149.0" layoutY="494.0" prefWidth="150.0" />
-      <Label layoutX="47.0" layoutY="448.0" text="Delivery staff ID:" />
-      <TextField layoutX="150.0" layoutY="444.0" />
-      <Button layoutX="349.0" layoutY="441.0" mnemonicParsing="false" onAction="#placeorderOA" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #dc942f;" text="Submit" wrapText="true">
+      <Label layoutX="48.0" layoutY="446.0" prefHeight="18.0" prefWidth="41.0" text="Rating:" />
+      <ComboBox fx:id="ratingsCB" layoutX="97.0" layoutY="443.0" prefWidth="150.0" />
+      <Button layoutX="295.0" layoutY="440.0" mnemonicParsing="false" onAction="#submitOA" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #dc942f;" text="Submit" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="478.0" layoutY="375.0" prefHeight="156.0" prefWidth="207.0" text="output Label" />
+      <Label fx:id="outputLabel" alignment="CENTER" layoutX="386.0" layoutY="388.0" prefHeight="178.0" prefWidth="299.0" text="output Label" />
    </children>
 </AnchorPane>

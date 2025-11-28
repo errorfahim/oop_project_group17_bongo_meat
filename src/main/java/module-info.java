@@ -5,6 +5,7 @@ module com.group17.oop_project_group17_bongo_meat {
     requires javafx.graphics;
     requires javafx.base;
 
+
     // Main package
     opens com.group17.oop_project_group17_bongo_meat to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat;
@@ -24,4 +25,15 @@ module com.group17.oop_project_group17_bongo_meat {
     // Delivery Staff
     opens com.group17.oop_project_group17_bongo_meat.shaika.DeliveryStaff to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.shaika.DeliveryStaff;
+    // Slaughterhousesupervisior
+    opens com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior to javafx.fxml;
+    exports com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior;
+    //QA officer
+    opens com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer to javafx.fxml;
+    exports com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer;
+    //logistic and veterinary
+    opens com.group17.oop_project_group17_bongo_meat.Zainab to javafx.fxml;
+    exports com.group17.oop_project_group17_bongo_meat.Zainab;
+
+
 }

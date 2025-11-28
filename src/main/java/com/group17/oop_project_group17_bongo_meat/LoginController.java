@@ -37,6 +37,7 @@ public class LoginController
         users.add(new Login("admin@gmail.com", "12345", "Admin"));
         users.add(new Login("customer@gmail.com", "123", "Customer"));
         users.add(new Login("deliveryman@gmail.com", "456", "Delivery staff"));
+        users.add(new Login("supervisior@gmail.com", "0123", "SlaughterHouseSupervisor"));
         loadCustomersFromFile();
     }
     private void loadCustomersFromFile() {
@@ -85,8 +86,9 @@ public class LoginController
                     switchTo("/com/group17/oop_project_group17_bongo_meat/shaika/DeliveryStaff/DeliverystaffDashboard.fxml", actionEvent);
                 }
                 else if (inputUserType.equals("Admin")) {
-                    switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Admin/AdminDashboard.fxml", actionEvent);
-                }
+                    switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Admin/AdminDashboard.fxml", actionEvent);}
+                else if (inputUserType.equals("SlaughterHouseSupervisor")) {
+                    switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/SlaughterHouseSupervisiorDashboard.fxml", actionEvent);}
                 return;
             }
         }
