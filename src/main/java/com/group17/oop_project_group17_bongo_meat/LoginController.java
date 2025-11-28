@@ -28,10 +28,12 @@ public class LoginController
     // ArrayList to store credentials
     private ArrayList<Login> users = new ArrayList<>();
     private ArrayList<User> customers = new ArrayList<>();
+
+
     @javafx.fxml.FXML
     public void initialize() {
         // Add default user types
-        userTypeCB.getItems().addAll("Admin","FarmManager", "Customer", "Delivery staff","QAOfficer","SlaughterHouseSupervisor","vaterinaryOfficer","Logistic");
+        userTypeCB.getItems().addAll("Admin","FarmManager", "Customer", "Delivery staff","QAOfficer","SlaughterHouseSupervisior","vaterinaryOfficer","Logistic");
 
         // Add some demo accounts to ArrayList
         users.add(new Login("admin@gmail.com", "12345", "Admin"));
@@ -40,6 +42,7 @@ public class LoginController
         users.add(new Login("supervisior@gmail.com", "0123", "SlaughterHouseSupervisor"));
         loadCustomersFromFile();
     }
+
     private void loadCustomersFromFile() {
         File file = new File("users.bin");
 
@@ -56,8 +59,6 @@ public class LoginController
             System.out.println("Error reading users.bin");
         }
     }
-
-
     @javafx.fxml.FXML
     public void loginButton(ActionEvent actionEvent) throws IOException {
         String inputEmail = emailOrPhoneNoTextField.getText();
@@ -71,21 +72,17 @@ public class LoginController
             showAlert(Alert.AlertType.ERROR, "Error", "Please fill all fields!");
             return;
         }
-
         // Verify credentials
         for (Login user : users) {
             if (user.getEmailOrPhone().equals(inputEmail) &&
                     user.getPassword().equals(inputPassword) &&
                     user.getUserType().equals(inputUserType)) {
-
                 showAlert(Alert.AlertType.INFORMATION, "Login Status", "Login Successful!");
                 if (inputUserType.equals("Customer")) {
                     switchTo("/com/group17/oop_project_group17_bongo_meat/shaika/Customer/CustomerDashboard.fxml", actionEvent);
-                }
-                else if (inputUserType.equals("Delivery staff")) {
+                } else if (inputUserType.equals("Delivery staff")) {
                     switchTo("/com/group17/oop_project_group17_bongo_meat/shaika/DeliveryStaff/DeliverystaffDashboard.fxml", actionEvent);
-                }
-                else if (inputUserType.equals("Admin")) {
+                } else if (inputUserType.equals("Admin")) {
                     switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Admin/AdminDashboard.fxml", actionEvent);}
                 else if (inputUserType.equals("SlaughterHouseSupervisor")) {
                     switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/SlaughterHouseSupervisiorDashboard.fxml", actionEvent);}
@@ -104,13 +101,11 @@ public class LoginController
                 }
             }
         }
-
         showAlert(Alert.AlertType.ERROR, "Login Failed", "Wrong credentials! Try again.");
-
     }
 
-    private void showAlert(Alert.AlertType alertType, String error, String s) {
 
+    private void showAlert(Alert.AlertType alertType, String error, String s) {
 
     }
 
