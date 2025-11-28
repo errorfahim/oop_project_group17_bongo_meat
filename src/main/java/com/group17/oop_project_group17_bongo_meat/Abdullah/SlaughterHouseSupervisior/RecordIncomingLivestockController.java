@@ -100,7 +100,7 @@ public class RecordIncomingLivestockController {
         }
     }
 
-    @FXML
+    @Deprecated
     private void showButton(ActionEvent event) {
         recorderIncomingTableView.refresh();
     }

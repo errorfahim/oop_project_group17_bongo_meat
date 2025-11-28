@@ -97,13 +97,6 @@
             </font>
         </Button>
 
-        <!-- Show Button -->
-        <Button layoutX="40" layoutY="415" onAction="#showButton" text="Show" textFill="#dc942f">
-            <font>
-                <Font name="System Bold" size="15" />
-            </font>
-        </Button>
-
         <!-- Output Label -->
         <Label fx:id="outputLabel" layoutX="200" layoutY="420" prefWidth="350" textFill="#dc942f">
             <font>
@@ -112,13 +105,14 @@
         </Label>
 
         <!-- Table -->
-        <TableView fx:id="recorderIncomingTableView" layoutX="40.0" layoutY="475.0" prefHeight="225.0" prefWidth="503.0">
+        <TableView fx:id="recorderIncomingTableView" layoutX="31.0" layoutY="405.0">
             <columns>
                 <TableColumn fx:id="batchIDColumn" text="Batch ID" />
                 <TableColumn fx:id="typeColumn" text="Type" />
                 <TableColumn fx:id="quantityColumn" text="Quantity" />
                 <TableColumn fx:id="weightColumn" prefWidth="67.33331298828125" text="Weight" />
                 <TableColumn fx:id="healthObservationColumn" prefWidth="120.0" text="Health Observation" />
+                <TableColumn fx:id="breedColumn" text="Breed" />
             </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
