@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.shaika.DeliveryStaff.deliverystaffdashboardController">
    <children>
       <Label prefHeight="580.0" prefWidth="700.0" textFill="#dc942f">
@@ -39,7 +38,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="112.0" layoutY="426.0" mnemonicParsing="false" onAction="#viewdeliveryhistoryOA" prefHeight="72.0" prefWidth="162.0" style="-fx-background-color: #dc942f;" text="View Delivery History" wrapText="true">
+      <Button layoutX="112.0" layoutY="426.0" mnemonicParsing="false" onAction="#viewRatingsOA" prefHeight="72.0" prefWidth="162.0" style="-fx-background-color: #dc942f;" text="View Ratings" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
@@ -60,5 +59,10 @@
          </font>
       </Button>
       <Label layoutX="241.0" layoutY="540.0" text="\@2025 BongoMeat Management System" />
+      <Button layoutX="552.0" layoutY="33.0" mnemonicParsing="false" onAction="#logoutOA" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: #dc942f;" text="LogOut" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

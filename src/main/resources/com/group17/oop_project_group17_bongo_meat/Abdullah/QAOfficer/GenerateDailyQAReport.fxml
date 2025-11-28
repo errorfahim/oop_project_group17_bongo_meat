@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="583.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.GenerateDailyQAReportController">
+
+    <children>
+
+        <Label layoutX="200" layoutY="20" style="-fx-text-fill: #dc942f; -fx-font-size: 16px; -fx-font-weight: bold; -fx-font-style: italic;" text="Generate Daily QA Report" />
+        <Label layoutX="40" layoutY="70" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Inspection Checklist:" />
+
+        <CheckBox fx:id="hygieneCheck" layoutX="60" layoutY="100" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Hygiene Check" />
+
+        <CheckBox fx:id="temperatureCheck" layoutX="60" layoutY="130" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Temperature Check" />
+
+        <CheckBox fx:id="equipmentCheck" layoutX="60" layoutY="160" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Equipment Cleanliness" />
+
+        <CheckBox fx:id="livestockConditionCheck" layoutX="60" layoutY="190" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Livestock Condition" />
+
+        <CheckBox fx:id="storageCleanlinessCheck" layoutX="60" layoutY="220" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Storage Cleanliness" />
+
+        <CheckBox fx:id="packagingQualityCheck" layoutX="60" layoutY="250" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Packaging Quality" />
+        <Label layoutX="327.0" layoutY="78.0" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Notes:" />
+        <Button layoutX="464.0" layoutY="350.0" onAction="#generateReportButton" prefWidth="150" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Generate Report" />
+        <Label fx:id="outputLabel" layoutX="260" layoutY="330" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="" />
+        <Button layoutX="40" layoutY="350" onAction="#checkReportButton" prefWidth="150" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Check Reports" />
+        <TableView fx:id="reportTable" layoutX="40" layoutY="390" prefHeight="150" prefWidth="610">
+            <columns>
+                <TableColumn fx:id="reportIdCol" prefWidth="100" text="Report ID" />
+                <TableColumn fx:id="dateCol" prefWidth="150" text="Date" />
+                <TableColumn fx:id="statusCol" prefWidth="150" text="Status" />
+                <TableColumn fx:id="reviewCol" prefWidth="150" text="Reviewed" />
+            </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+
+        </TableView>
+        <Button layoutX="486.0" layoutY="543.0" onAction="#downloadPDFButton" prefWidth="150" style="-fx-text-fill: #dc942f; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-style: italic;" text="Download PDF" />
+      <TextField fx:id="notesTextField" layoutX="320.0" layoutY="105.0" prefHeight="101.0" prefWidth="269.0" />
+
+    </children>
+
+</AnchorPane>

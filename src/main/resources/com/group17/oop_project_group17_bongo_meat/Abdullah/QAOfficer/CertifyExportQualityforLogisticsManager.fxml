@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.CertifyExportQualityforLogisticsManagerController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="420.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.CertifyExportQualityforLogisticsManagerController">
+
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <VBox layoutX="40" layoutY="25" prefWidth="540" spacing="12">
+
+        <!-- PAGE TITLE -->
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #dc942f;" text="Export Quality Certification" />
+
+        <!-- EXPORT ORDERS -->
+        <Label style="-fx-text-fill: #dc942f;" text="Select Export Order:" />
+        <ComboBox fx:id="exportOrderCombo" promptText="Choose export order" />
+
+        <!-- DOCUMENTATION SECTION -->
+        <Label style="-fx-text-fill: #dc942f;" text="Required Quality Documents:" />
+        <ListView fx:id="documentList" prefHeight="120" />
+
+        <!-- REVIEW BUTTON & CERTIFICATE BUTTON -->
+        <HBox spacing="10">
+            <Button fx:id="reviewBtn" style="-fx-background-color: #dc942f; -fx-text-fill: white;" text="Review Documentation" />
+            <Button fx:id="generateCertBtn" style="-fx-background-color: #dc942f; -fx-text-fill: white;" text="Generate Certificate" />
+        </HBox>
+
+        <!-- NEW: PDF DOWNLOAD BUTTON -->
+        <Button fx:id="downloadPdfBtn" style="-fx-background-color: #dc942f; -fx-text-fill: white;" text="Download PDF Certificate" />
+
+        <!-- STATUS LABEL -->
+        <Label fx:id="statusLabel" style="-fx-text-fill: #dc942f; -fx-font-weight: bold;" text="" />
+    </VBox>
 
 </AnchorPane>

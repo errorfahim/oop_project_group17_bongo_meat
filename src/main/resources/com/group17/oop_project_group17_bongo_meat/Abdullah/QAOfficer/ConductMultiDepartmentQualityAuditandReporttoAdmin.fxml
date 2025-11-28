@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.ConductMultiDepartmentQualityAuditandReporttoAdminController"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.MultiDepartmentAuditController"
+            prefHeight="500.0" prefWidth="650.0">
 
+    <children>
+        <VBox spacing="12" layoutX="30" layoutY="25" prefWidth="590">
+
+            <!-- TITLE -->
+            <Label text="Multi-Department Quality Audit"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-font-style: italic; -fx-text-fill: #dc942f;" />
+
+            <!-- DATE RANGE -->
+            <Label text="Select Date Range:"
+                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <HBox spacing="10">
+                <DatePicker fx:id="startDate" promptText="Start Date" />
+                <DatePicker fx:id="endDate" promptText="End Date" />
+            </HBox>
+
+            <!-- DEPARTMENT SELECTION -->
+            <Label text="Select Departments:"
+                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <VBox spacing="5">
+                <CheckBox fx:id="farmDept" text="Farm" />
+                <CheckBox fx:id="slaughterDept" text="Slaughterhouse" />
+                <CheckBox fx:id="logisticsDept" text="Logistics" />
+                <CheckBox fx:id="deliveryDept" text="Delivery" />
+            </VBox>
+
+            <!-- AUDIT TYPE -->
+            <Label text="Audit Type:"
+                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <ComboBox fx:id="auditTypeCombo" promptText="Select audit type" />
+
+            <!-- GENERATE REPORT BUTTON -->
+            <Button fx:id="generateReportBtn"
+                    text="Generate Audit Report"
+                    style="-fx-background-color: #dc942f; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-style: italic;"
+                    prefWidth="200" />
+
+            <!-- CHART PLACEHOLDER -->
+            <Label text="Audit Performance Chart:"
+                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <Pane fx:id="chartPane"
+                  prefHeight="200"
+                  style="-fx-border-color: #dc942f; -fx-border-width: 1;" />
+
+            <!-- OBSERVATIONS -->
+            <Label text="Officer Observations:"
+                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <TextArea fx:id="observationArea" prefHeight="100" />
+
+            <!-- SUBMIT BUTTON -->
+            <Button fx:id="submitReportBtn"
+                    text="Submit Report to Admin"
+                    style="-fx-background-color: #dc942f; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-style: italic;"
+                    prefWidth="220" />
+
+            <!-- STATUS LABEL -->
+            <Label fx:id="statusLabel"
+                   style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic;" />
+
+        </VBox>
+    </children>
 </AnchorPane>

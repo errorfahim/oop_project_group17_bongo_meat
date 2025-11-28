@@ -7,72 +7,118 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="561.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.RecordIncomingLivestockController">
-   <children>
-      <Button layoutX="25.0" layoutY="27.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="515.0" layoutY="27.0" mnemonicParsing="false" onAction="#logOutButton" text="Log Out" textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="526.0" layoutY="346.0" mnemonicParsing="false" onAction="#nextButton" text="Next" textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Label fx:id="recordIncomingTextField" layoutX="40.0" layoutY="81.0" prefHeight="29.0" prefWidth="191.0" text="Record Incoming Livestock" textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="numberOfAnimalsTextField" layoutX="179.0" layoutY="142.0" />
-      <ComboBox fx:id="typeComboBox" layoutX="179.0" layoutY="231.0" prefWidth="150.0" />
-      <ComboBox fx:id="healthObservationComboBox" layoutX="179.0" layoutY="279.0" prefWidth="150.0" />
-      <Label layoutX="39.0" layoutY="146.0" text="Number Of Animals : " textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-      <Label layoutX="40.0" layoutY="235.0" text="Type /Breed" textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-      <Label layoutX="39.0" layoutY="283.0" text="Health Observation: " textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-      <TextField fx:id="weightTextField" layoutX="180.0" layoutY="188.0" />
-      <Label layoutX="40.0" layoutY="192.0" text="Weight: " textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-      <Label fx:id="outputLabel" layoutX="386.0" layoutY="146.0" text="Add succefully / unsuccessfully" />
-      <ComboBox fx:id="batchNumberComboBox" layoutX="180.0" layoutY="321.0" prefWidth="150.0" />
-      <Label layoutX="40.0" layoutY="325.0" text="Batch Number: " textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TableView fx:id="recorderIncomingTableView" layoutY="406.0" prefHeight="153.0" prefWidth="600.0">
-        <columns>
-          <TableColumn fx:id="batchIdColumn" prefWidth="75.0" text="Batch Id" />
-          <TableColumn fx:id="batchNumberColumn" prefWidth="98.0" text="Batch Number" />
-            <TableColumn fx:id="numberOfAnimalsColumn" prefWidth="126.66671752929688" text="Number of Animals" />
-            <TableColumn fx:id="weightColoumn" prefWidth="86.6666259765625" text="Weight" />
-            <TableColumn fx:id="typeColumn" prefWidth="86.6666259765625" text="Type" />
-            <TableColumn fx:id="healthObservationColumn" prefWidth="124.66668701171875" text="Health Observation" />
-        </columns>
-      </TableView>
-      <TextField fx:id="batchIdTextField" layoutX="180.0" layoutY="361.0" />
-      <Label layoutX="43.0" layoutY="365.0" text="Batch Id: " textFill="#dc942f">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-   </children>
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.RecordIncomingLivestockController">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button layoutX="20" layoutY="20" onAction="#backButton" text="Back" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="17" />
+            </font>
+        </Button>
+
+        <!-- Title -->
+        <Label layoutX="30" layoutY="70" text="Record Incoming Livestock" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="20" />
+            </font>
+        </Label>
+
+        <!-- Separator Line -->
+        <Line endX="300" layoutX="30" layoutY="105" startX="0" stroke="#dc942f" />
+
+        <!-- Animal Type -->
+        <Label layoutX="40" layoutY="140" text="Animal Type:" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+
+        <ComboBox fx:id="typeComboBox" layoutX="200" layoutY="138" prefWidth="180" promptText="Select Type" />
+
+        <!-- Breed -->
+        <Label layoutX="40" layoutY="185" text="Breed:" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+
+        <TextField fx:id="breedTextField" layoutX="200" layoutY="183" prefWidth="180" promptText="Enter Breed" />
+
+        <!-- Quantity -->
+        <Label layoutX="40" layoutY="230" text="Quantity:" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+
+        <TextField fx:id="quantityTextField" layoutX="200" layoutY="228" prefWidth="180" promptText="Enter Quantity" />
+
+        <!-- Weight -->
+        <Label layoutX="40" layoutY="275" text="Weight:" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+
+        <TextField fx:id="weightTextField" layoutX="200" layoutY="273" prefWidth="180" promptText="Enter Weight" />
+
+        <!-- Health Observation -->
+        <Label layoutX="40" layoutY="320" text="Health Observation:" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+
+        <TextField fx:id="healthObservationTextField" layoutX="200" layoutY="318" prefWidth="240" promptText="Enter Observation" />
+
+        <!-- Generate Batch ID Button -->
+        <Button layoutX="40" layoutY="365" onAction="#generateBatchIDButton" text="Generate Batch ID" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="15" />
+            </font>
+        </Button>
+
+        <!-- Batch Output -->
+        <Label fx:id="batchOutputLabel" layoutX="200" layoutY="370" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+
+        <!-- Save Button -->
+        <Button layoutX="650" layoutY="365" onAction="#saveRecordButton" text="Save Record" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="15" />
+            </font>
+        </Button>
+
+        <!-- Output Label -->
+        <Label fx:id="outputLabel" layoutX="200" layoutY="420" prefWidth="350" textFill="#dc942f">
+            <font>
+                <Font name="System Bold" size="16" />
+            </font>
+        </Label>
+
+        <!-- Table -->
+        <TableView fx:id="recorderIncomingTableView" layoutX="31.0" layoutY="405.0">
+            <columns>
+                <TableColumn fx:id="batchIDColumn" text="Batch ID" />
+                <TableColumn fx:id="typeColumn" text="Type" />
+                <TableColumn fx:id="quantityColumn" text="Quantity" />
+                <TableColumn fx:id="weightColumn" prefWidth="67.33331298828125" text="Weight" />
+                <TableColumn fx:id="healthObservationColumn" prefWidth="120.0" text="Health Observation" />
+                <TableColumn fx:id="breedColumn" text="Breed" />
+            </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+        </TableView>
+
+    </children>
+
 </AnchorPane>
