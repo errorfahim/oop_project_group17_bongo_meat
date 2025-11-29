@@ -4,7 +4,7 @@ module com.group17.oop_project_group17_bongo_meat {
     requires java.desktop;
     requires javafx.graphics;
     requires javafx.base;
-    requires com.group17.oop_project_group17_bongo_meat;
+
 
 
     // Main package
