@@ -88,6 +88,12 @@ public class LoginController
                     switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Admin/AdminDashboard.fxml", actionEvent);}
                 else if (inputUserType.equals("SlaughterHouseSupervisior")) {
                     switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/SlaughterHouseSupervisiorDashboard.fxml", actionEvent);}
+                else if (inputUserType.equals("LogisticManager")) {
+                    switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/logisticManagerDashboard.fxml", actionEvent);}
+                else if (inputUserType.equals("VeterinaryOfficer")) {
+                    switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/veterinaryOfficerDashboard.fxml", actionEvent);}
+
+
                 return;
             }
         }

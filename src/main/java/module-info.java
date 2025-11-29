@@ -32,6 +32,7 @@ module com.group17.oop_project_group17_bongo_meat {
     //QA officer
     opens com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer;
+
     //logistic manager
     opens com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager;
