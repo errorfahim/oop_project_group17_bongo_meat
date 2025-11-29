@@ -1,18 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer.VeterinaryOfficerDashboardController">
    <children>
-      <Button layoutX="107.0" layoutY="110.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="502.0" layoutY="435.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="490.0" layoutY="338.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="464.0" layoutY="210.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="476.0" layoutY="120.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="117.0" layoutY="422.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="117.0" layoutY="338.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="117.0" layoutY="210.0" mnemonicParsing="false" text="Button" />
+      <Label layoutX="246.0" layoutY="25.0" prefHeight="35.0" prefWidth="207.0" text="Veterinary Officer" textFill="#dc942f" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="247.59999999999997" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="266.0" layoutY="78.0" text="Name :" />
+      <Label layoutX="219.0" layoutY="145.0" text="Welcome to the Veterinary World" textFill="#dc942f">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="106.0" text="1331619" />
+      <Label layoutX="247.0" layoutY="106.0" text="Veterinary ID :" />
+      <Label layoutX="337.0" layoutY="78.0" text="Dr. Zainab Reem" />
+      <Line endX="332.7999267578125" endY="-8.800003051757812" layoutX="320.0" layoutY="186.0" startX="-274.3999938964844" startY="-8.800003051757812" />
+      <Label layoutX="196.0" layoutY="187.0" text="Press the Button to execute tasks." textFill="#dc942f" />
+      <VBox fx:id="buttonsVBox" layoutX="48.0" layoutY="215.0" prefHeight="343.0" prefWidth="474.0" spacing="15.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="178.4000000000001" AnchorPane.topAnchor="215.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#animalHealthCheckupButtonOnAction" prefHeight="0.0" prefWidth="476.0" style="-fx-background-color: #dc942f;" text="Animal Health Checkup">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#vaccinationRecordButtonOnAction" prefHeight="26.0" prefWidth="522.0" style="-fx-background-color: #dc942f;" text="Vaccination Record">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#preSlaughterInspectionButtonOnAction" prefHeight="26.0" prefWidth="528.0" style="-fx-background-color: #dc942f;" text="Pre-Slaughter Inspection">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#meatQualityTestButtonOnAction" prefHeight="26.0" prefWidth="518.0" style="-fx-background-color: #dc942f;" text="Meat Quality Test">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#medicineInventoryButtonOnAction" prefHeight="26.0" prefWidth="590.0" style="-fx-background-color: #dc942f;" text="Medicine Inventory">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#feedingandNutritionDataRecordButtonOnAction" prefHeight="26.0" prefWidth="565.0" style="-fx-background-color: #dc942f;" text="Feeding and Nutrition Data Record">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#diseaseOutbreakAlertsButtonOnAction" prefHeight="26.0" prefWidth="550.0" style="-fx-background-color: #dc942f;" text="Disease Outbreak Alerts">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" lineSpacing="15.0" mnemonicParsing="false" onAction="#veterinaryActivityReportsButtonOnAction" prefHeight="26.0" prefWidth="547.0" style="-fx-background-color: #dc942f;" text="Veterinary Activity Reports">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Line endX="-100.0" endY="315.4000244140625" layoutX="656.0" layoutY="252.0" startX="-100.0" startY="-47.0" stroke="#dc942f" />
+      <Button layoutX="594.0" layoutY="518.0" mnemonicParsing="false" onAction="#backOutButtonOnAction" text="Back Out" textFill="#dc942f">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="592.0" layoutY="491.0" text="If bored ,then" />
    </children>
 </AnchorPane>

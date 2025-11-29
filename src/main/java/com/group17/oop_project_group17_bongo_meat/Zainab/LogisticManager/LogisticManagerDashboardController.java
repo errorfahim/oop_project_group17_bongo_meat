@@ -20,8 +20,6 @@ public class LogisticManagerDashboardController {
     private Label iDLabel;
     @javafx.fxml.FXML
     private Label nameLabel;
-    @javafx.fxml.FXML
-    private Button backOutButtonOnAction;
 
     @javafx.fxml.FXML
     public void exportContainerAllocationButtonOnAction(ActionEvent actionEvent) throws IOException {
@@ -62,6 +60,11 @@ public class LogisticManagerDashboardController {
     @javafx.fxml.FXML
     public void warehouseDispatchButtonOnAction(ActionEvent actionEvent) throws IOException {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/warehouseDispatchView.fxml", actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void backOutButtonOnAction(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/login.fxml", actionEvent);
     }
 }
 

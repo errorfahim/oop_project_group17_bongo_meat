@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer.AnimalHealthCheckFormController"
-            prefHeight="580.0" prefWidth="700.0">
 
+<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer.AnimalHealthCheckFormController">
+   <children>
+      <Label layoutX="213.0" layoutY="26.0" prefHeight="35.0" prefWidth="275.0" text="Animal Health Checkup" textFill="#dc942f" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="212.60000000000002" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="46.0" layoutY="70.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="608.0" text="Load Health Cheakup Batch" textFill="#dc942f" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView layoutX="46.0" layoutY="96.0" prefHeight="74.0" prefWidth="608.0">
+        <columns>
+          <TableColumn prefWidth="149.60004425048828" text="Batch ID" />
+          <TableColumn prefWidth="116.7999267578125" text="Animal Count" />
+            <TableColumn prefWidth="165.60003662109375" text="Last Check Date" />
+            <TableColumn prefWidth="175.99996948242188" text="Status" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="46.0" layoutY="182.0" prefHeight="18.0" prefWidth="608.0" text="*Selected Batch for Inspection*" />
+      <Label layoutX="100.0" layoutY="205.0" prefHeight="18.0" prefWidth="166.0" text="Health Assessment Data" textFill="#dc942f">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="408.0" text="Injury Notes :" />
+      <Label layoutX="42.0" layoutY="371.0" text="Hydration Level :" />
+      <Label layoutX="56.0" layoutY="326.0" text="Behavior :" />
+      <Label layoutX="51.0" layoutY="279.0" text="Symptoms :" />
+      <Label layoutX="39.0" layoutY="241.0" text="Temperature (°C) :" />
+      <Label layoutX="37.0" layoutY="480.0" text="Medicine Dosage :" />
+      <Label layoutX="40.0" layoutY="442.0" text="Treatment Given :" />
+      <TextField layoutX="147.0" layoutY="237.0" prefHeight="26.0" prefWidth="158.0" />
+      <TextField layoutX="147.0" layoutY="438.0" prefHeight="26.0" prefWidth="158.0" />
+      <TextField layoutX="147.0" layoutY="476.0" prefHeight="26.0" prefWidth="158.0" />
+      <TextField layoutX="147.0" layoutY="404.0" prefHeight="26.0" prefWidth="158.0" />
+      <TextArea layoutX="147.0" layoutY="271.0" prefHeight="26.0" prefWidth="158.0" />
+      <TextArea layoutX="147.0" layoutY="315.0" prefHeight="26.0" prefWidth="158.0" />
+      <ComboBox layoutX="147.0" layoutY="366.0" prefHeight="26.0" prefWidth="158.0" />
+      <Button alignment="CENTER" layoutX="42.0" layoutY="527.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: #dc942f;" text="Validate Entry">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="463.0" layoutY="237.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" style="-fx-background-color: #dc942f;" text="Save Health Check">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="-99.99996948242188" endY="320.39996337890625" layoutX="460.0" layoutY="234.0" startX="-99.99996948242188" startY="-18.800003051757812" stroke="#dc942f" />
+      <Label alignment="CENTER" layoutX="418.0" layoutY="270.0" prefHeight="18.0" prefWidth="235.0" text="*Updated health record save*" />
+      <Label layoutX="173.0" layoutY="531.0" text="*Success/Error messages*" />
+      <Button alignment="CENTER" layoutX="426.0" layoutY="353.0" mnemonicParsing="false" text="Generate Certificate" textFill="#dc942f">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="410.0" layoutY="305.0" text="Generates a Veterinary Health Certificate" textFill="#dc942f">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="586.0" layoutY="296.0" startX="-192.39999389648438" />
+      <Label layoutX="427.0" layoutY="429.0" text="*Certificate Generated Successfully! or Error*" />
+      <Label layoutX="402.0" layoutY="455.0" text="Adds to supervisor queue and Notify Fram Manager" />
+      <Button layoutX="466.0" layoutY="489.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="165.0" text="Submit " textFill="#dc942f">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="581.0" layoutY="527.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #dc942f;" text="Return">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextArea layoutX="559.0" layoutY="338.0" prefHeight="81.0" prefWidth="98.0" promptText="Batch IDVet licenseTimestampHealth status" text="Batch ID&#10;Vet license&#10;Timestamp&#10;Health status" />
+   </children>
 </AnchorPane>
