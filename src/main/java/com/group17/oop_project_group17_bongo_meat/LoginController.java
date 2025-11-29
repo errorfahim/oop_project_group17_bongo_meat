@@ -33,13 +33,15 @@ public class LoginController
     @javafx.fxml.FXML
     public void initialize() {
         // Add default user types
-        userTypeCB.getItems().addAll("Admin","FarmManager", "Customer", "Delivery staff","QAOfficer","SlaughterHouseSupervisior","vaterinaryOfficer","Logistic");
+        userTypeCB.getItems().addAll("Admin","FarmManager", "Customer", "Delivery staff","QAOfficer","SlaughterHouseSupervisior","Veterinary Officer","Logistic Manager");
 
         // Add some demo accounts to ArrayList
         users.add(new Login("admin@gmail.com", "12345", "Admin"));
         users.add(new Login("customer@gmail.com", "123", "Customer"));
         users.add(new Login("deliveryman@gmail.com", "456", "Delivery staff"));
         users.add(new Login("supervisior@gmail.com", "0123", "SlaughterHouseSupervisior"));
+        users.add(new Login("logisticManager@gmail.com", "9870", "LogisticManager"));
+        users.add(new Login("veterinaryOfficer@gmail.com", "6540", "VeterinaryOfficer"));
         loadCustomersFromFile();
     }
 

@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.group17.oop_project_group17_bongo_meat.SceneSwitcher.switchTo;
+
 public class LogisticManagerDashboardController {
     @javafx.fxml.FXML
     private VBox buttonsVBox;
@@ -23,99 +25,43 @@ public class LogisticManagerDashboardController {
 
     @javafx.fxml.FXML
     public void exportContainerAllocationButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Zainab/exportContainerAllocationForm.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Export Container Allocation Form");
-        stage.show();
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/exportContainerAllocationForm.fxml", actionEvent);
     }
 
 
     @javafx.fxml.FXML
     public void transportScheduleButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Zainab/transportScheduleForm.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Transport Schedule Form");
-        stage.show();
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/transportScheduleForm.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
     public void packagingInventoryButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Zainab/packagingInventoryView.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Packaging Inventory View");
-        stage.show();
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/packagingInventoryView.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
     public void coldChainButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Zainab/coldChainMonitorView.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Cold Chain Monitor View");
-        stage.show();
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/coldChainMonitorView.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
     public void exportClearanceButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Zainab/exportClearanceForm.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Export Clearance Form");
-        stage.show();
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/exportClearanceForm.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
     public void fleetMaintenanceButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Zainab/fleetMaintenanceView.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Fleet Maintenance View");
-        stage.show();
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/fleetMaintenanceView.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
     public void packagingCoordinationButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Zainab/packagingCoordinationForm.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Packaging Coordination Form");
-        stage.show();
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/packagingCoordinationForm.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
     public void warehouseDispatchButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Zainab/warehouseDispatchView.fxml"));
-        root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Warehouse Dispatch");
-        stage.show();
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/warehouseDispatchView.fxml", actionEvent);
     }
 }
 
