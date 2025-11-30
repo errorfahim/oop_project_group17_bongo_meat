@@ -22,8 +22,6 @@ public class RecordSlaughterProcessDataController
     @javafx.fxml.FXML
     private TableColumn batchIDColumn;
     @javafx.fxml.FXML
-    private TableColumn finishingColumn;
-    @javafx.fxml.FXML
     private TextField observationTextField;
 
     @javafx.fxml.FXML

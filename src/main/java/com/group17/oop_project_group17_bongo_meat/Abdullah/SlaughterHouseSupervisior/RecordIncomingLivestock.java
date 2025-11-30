@@ -5,6 +5,8 @@ import java.io.Serializable;
 
 public class RecordIncomingLivestock implements Serializable {
 
+    private static final long serialVersionUID = 1L; // Added for safe serialization
+
     private String batchID;
     private String type;
     private String breed;
@@ -14,7 +16,6 @@ public class RecordIncomingLivestock implements Serializable {
 
     public RecordIncomingLivestock(String batchID, String type, String breed,
                                    int quantity, double weight, String healthObservation) {
-
         this.batchID = batchID;
         this.type = type;
         this.breed = breed;
@@ -30,10 +31,20 @@ public class RecordIncomingLivestock implements Serializable {
     public DoubleProperty weightProperty() { return new SimpleDoubleProperty(weight); }
     public StringProperty healthObservationProperty() { return new SimpleStringProperty(healthObservation); }
 
+    // --- Standard getters ---
     public String getBatchID() { return batchID; }
     public String getType() { return type; }
     public String getBreed() { return breed; }
     public int getQuantity() { return quantity; }
     public double getWeight() { return weight; }
     public String getHealthObservation() { return healthObservation; }
+
+    // --- Optional setters ---
+    public void setBatchID(String batchID) { this.batchID = batchID; }
+    public void setType(String type) { this.type = type; }
+    public void setBreed(String breed) { this.breed = breed; }
+    public void setQuantity(int quantity) { this.quantity = quantity; }
+    public void setWeight(double weight) { this.weight = weight; }
+    public void setHealthObservation(String healthObservation) { this.healthObservation = healthObservation; }
 }
+

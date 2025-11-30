@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SceneSwitcher {
-    public static Stage stage;
 
     public static void switchTo(String fxml, ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(
@@ -18,13 +17,6 @@ public class SceneSwitcher {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
-    }
-
-    public static void switchTo(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource(fxml)
-        );
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
+        stage.show();
     }
 }

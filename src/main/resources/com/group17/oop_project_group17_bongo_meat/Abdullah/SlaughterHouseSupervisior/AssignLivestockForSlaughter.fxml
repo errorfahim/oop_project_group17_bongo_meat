@@ -24,7 +24,6 @@
                 <TableColumn fx:id="qaStatusColumn" prefWidth="69.3333740234375" text="QA Status" />
                 <TableColumn fx:id="typeColumn" prefWidth="68.6666259765625" text="Type" />
                 <TableColumn fx:id="noteColumn" prefWidth="48.00006103515625" text="Note" />
-            <TableColumn fx:id="finishTimeColumn" prefWidth="123.33331298828125" text="Estimate Finish Time" />
             </columns>
             <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -93,12 +92,6 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
-      <DatePicker fx:id="finishTime" layoutX="232.0" layoutY="288.0" />
-      <Label layoutX="33.0" layoutY="287.0" text="Estimate Finish Time:" textFill="#dc942f">
-         <font>
-            <Font name="System Bold Italic" size="18.0" />
-         </font>
-      </Label>
 
     </children>
 

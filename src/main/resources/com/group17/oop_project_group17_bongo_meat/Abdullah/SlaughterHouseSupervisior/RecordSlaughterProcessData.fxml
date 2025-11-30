@@ -24,7 +24,6 @@
                 <TableColumn fx:id="animalTypeColumn" prefWidth="101.33336639404297" text="Animal Type" />
                 <TableColumn fx:id="staffColumn" prefWidth="146.00001525878906" text="Assigned Staff" />
                 <TableColumn fx:id="timeColumn" prefWidth="86.0" text="Assign Time" />
-            <TableColumn fx:id="finishingColumn" prefWidth="114.0" text=" Finishing Time" />
             <TableColumn fx:id="quantityColumn" prefWidth="164.66665649414062" text="Quantity" />
             </columns>
          <columnResizePolicy>

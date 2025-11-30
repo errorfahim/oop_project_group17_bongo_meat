@@ -1,6 +1,9 @@
 package com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior;
 
 import javafx.event.ActionEvent;
+
+import java.io.IOException;
+
 import static com.group17.oop_project_group17_bongo_meat.SceneSwitcher.switchTo;
 
 public class SlaughterHouseSupervisiorDashboardController {
@@ -11,13 +14,13 @@ public class SlaughterHouseSupervisiorDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void recordIncomingLivestockButton(ActionEvent actionEvent) throws Exception {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/RecordIncomingLivestock.fxml", actionEvent);
+    public void incomingLivestockVetInspectionRequestButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/IncomingLivestockVetInspectionRequest.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void vetCheckRequestButton(ActionEvent actionEvent) throws Exception {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/VetCheckRequest.fxml", actionEvent);
+    public void recordIncomingLivestockButton(ActionEvent actionEvent) throws Exception {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/RecordIncomingLivestock.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -26,8 +29,8 @@ public class SlaughterHouseSupervisiorDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void qaInspectionRequestButton(ActionEvent actionEvent) throws Exception {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/QAInspectionRequest.fxml", actionEvent);
+    public void requestQAForIncomingLivestockButton(ActionEvent actionEvent) throws Exception {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/RequestQAForIncomingLivestock.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -53,10 +56,5 @@ public class SlaughterHouseSupervisiorDashboardController {
     @javafx.fxml.FXML
     public void logOutButton(ActionEvent actionEvent) throws Exception {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Login.fxml", actionEvent);
-    }
-
-    @javafx.fxml.FXML
-    public void nextButton(ActionEvent actionEvent) {
-        // Future features
     }
 }

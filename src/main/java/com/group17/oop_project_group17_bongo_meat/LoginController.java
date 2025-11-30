@@ -42,6 +42,7 @@ public class LoginController
         users.add(new Login("supervisior@gmail.com", "0123", "SlaughterHouseSupervisior"));
         users.add(new Login("logisticManager@gmail.com", "9870", "Logistic Manager"));
         users.add(new Login("veterinaryOfficer@gmail.com", "6540", "Veterinary Officer"));
+        users.add(new Login("qaofficer@gmail.com", "007", "QAOfficer"));
         loadCustomersFromFile();
     }
 
@@ -92,6 +93,8 @@ public class LoginController
                     switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/logisticManagerDashboard.fxml", actionEvent);}
                 else if (inputUserType.equals("Veterinary Officer")) {
                     switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/VeterinaryOfficer/veterinaryOfficerDashboard.fxml", actionEvent);}
+                else if (inputUserType.equals("QAOfficer")) {
+                    switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/QAOfficerDashboard.fxml", actionEvent);}
 
 
                 return;

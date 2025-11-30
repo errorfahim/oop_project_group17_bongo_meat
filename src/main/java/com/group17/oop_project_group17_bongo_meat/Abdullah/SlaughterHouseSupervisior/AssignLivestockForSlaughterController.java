@@ -31,10 +31,6 @@ public class AssignLivestockForSlaughterController
     private TextField quantityTextField;
     @javafx.fxml.FXML
     private TableView assignTableView;
-    @javafx.fxml.FXML
-    private DatePicker finishTime;
-    @javafx.fxml.FXML
-    private TableColumn finishTimeColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

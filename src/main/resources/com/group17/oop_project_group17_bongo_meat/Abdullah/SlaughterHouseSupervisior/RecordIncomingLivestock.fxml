@@ -13,25 +13,18 @@
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.RecordIncomingLivestockController">
 
     <children>
-
-        <!-- Back Button -->
         <Button layoutX="20" layoutY="20" onAction="#backButton" text="Back" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="17" />
             </font>
         </Button>
-
-        <!-- Title -->
         <Label layoutX="30" layoutY="70" text="Record Incoming Livestock" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="20" />
             </font>
         </Label>
-
-        <!-- Separator Line -->
         <Line endX="300" layoutX="30" layoutY="105" startX="0" stroke="#dc942f" />
 
-        <!-- Animal Type -->
         <Label layoutX="40" layoutY="140" text="Animal Type:" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="16" />
@@ -40,7 +33,7 @@
 
         <ComboBox fx:id="typeComboBox" layoutX="200" layoutY="138" prefWidth="180" promptText="Select Type" />
 
-        <!-- Breed -->
+
         <Label layoutX="40" layoutY="185" text="Breed:" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="16" />
@@ -49,7 +42,7 @@
 
         <TextField fx:id="breedTextField" layoutX="200" layoutY="183" prefWidth="180" promptText="Enter Breed" />
 
-        <!-- Quantity -->
+
         <Label layoutX="40" layoutY="230" text="Quantity:" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="16" />
@@ -58,7 +51,7 @@
 
         <TextField fx:id="quantityTextField" layoutX="200" layoutY="228" prefWidth="180" promptText="Enter Quantity" />
 
-        <!-- Weight -->
+
         <Label layoutX="40" layoutY="275" text="Weight:" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="16" />
@@ -67,7 +60,7 @@
 
         <TextField fx:id="weightTextField" layoutX="200" layoutY="273" prefWidth="180" promptText="Enter Weight" />
 
-        <!-- Health Observation -->
+
         <Label layoutX="40" layoutY="320" text="Health Observation:" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="16" />
@@ -76,35 +69,29 @@
 
         <TextField fx:id="healthObservationTextField" layoutX="200" layoutY="318" prefWidth="240" promptText="Enter Observation" />
 
-        <!-- Generate Batch ID Button -->
+
         <Button layoutX="40" layoutY="365" onAction="#generateBatchIDButton" text="Generate Batch ID" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="15" />
             </font>
         </Button>
 
-        <!-- Batch Output -->
+
         <Label fx:id="batchOutputLabel" layoutX="200" layoutY="370" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="16" />
             </font>
         </Label>
-
-        <!-- Save Button -->
         <Button layoutX="650" layoutY="365" onAction="#saveRecordButton" text="Save Record" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="15" />
             </font>
         </Button>
-
-        <!-- Output Label -->
         <Label fx:id="outputLabel" layoutX="200" layoutY="420" prefWidth="350" textFill="#dc942f">
             <font>
                 <Font name="System Bold" size="16" />
             </font>
         </Label>
-
-        <!-- Table -->
         <TableView fx:id="recorderIncomingTableView" layoutX="31.0" layoutY="405.0">
             <columns>
                 <TableColumn fx:id="batchIDColumn" text="Batch ID" />

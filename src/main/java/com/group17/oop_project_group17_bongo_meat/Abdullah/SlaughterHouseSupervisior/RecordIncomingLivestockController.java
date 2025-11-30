@@ -35,7 +35,6 @@ public class RecordIncomingLivestockController {
 
     @FXML
     public void initialize() {
-
         typeComboBox.getItems().addAll("Cow", "Goat", "Sheep", "Chicken", "Other");
 
         batchIDColumn.setCellValueFactory(c -> c.getValue().batchIDProperty());
@@ -57,7 +56,6 @@ public class RecordIncomingLivestockController {
 
     @FXML
     private void saveRecordButton(ActionEvent event) {
-
         try {
             if (generatedBatchID.isEmpty()) {
                 showAlert("Generate a Batch ID first.");
@@ -68,7 +66,7 @@ public class RecordIncomingLivestockController {
             String breed = breedTextField.getText().trim();
             String healthObs = healthObservationTextField.getText().trim();
 
-            if (type == null || breed.isEmpty()) {
+            if (type == null || breed.isEmpty() || quantityTextField.getText().isEmpty() || weightTextField.getText().isEmpty()) {
                 showAlert("Please fill all fields.");
                 return;
             }
@@ -95,33 +93,35 @@ public class RecordIncomingLivestockController {
             clearFields();
             outputLabel.setText("Record successfully saved!");
 
+        } catch (NumberFormatException e) {
+            showAlert("Quantity and Weight must be numeric.");
         } catch (Exception e) {
             showAlert("Invalid input. Check your values.");
+            e.printStackTrace();
         }
     }
 
-    @Deprecated
-    private void showButton(ActionEvent event) {
-        recorderIncomingTableView.refresh();
+    private void saveRecordsToFile() {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+            out.writeObject(new ArrayList<>(livestockList)); // convert ObservableList to ArrayList
+            outputLabel.setText("Record successfully saved to file!");
+        } catch (IOException e) {
+            e.printStackTrace();
+            outputLabel.setText("Something went wrong while saving!");
+        }
     }
 
     private void loadRecordsFromFile() {
         File file = new File(FILE_NAME);
         if (!file.exists()) return;
 
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-            ArrayList<RecordIncomingLivestock> list = (ArrayList<RecordIncomingLivestock>) ois.readObject();
-            livestockList.setAll(list);
-        } catch (Exception e) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
+            ArrayList<RecordIncomingLivestock> list = (ArrayList<RecordIncomingLivestock>) in.readObject();
+            livestockList.clear();
+            livestockList.addAll(list);
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
-        }
-    }
-
-    private void saveRecordsToFile() {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
-            oos.writeObject(new ArrayList<>(livestockList));
-        } catch (IOException e) {
-            e.printStackTrace();
+            outputLabel.setText("Something went wrong while loading!");
         }
     }
 
@@ -145,3 +145,4 @@ public class RecordIncomingLivestockController {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/SlaughterHouseSupervisiorDashboard.fxml", event);
     }
 }
+

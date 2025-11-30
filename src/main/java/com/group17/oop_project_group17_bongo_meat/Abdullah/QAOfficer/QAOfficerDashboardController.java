@@ -1,58 +1,69 @@
 package com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
+import java.io.IOException;
+import static com.group17.oop_project_group17_bongo_meat.SceneSwitcher.switchTo;
 
-public class QAOfficerDashboardController
-{
-    @javafx.fxml.FXML
-    private Label qaOfficerDashboardLabel;
+public class QAOfficerDashboardController {
 
     @javafx.fxml.FXML
     public void initialize() {
+        // Optional initialization
+    }
+
+
+    @javafx.fxml.FXML
+    public void qualityClearanceManagementButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/QualityClearanceManagement.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void nextButton(ActionEvent actionEvent) {
+    public void exportQualityCertificationButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/ExportQualityCertification.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void exportQualityCertificationButton(ActionEvent actionEvent) {
+    public void customerQualityComplaintsButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/CustomerQualityComplaints.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void customerQualityComplaintsButton(ActionEvent actionEvent) {
+    public void deliveryQualityMonitoringButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/DeliveryQualityMonitoring.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void logOutButton(ActionEvent actionEvent) {
+    public void generateReport(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/GenerateReport.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void deliveryQualityMonitoringButton(ActionEvent actionEvent) {
+    public void preSlaughterBatchApprovalButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/PreSlaughterBatchApproval.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void incomingLivestockInspectionButton(ActionEvent actionEvent) {
+    public void veterinaryDocumentVerificationButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/VeterinaryDocumentVerification.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void generateReport(ActionEvent actionEvent) {
+    public void nextButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/NextScene.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void logOutButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Login.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void preSlaughterBatchApprovalButton(ActionEvent actionEvent) {
+    public void backButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/PreviousScene.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void qualityClearanceManagementButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void veterinaryDocumentVerificationButton(ActionEvent actionEvent) {
+    public void incomingQARequestButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/IncomingQARequest.fxml", actionEvent);
     }
 }
