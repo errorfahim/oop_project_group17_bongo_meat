@@ -1,14 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer.NutritionFeedingRecordController"
-            prefHeight="580.0" prefWidth="700.0">
-
+<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer.NutritionFeedingRecordController">
+   <children>
+      <AnchorPane layoutX="5.0" prefHeight="580.0" prefWidth="700.0">
+         <children>
+            <Label layoutX="248.0" layoutY="22.0" prefHeight="35.0" prefWidth="203.0" text="Animal Nutrition" textFill="#dc942f" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="248.8" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="46.0" layoutY="70.0" mnemonicParsing="false" onAction="#loadLivestockBatchButtonOnAction" prefHeight="26.0" prefWidth="608.0" text="Load livestock Batch for Scheduling Nutrition" textFill="#dc942f" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TableView fx:id="animalListTableView" layoutX="46.0" layoutY="96.0" prefHeight="74.0" prefWidth="608.0">
+               <columns>
+                  <TableColumn fx:id="animalIDCol" prefWidth="79.20001220703125" text=" Animal ID" />
+                  <TableColumn fx:id="typeCol" prefWidth="72.0" text="Type" />
+                  <TableColumn fx:id="weightCol" prefWidth="74.4000244140625" text="Weight" />
+                  <TableColumn fx:id="feedTypeCol" prefWidth="106.39996337890625" text="Feed Type" />
+                  <TableColumn fx:id="quantityCol" prefWidth="76.00006103515625" text="Quantity" />
+                  <TableColumn fx:id="feedingTimeCol" prefWidth="120.800048828125" text="Feeding Time" />
+                  <TableColumn fx:id="statusCol" prefWidth="81.5999755859375" text="Status" />
+               </columns>
+            </TableView>
+            <Label fx:id="selectedBatchMessageLabel" alignment="CENTER" layoutX="46.0" layoutY="182.0" prefHeight="18.0" prefWidth="608.0" text="*Selected Animal Batch for Nutrition Schedule*" />
+            <Label layoutX="122.0" layoutY="218.0" prefHeight="19.0" prefWidth="98.0" text="Schedule Form" textFill="#dc942f">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="383.0" text="Notes :" />
+            <Label layoutX="42.0" layoutY="333.0" text="Feeding Time :" />
+            <Label layoutX="55.0" layoutY="294.0" text="Quantity :" />
+            <Label layoutX="51.0" layoutY="254.0" text="Feed Type :" />
+            <TextArea fx:id="noteTextArea" layoutX="132.0" layoutY="373.0" prefHeight="26.0" prefWidth="158.0" />
+            <ComboBox fx:id="feedTypeComboBox" layoutX="133.0" layoutY="250.0" prefHeight="26.0" prefWidth="158.0" />
+            <Button alignment="CENTER" layoutX="33.0" layoutY="450.0" mnemonicParsing="false" onAction="#validateEntryButtonOnAction" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: #dc942f;" text="Validate Entry">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="463.0" layoutY="237.0" mnemonicParsing="false" onAction="#saveANdAssignButtonOnAction" prefHeight="26.0" prefWidth="145.0" style="-fx-background-color: #dc942f;" text="Save and Assign">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Line endX="-99.99996948242188" endY="320.39996337890625" layoutX="460.0" layoutY="234.0" startX="-99.99996948242188" startY="-18.800003051757812" stroke="#dc942f" />
+            <Label fx:id="recordSaveMessageLabel" alignment="CENTER" layoutX="422.0" layoutY="267.0" prefHeight="18.0" prefWidth="235.0" text="*Assigned feeding schedule record saved*">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Label fx:id="validationSuccessMessageLabel" layoutX="155.0" layoutY="454.0" text="*Success/Error messages*">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Button alignment="CENTER" layoutX="423.0" layoutY="360.0" mnemonicParsing="false" onAction="#generateReportButtonOnAction" text="Generate Report" textFill="#dc942f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="423.0" layoutY="306.0" text="Generates a Feeding Schedule Report" textFill="#dc942f">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="586.0" layoutY="296.0" startX="-192.39999389648438" />
+            <Label fx:id="reportGenerateMessageLabel" layoutX="431.0" layoutY="420.0" text="*Report Generated Successfully! or Error*" />
+            <Label layoutX="467.0" layoutY="454.0" text="Adds to notify Fram Manager" />
+            <Button layoutX="462.0" layoutY="476.0" mnemonicParsing="false" onAction="#submitButtonOnAction" prefHeight="26.0" prefWidth="165.0" text="Submit " textFill="#dc942f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="581.0" layoutY="527.0" mnemonicParsing="false" onAction="#returnButtonOnAction" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #dc942f;" text="Return">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextArea layoutX="559.0" layoutY="338.0" prefHeight="81.0" prefWidth="98.0" promptText="Batch IDVet licenseTimestampHealth status" text="Animal ID&#10;Feed Type&#10;Quantity&#10;Feeding Time" />
+            <ComboBox fx:id="quantityComboBox" layoutX="133.0" layoutY="290.0" prefHeight="26.0" prefWidth="158.0" />
+            <DatePicker fx:id="feedingDatePicker" layoutX="132.0" layoutY="329.0" prefHeight="26.0" prefWidth="158.0" />
+            <Label fx:id="feedingScheduleSuccessMessageLabel" layoutX="384.0" layoutY="502.0" text="*Feeding Schedule Assigned and Approved Successfully!*" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

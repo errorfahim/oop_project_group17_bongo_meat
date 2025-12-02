@@ -30,7 +30,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#coldChainButtonOnAction" prefHeight="37.0" prefWidth="581.0" style="-fx-background-color: #dc942f;" text="Cold Chain">
+            <Button mnemonicParsing="false" onAction="#coldChainButtonOnAction" prefHeight="37.0" prefWidth="581.0" style="-fx-background-color: #dc942f;" text="Cold Chain Monitor">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact name="com_itextpdf_text_Paragraph">
+    <output-path>$PROJECT_DIR$/out/artifacts/com_itextpdf_text_Paragraph</output-path>
+    <root id="root">
+      <element id="library" level="project" name="com.itextpdf.text.Paragraph" />
+    </root>
+  </artifact>
+</component>

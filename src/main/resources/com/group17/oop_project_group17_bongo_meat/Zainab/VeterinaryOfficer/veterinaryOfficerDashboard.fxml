@@ -52,7 +52,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#feedingandNutritionDataRecordButtonOnAction" prefHeight="26.0" prefWidth="565.0" style="-fx-background-color: #dc942f;" text="Feeding and Nutrition Data Record">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#feedingandNutritionDataRecordButtonOnAction" prefHeight="26.0" prefWidth="565.0" style="-fx-background-color: #dc942f;" text="Animal Nutrition">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

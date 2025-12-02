@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer.VetActivityReportController"
-            prefHeight="580.0" prefWidth="700.0">
 
+<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer.VetActivityReportController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="2.0" prefHeight="580.0" prefWidth="700.0">
+         <children>
+            <Label layoutX="190.0" layoutY="22.0" prefHeight="35.0" prefWidth="319.0" text="Veterinary Activity Reports" textFill="#dc942f" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="190.79999999999995" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="fetchSuccessMessageLabel" alignment="CENTER" layoutX="46.0" layoutY="228.0" prefHeight="18.0" prefWidth="608.0" text="*Fetch Success Message*" />
+            <Button alignment="CENTER" layoutX="287.0" layoutY="313.0" mnemonicParsing="false" onAction="#exportReportButtonOnAction" text="Export Report" textFill="#dc942f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="216.0" layoutY="254.0" prefHeight="35.0" prefWidth="257.0" text="Generates the Activity Report as PDF" textFill="#dc942f">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="reportGenerateMessageLabel" layoutX="236.0" layoutY="467.0" text="*Report Generated Successfully! or Error*" />
+            <Button layoutX="581.0" layoutY="527.0" mnemonicParsing="false" onAction="#returnButtonOnAction" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #dc942f;" text="Return">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextArea layoutX="287.0" layoutY="359.0" prefHeight="81.0" prefWidth="98.0" promptText="Batch IDVet licenseTimestampHealth status" text="Animal ID&#10;Activity Type&#10;Date&#10;Vet ID&#10;Remarks" />
+            <DatePicker fx:id="fromDatePicker" layoutX="335.0" layoutY="90.0" />
+            <Label layoutX="237.0" layoutY="94.0" text="From Date :" />
+            <DatePicker fx:id="toDatePicker" layoutX="335.0" layoutY="122.0" />
+            <Label layoutX="244.0" layoutY="126.0" text="To Date :" />
+            <Button layoutX="307.0" layoutY="192.0" mnemonicParsing="false" onAction="#fetchButtonOnAction" style="-fx-background-color: #dc942f;" text="Fetch Data">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="247.0" layoutY="158.0" text="Filter By" />
+            <ComboBox fx:id="filterComboBox" layoutX="335.0" layoutY="154.0" prefHeight="26.0" prefWidth="175.0" promptText="Batch / Animal Type / Activity Type" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

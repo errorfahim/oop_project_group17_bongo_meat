@@ -4,7 +4,8 @@ module com.group17.oop_project_group17_bongo_meat {
     requires java.desktop;
     requires javafx.graphics;
     requires javafx.base;
-
+    requires com.github.librepdf.openpdf;
+    requires itextpdf;
 
 
     // Main package
@@ -40,6 +41,5 @@ module com.group17.oop_project_group17_bongo_meat {
     //veterinary officer
     opens com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer;
-
 
 }
