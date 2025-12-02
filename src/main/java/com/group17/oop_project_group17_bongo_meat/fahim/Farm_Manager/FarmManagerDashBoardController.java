@@ -1,6 +1,10 @@
 package com.group17.oop_project_group17_bongo_meat.fahim.Farm_Manager;
 
-import java.awt.event.ActionEvent;
+import com.group17.oop_project_group17_bongo_meat.SceneSwitcher;
+
+import javafx.event.ActionEvent;
+import java.io.IOException;
+import static com.group17.oop_project_group17_bongo_meat.SceneSwitcher.switchTo;
 
 public class FarmManagerDashBoardController
 {
@@ -9,11 +13,11 @@ public class FarmManagerDashBoardController
     }
 
     @javafx.fxml.FXML
-    public void approveLivestockTransferButton(ActionEvent actionEvent) {
+    public void approveLivestockTransferButton(ActionEvent actionEvent){
     }
 
     @javafx.fxml.FXML
-    public void generateFarmProductionReportButton(ActionEvent actionEvent) {
+    public void generateFarmProductionReportButton(ActionEvent actionEvent){
     }
 
     @javafx.fxml.FXML
@@ -21,22 +25,32 @@ public class FarmManagerDashBoardController
     }
 
     @javafx.fxml.FXML
-    public void registerNewLivestockButton(ActionEvent actionEvent) {
+    public void registerNewLivestockButton(ActionEvent actionEvent) throws IOException{
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/RegisterNewLivestock.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void trackLivestockInventoryButton(ActionEvent actionEvent) {
+    public void trackLivestockInventoryButton(ActionEvent actionEvent) throws  IOException{
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/TrackLivestockInventory.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void updateLivestockHealthStatusButton(ActionEvent actionEvent) {
+    public void updateLivestockHealthStatusButton(ActionEvent actionEvent)throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/UpdateLivestockHealthStatus.fxml", actionEvent);
+    }
+
+    @Deprecated
+    public void ScheduleAnimalFeddingButton(ActionEvent actionEvent) throws IOException{
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/ScheduleAnimalFeeding.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void ScheduleAnimalFeddingButton(ActionEvent actionEvent) {
+    public void reportLivestockIssuesButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/ReportLivestockIssues.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void reportLivestockIssuesButton(ActionEvent actionEvent) {
+    public void scheduleAnimalFeddingButton(ActionEvent actionEvent) throws  IOException{
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/ScheduleAnimalFeeding.fxml", actionEvent);
     }
 }

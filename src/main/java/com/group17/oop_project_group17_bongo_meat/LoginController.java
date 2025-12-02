@@ -37,6 +37,7 @@ public class LoginController
 
         // Add some demo accounts to ArrayList
         users.add(new Login("admin@gmail.com", "12345", "Admin"));
+        users.add(new Login("fmanager@gmail.com","54321","FarmManager"));
         users.add(new Login("customer@gmail.com", "123", "Customer"));
         users.add(new Login("deliveryman@gmail.com", "456", "Delivery staff"));
         users.add(new Login("supervisior@gmail.com", "0123", "SlaughterHouseSupervisior"));
@@ -81,6 +82,7 @@ public class LoginController
                     user.getPassword().equals(inputPassword) &&
                     user.getUserType().equals(inputUserType)) {
                 showAlert(Alert.AlertType.INFORMATION, "Login Status", "Login Successful!");
+
                 if (inputUserType.equals("Customer")) {
                     switchTo("/com/group17/oop_project_group17_bongo_meat/shaika/Customer/CustomerDashboard.fxml", actionEvent);
                 } else if (inputUserType.equals("Delivery staff")) {
@@ -95,6 +97,8 @@ public class LoginController
                     switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/VeterinaryOfficer/veterinaryOfficerDashboard.fxml", actionEvent);}
                 else if (inputUserType.equals("QAOfficer")) {
                     switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/QAOfficerDashboard.fxml", actionEvent);}
+                else if (inputUserType.equals("FarmManager")) {
+                    switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/FarmManagerDashBoard.fxml", actionEvent);}
 
 
                 return;

@@ -27,7 +27,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="379.0" layoutY="232.0" mnemonicParsing="false" onAction="#ScheduleAnimalFeddingButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Schedule Animal Feeding">
+      <Button layoutX="379.0" layoutY="232.0" mnemonicParsing="false" onAction="#scheduleAnimalFeddingButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Schedule Animal Feeding">
          <font>
             <Font size="18.0" />
          </font>
