@@ -61,7 +61,7 @@ public class RegisterNewLivestockController
     @javafx.fxml.FXML
     public void initialize() {
         // Initialize ComboBox values
-        animalTypeCB.getItems().addAll("Cow", "Sheep", "Goat", "Chicken", "Pig", "Duck", "Turkey");
+        animalTypeCB.getItems().addAll("Cow", "Sheep", "Goat", "Chicken", "Duck", "Turkey");
         sourceCB.getItems().addAll("Purchase", "Birth", "Donation", "Transfer");
         availabilityCB.getItems().addAll("Available", "Sold", "Deceased", "Transferred");
         healthStatusCB.getItems().addAll("Healthy", "Sick", "Under Treatment", "Recovering");

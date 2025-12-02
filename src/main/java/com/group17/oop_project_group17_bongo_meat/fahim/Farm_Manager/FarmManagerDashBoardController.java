@@ -44,13 +44,14 @@ public class FarmManagerDashBoardController
         switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/ScheduleAnimalFeeding.fxml", actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void reportLivestockIssuesButton(ActionEvent actionEvent) throws IOException {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/ReportLivestockIssues.fxml", actionEvent);
-    }
 
     @javafx.fxml.FXML
     public void scheduleAnimalFeddingButton(ActionEvent actionEvent) throws  IOException{
         switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/ScheduleAnimalFeeding.fxml", actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void farmInstrumentInventoryButton (ActionEvent actionEvent) throws IOException{
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/FarmInstrumentInventory.fxml", actionEvent);
     }
 }

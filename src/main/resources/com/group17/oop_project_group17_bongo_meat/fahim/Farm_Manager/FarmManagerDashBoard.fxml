@@ -42,7 +42,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="41.0" layoutY="456.0" mnemonicParsing="false" onAction="#reportLivestockIssuesButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Report Livestock Issues">
+      <Button layoutX="41.0" layoutY="456.0" mnemonicParsing="false" onAction="#farmInstrumentInventoryButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Farm Instrument Inventory">
          <font>
             <Font size="18.0" />
          </font>
