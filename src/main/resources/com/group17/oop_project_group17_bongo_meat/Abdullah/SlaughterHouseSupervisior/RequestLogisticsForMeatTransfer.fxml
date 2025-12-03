@@ -27,36 +27,30 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="74.0" layoutY="227.0" text="Meat Type: " textFill="#dc942f">
+      <Label layoutX="74.0" layoutY="155.0" text="Meat Type: " textFill="#dc942f">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="51.0" layoutY="269.0" text="Total Weight (Kg) :" textFill="#dc942f">
+      <Label layoutX="51.0" layoutY="202.0" text="Total Weight :" textFill="#dc942f">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="26.0" layoutY="357.0" text="Estimate Arrival Time : " textFill="#dc942f">
+      <Label layoutX="32.0" layoutY="302.0" text="Estimate Arrival Time : " textFill="#dc942f">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="weightTextField" layoutX="254.0" layoutY="270.0" />
-      <ComboBox fx:id="typeComboBox" layoutX="254.0" layoutY="228.0" prefWidth="150.0" />
-      <DatePicker fx:id="arrivalTimeDatePicker" layoutX="243.0" layoutY="358.0" />
-      <DatePicker fx:id="slaughterTimeDatePicker" layoutX="242.0" layoutY="313.0" />
-      <Label layoutX="51.0" layoutY="312.0" text="Slaughter Time : " textFill="#dc942f">
+      <TextField fx:id="weightTextField" layoutX="243.0" layoutY="203.0" />
+      <ComboBox fx:id="typeComboBox" layoutX="243.0" layoutY="156.0" prefWidth="150.0" />
+      <DatePicker fx:id="arrivalTimeDatePicker" layoutX="243.0" layoutY="303.0" />
+      <DatePicker fx:id="slaughterTimeDatePicker" layoutX="243.0" layoutY="252.0" />
+      <Label layoutX="51.0" layoutY="251.0" text="Slaughter Time : " textFill="#dc942f">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="76.0" layoutY="182.0" text="Batch ID : " textFill="#dc942f">
-         <font>
-            <Font name="System Bold Italic" size="18.0" />
-         </font>
-      </Label>
-      <TextField fx:id="batchIDTextField" layoutX="256.0" layoutY="183.0" />
       <Label fx:id="outputLabel" layoutX="37.0" layoutY="414.0" text="Successfully send request" textFill="#dc942f">
          <font>
             <Font name="System Bold Italic" size="18.0" />

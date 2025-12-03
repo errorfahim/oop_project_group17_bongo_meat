@@ -57,13 +57,10 @@ public class QAOfficerDashboardController {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Login.fxml", actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) throws IOException {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/PreviousScene.fxml", actionEvent);
-    }
+
 
     @javafx.fxml.FXML
     public void incomingQARequestButton(ActionEvent actionEvent) throws IOException {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/IncomingQARequest.fxml", actionEvent);
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/IncomingQARequest.fxml", actionEvent);  // Added /Abdullah/QAOfficer/
     }
 }
