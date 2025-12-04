@@ -13,7 +13,7 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="334.0" layoutY="182.0" mnemonicParsing="false" onAction="#qualityClearanceManagementButton" text="Quality Clearance Management" textFill="#dc942f">
+      <Button layoutX="334.0" layoutY="182.0" mnemonicParsing="false" onAction="#overseeMeatQualityTestingButton" text="Oversee Meat Quality Testing" textFill="#dc942f">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
@@ -64,6 +64,12 @@
       </Button>
 
       <Button layoutX="609.0" layoutY="413.0" mnemonicParsing="false" onAction="#nextButton" text="Next" textFill="#dc942f">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+
+      <Button layoutX="20.0" layoutY="22.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

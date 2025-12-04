@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.OverseeMeatQualityTestingController">
+
+    <!-- PAGE TITLE -->
+    <Label layoutX="20" layoutY="20" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-font-style: italic; -fx-text-fill: #dc942f;" text="Meat Quality Test" />
+
+    <!-- MEAT BATCH TABLE -->
+    <TableView fx:id="meatTableView" layoutX="20" layoutY="70" prefHeight="200" prefWidth="860">
+        <columns>
+            <TableColumn fx:id="batchIdCol" prefWidth="120" text="Batch ID" />
+            <TableColumn fx:id="cutTypeCol" prefWidth="140" text="Cut Type" />
+            <TableColumn fx:id="weightCol" prefWidth="100" text="Weight (kg)" />
+            <TableColumn fx:id="processDateCol" prefWidth="150" text="Processing Date" />
+            <TableColumn fx:id="storageTimeCol" prefWidth="150" text="Storage Time" />
+            <TableColumn fx:id="tempCol" prefWidth="120" text="Temperature (°C)" />
+        </columns>
+    </TableView>
+
+    <!-- SECTION TITLE -->
+    <Label layoutX="20" layoutY="290" style="-fx-font-size: 20px; -fx-font-style: italic; -fx-font-weight: bold; -fx-text-fill: #dc942f;" text="Laboratory Test Inputs" />
+
+    <!-- INPUT FIELDS -->
+    <Label layoutX="20" layoutY="330" text="pH:" />
+    <TextField fx:id="phField" layoutX="150" layoutY="325" prefWidth="120" />
+
+    <Label layoutX="300" layoutY="330" text="Microbial Count:" />
+    <TextField fx:id="microbialField" layoutX="430" layoutY="325" prefWidth="120" />
+
+    <Label layoutX="580" layoutY="330" text="Moisture %:" />
+    <TextField fx:id="moistureField" layoutX="700" layoutY="325" prefWidth="120" />
+
+    <Label layoutX="20" layoutY="370" text="Color Score:" />
+    <TextField fx:id="colorField" layoutX="150" layoutY="365" prefWidth="120" />
+
+    <Label layoutX="300" layoutY="370" text="Odor Evaluation:" />
+    <TextField fx:id="odorField" layoutX="430" layoutY="365" prefWidth="120" />
+
+    <Label layoutX="580" layoutY="370" text="Foreign Matter Check:" />
+    <TextField fx:id="foreignMatterField" layoutX="750" layoutY="365" prefWidth="120" />
+
+    <Label layoutX="20" layoutY="410" text="Remarks:" />
+    <TextArea fx:id="remarksArea" layoutX="150" layoutY="405" prefHeight="80" prefWidth="720" />
+
+    <!-- ACTION BUTTONS -->
+    <Button layoutX="150" layoutY="510" onAction="#approveButton" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-weight: bold;" text="Approve" />
+
+    <Button layoutX="260" layoutY="510" onAction="#rejectButton" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Reject" />
+
+    <Button layoutX="370" layoutY="510" onAction="#backButton" style="-fx-font-weight: bold;" text="Back" />
+
+</AnchorPane>

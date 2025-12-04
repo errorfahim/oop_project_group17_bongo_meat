@@ -12,10 +12,7 @@ public class QAOfficerDashboardController {
     }
 
 
-    @javafx.fxml.FXML
-    public void qualityClearanceManagementButton(ActionEvent actionEvent) throws IOException {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/QualityClearanceManagement.fxml", actionEvent);
-    }
+
 
     @javafx.fxml.FXML
     public void exportQualityCertificationButton(ActionEvent actionEvent) throws IOException {
@@ -62,5 +59,15 @@ public class QAOfficerDashboardController {
     @javafx.fxml.FXML
     public void incomingQARequestButton(ActionEvent actionEvent) throws IOException {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/IncomingQARequest.fxml", actionEvent);  // Added /Abdullah/QAOfficer/
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
+
+    }
+
+    @javafx.fxml.FXML
+    public void overseeMeatQualityTestingButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/OverseeMeatQualityTesting", actionEvent);
     }
 }
