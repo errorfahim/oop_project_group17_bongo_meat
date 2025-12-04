@@ -1,0 +1,14 @@
+=== Veterinary Health Certificate ===
+Checkup ID     : 1
+Batch ID       : 1003
+Vet License    : VET-12345
+Timestamp      : 2025-12-02 00:56:32
+Temperature    : 45.0 °C
+Hydration      : Low
+Symptoms       : dfgsfd
+Behavior       : sdfgdf
+Injury Notes   : fdg
+Treatment      : fdg
+Medicine Dose  : 34
+Health Status  : Needs Review
+=====================================

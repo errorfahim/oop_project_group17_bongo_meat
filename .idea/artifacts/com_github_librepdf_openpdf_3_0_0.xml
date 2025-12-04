@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact name="com.github.librepdf.openpdf.3.0.0">
+    <output-path>$PROJECT_DIR$/out/artifacts/com_github_librepdf_openpdf_3_0_0</output-path>
+    <root id="root" />
+  </artifact>
+</component>
