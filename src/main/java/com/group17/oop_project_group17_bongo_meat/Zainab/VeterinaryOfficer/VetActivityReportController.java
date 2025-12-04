@@ -1,8 +1,9 @@
 package com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfWriter;
+import org.openpdf.text.Document;
+import org.openpdf.text.DocumentException;
+import org.openpdf.text.Paragraph;
+import org.openpdf.text.pdf.PdfWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -142,7 +143,7 @@ public class VetActivityReportController {
     }
 
     // -------------------------------------------------------------------------
-    // EXPORT REPORT (PDF)
+    // EXPORT REPORT (PDF)  — using OpenPDF
     // -------------------------------------------------------------------------
 
     @FXML
@@ -190,7 +191,7 @@ public class VetActivityReportController {
             reportGenerateMessageLabel.setStyle("-fx-text-fill: green;");
             reportGenerateMessageLabel.setText("Report exported successfully!");
 
-        } catch (Exception e) {
+        } catch (DocumentException | IOException e) {
             e.printStackTrace();
             reportGenerateMessageLabel.setStyle("-fx-text-fill: red;");
             reportGenerateMessageLabel.setText("Error exporting report.");

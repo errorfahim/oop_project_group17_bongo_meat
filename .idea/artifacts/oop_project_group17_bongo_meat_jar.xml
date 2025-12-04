@@ -12,8 +12,7 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/21.0.6/javafx-base-21.0.6.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/21.0.6/javafx-controls-21.0.6.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/21.0.6/javafx-fxml-21.0.6.jar" path-in-jar="/" />
-      <element id="library" level="project" name="Apache PDFBox" />
-      <element id="artifact" artifact-name="com_itextpdf_text_Paragraph" />
+      <element id="artifact" artifact-name="com.github.librepdf.openpdf.3.0.0" />
     </root>
   </artifact>
 </component>

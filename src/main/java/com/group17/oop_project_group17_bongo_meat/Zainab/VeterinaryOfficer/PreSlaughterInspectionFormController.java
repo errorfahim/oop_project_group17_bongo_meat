@@ -1,20 +1,18 @@
 package com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfWriter;
 import com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.IncomingLivestockVetInspectionRequest;
+import org.openpdf.text.Document;
+import org.openpdf.text.DocumentException;
+import org.openpdf.text.Paragraph;
+import org.openpdf.text.Table;
+import org.openpdf.text.pdf.PdfWriter;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -66,8 +64,8 @@ public class PreSlaughterInspectionFormController {
 
     private ToggleGroup decisionToggleGroup;
 
-    private static final String VET_ID = "VET-007";         // dummy
-    private static final String VET_LICENSE = "LIC-2025-PSI"; // dummy
+    private static final String VET_ID = "VET-007";            // dummy
+    private static final String VET_LICENSE = "LIC-2025-PSI";  // dummy
 
     @FXML
     public void initialize() {
@@ -256,59 +254,103 @@ public class PreSlaughterInspectionFormController {
 
     @FXML
     public void generateCertificateButtonOnAction(ActionEvent actionEvent) {
-        // Generate Pre-Slaughter Inspection Report PDF
+        // Make sure we have something saved to report on
+        if (lastSavedRecord == null) {
+            reportGenerateMessageLabel.setStyle("-fx-text-fill: red;");
+            reportGenerateMessageLabel.setText("Save a decision before generating the inspection report.");
+            return;
+        }
 
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save Pre-Slaughter Inspection Report");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("PDF Files", "*.pdf"));
+        File chosenFile = fileChooser.showSaveDialog(null);
+
+        if (chosenFile == null) {
+            return;
+        }
+
+        Document document = new Document();
         try {
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Save Pre-Slaughter Inspection Report");
-            fileChooser.getExtensionFilters().add(
-                    new FileChooser.ExtensionFilter("PDF Files", "*.pdf"));
-            File chosenFile = fileChooser.showSaveDialog(null);
-
-            if (chosenFile == null) {
-                return;
-            }
-
-            Document document = new Document();
             PdfWriter.getInstance(document, new FileOutputStream(chosenFile));
             document.open();
 
-            document.add(new Paragraph("Pre-Slaughter Inspection Report"));
-            document.add(new Paragraph("---------------------------------------"));
-            document.add(new Paragraph("Batch ID      : " + lastSavedRecord.getBatchId()));
-            document.add(new Paragraph("Type          : " + lastSavedRecord.getType()));
-            document.add(new Paragraph("Animal Count  : " + lastSavedRecord.getAnimalCount()));
-            document.add(new Paragraph("Holding Time  : " + lastSavedRecord.getHoldingTime()));
-            document.add(new Paragraph("Last Health Check : " + lastSavedRecord.getLastHealthCheckDate()));
-            document.add(new Paragraph(""));
-            document.add(new Paragraph("Vet ID        : " + lastSavedRecord.getVetId()));
-            document.add(new Paragraph("Vet License   : " + lastSavedRecord.getVetLicense()));
-            document.add(new Paragraph("Inspection DT : " + lastSavedRecord.getInspectionDateTime()));
-            document.add(new Paragraph(""));
-            document.add(new Paragraph("Temperature   : " + lastSavedRecord.getTemperature() + " °C"));
-            document.add(new Paragraph("Movement      : " + lastSavedRecord.getMovementBehavior()));
-            document.add(new Paragraph("Hydration     : " + lastSavedRecord.getHydration()));
-            document.add(new Paragraph("Injury Check  : " + lastSavedRecord.getInjuryCheck()));
-            document.add(new Paragraph("Stress Level  : " + lastSavedRecord.getStressLevel()));
-            document.add(new Paragraph("Feed Withdraw : " + lastSavedRecord.getFeedWithdrawalStatus()));
-            document.add(new Paragraph("Cleanliness   : " + lastSavedRecord.getCleanliness()));
-            document.add(new Paragraph("Final Remarks : " + lastSavedRecord.getFinalRemarks()));
-            document.add(new Paragraph(""));
-            document.add(new Paragraph("Decision      : " + lastSavedRecord.getDecision()));
-            document.add(new Paragraph(""));
-            document.add(new Paragraph("Report generated by Veterinary System."));
+            PreSlaughterInspectionRecord r = lastSavedRecord;
 
-            document.close();
+            document.add(new Paragraph("Pre-Slaughter Inspection Report"));
+            document.add(new Paragraph(" "));
+
+            // 2-column key/value table like other screens
+            Table table = new Table(2);
+
+            table.addCell("Batch ID");
+            table.addCell(r.getBatchId());
+
+            table.addCell("Type");
+            table.addCell(r.getType());
+
+            table.addCell("Animal Count");
+            table.addCell(String.valueOf(r.getAnimalCount()));
+
+            table.addCell("Holding Time");
+            table.addCell(r.getHoldingTime());
+
+            table.addCell("Last Health Check");
+            table.addCell(r.getLastHealthCheckDate());
+
+            table.addCell("Vet ID");
+            table.addCell(r.getVetId());
+
+            table.addCell("Vet License");
+            table.addCell(r.getVetLicense());
+
+            table.addCell("Inspection DateTime");
+            table.addCell(r.getInspectionDateTime());
+
+            table.addCell("Temperature (°C)");
+            table.addCell(r.getTemperature());
+
+            table.addCell("Movement Behavior");
+            table.addCell(r.getMovementBehavior());
+
+            table.addCell("Hydration");
+            table.addCell(r.getHydration());
+
+            table.addCell("Injury Check");
+            table.addCell(r.getInjuryCheck());
+
+            table.addCell("Stress Level");
+            table.addCell(r.getStressLevel());
+
+            table.addCell("Feed Withdrawal Status");
+            table.addCell(r.getFeedWithdrawalStatus());
+
+            table.addCell("Cleanliness");
+            table.addCell(r.getCleanliness());
+
+            table.addCell("Final Remarks");
+            table.addCell(r.getFinalRemarks());
+
+            table.addCell("Decision");
+            table.addCell(r.getDecision());
+
+            document.add(table);
+
+            document.add(new Paragraph(" "));
+            document.add(new Paragraph("Report generated on: " + LocalDateTime.now()));
+            document.add(new Paragraph("Generated by: Veterinary System"));
 
             reportGenerateMessageLabel.setStyle("-fx-text-fill: green;");
             reportGenerateMessageLabel.setText("Report Generated Successfully!");
 
-        } catch (Exception e) {
+        } catch (DocumentException | IOException e) {
             reportGenerateMessageLabel.setStyle("-fx-text-fill: red;");
             reportGenerateMessageLabel.setText("Error generating report.");
             e.printStackTrace();
+        } finally {
+            document.close();
         }
-
     }
 
     @FXML
@@ -332,7 +374,6 @@ public class PreSlaughterInspectionFormController {
 
     @FXML
     public void returnButtonOnAction(ActionEvent actionEvent) throws IOException {
-        // go to next Vet screen; adjust path as you like
         switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/VeterinaryOfficer/veterinaryOfficerDashboard.fxml",
                 actionEvent);
     }
@@ -432,11 +473,10 @@ public class PreSlaughterInspectionFormController {
 
         queue.add(record);
 
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(PRE_SLAUGHTER_QA_QUEUE_FILE))) {
             oos.writeObject(queue);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }

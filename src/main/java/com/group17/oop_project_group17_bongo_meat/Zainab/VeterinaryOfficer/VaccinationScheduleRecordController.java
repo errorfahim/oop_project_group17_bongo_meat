@@ -1,19 +1,16 @@
 package com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfWriter;
+import org.openpdf.text.Document;
+import org.openpdf.text.DocumentException;
+import org.openpdf.text.Paragraph;
+import org.openpdf.text.pdf.PdfWriter;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -114,7 +111,7 @@ public class VaccinationScheduleRecordController {
 
     @FXML
     public void loadVaccinationListButtonOnAction(ActionEvent actionEvent) {
-        // dummy vaccination schedule data (ArrayList only)
+        // dummy vaccination schedule data
         scheduleList.clear();
 
         scheduleList.add(new VaccinationRecord(
@@ -131,7 +128,6 @@ public class VaccinationScheduleRecordController {
     @FXML
     public void validateEntryButtonOnAction(ActionEvent actionEvent) {
         validateForm();
-
     }
 
     @FXML
@@ -185,7 +181,7 @@ public class VaccinationScheduleRecordController {
         lastSavedRecord = newRecord;
         saveRecordsToFile();
 
-        // you can also update status in table if you want:
+        // optional: also add to table as “history”
         scheduleList.add(newRecord);
 
         recordSaveMessageLabel.setStyle("-fx-text-fill: green;");
@@ -211,6 +207,7 @@ public class VaccinationScheduleRecordController {
                 return;
             }
 
+            // OpenPDF (org.openpdf.text.*) style
             Document document = new Document();
             PdfWriter.getInstance(document, new FileOutputStream(chosenFile));
             document.open();
@@ -240,7 +237,7 @@ public class VaccinationScheduleRecordController {
             recordSaveMessageLabel.setStyle("-fx-text-fill: green;");
             recordSaveMessageLabel.setText("Medical report generated successfully.");
 
-        } catch (Exception e) {
+        } catch (DocumentException | IOException e) {
             recordSaveMessageLabel.setStyle("-fx-text-fill: red;");
             recordSaveMessageLabel.setText("Error generating report.");
             e.printStackTrace();
@@ -272,7 +269,6 @@ public class VaccinationScheduleRecordController {
 
     @FXML
     public void returnButtonOnAction(ActionEvent actionEvent) throws IOException {
-        // go back to previous Vet screen – adjust path if needed
         switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/VeterinaryOfficer/veterinaryOfficerDashboard.fxml",
                 actionEvent);
     }
@@ -326,9 +322,6 @@ public class VaccinationScheduleRecordController {
             errors.append("Vaccination Date must be chosen.\n");
         }
 
-        // Notes = optional → no validation
-
-        // FINAL RESULT
         if (errors.length() > 0) {
             validationSuccessMessageLabel.setStyle("-fx-text-fill: red;");
             validationSuccessMessageLabel.setText(errors.toString().trim());
@@ -339,7 +332,6 @@ public class VaccinationScheduleRecordController {
             return true;
         }
     }
-
 
     // ===================== BINARY HELPERS =====================
 
@@ -381,11 +373,10 @@ public class VaccinationScheduleRecordController {
 
         queue.add(record);
 
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(VACC_SUPERVISOR_QUEUE_FILE))) {
             oos.writeObject(queue);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }

@@ -1,8 +1,5 @@
 package com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfWriter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,6 +12,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 import static com.group17.oop_project_group17_bongo_meat.SceneSwitcher.switchTo;
+
+// ===== OpenPDF imports (same style as your group mate) =====
+import org.openpdf.text.Document;
+import org.openpdf.text.DocumentException;
+import org.openpdf.text.Paragraph;
+import org.openpdf.text.Table;
+import org.openpdf.text.pdf.PdfWriter;
 
 public class DiseaseAlertFormController {
 
@@ -330,34 +334,58 @@ public class DiseaseAlertFormController {
         File file = chooser.showSaveDialog(null);
         if (file == null) return;
 
+        Document document = new Document();
         try {
-            Document document = new Document();
             PdfWriter.getInstance(document, new FileOutputStream(file));
             document.open();
 
             document.add(new Paragraph("Disease Outbreak Alert Report"));
-            document.add(new Paragraph("------------------------------"));
-            document.add(new Paragraph("Alert ID: " + currentAlert.getAlertId()));
-            document.add(new Paragraph("Batch ID: " + currentAlert.getBatchId()));
-            document.add(new Paragraph("Number Affected: " + currentAlert.getNumberAffected()));
-            document.add(new Paragraph("Symptoms: " + currentAlert.getSymptoms()));
-            document.add(new Paragraph("Onset Date: " + currentAlert.getOnsetDate()));
-            document.add(new Paragraph("Priority: " + currentAlert.getPriority()));
-            document.add(new Paragraph("Samples Collected: " +
-                    (currentAlert.isSamplesCollected() ? "Yes" : "No")));
-            document.add(new Paragraph("Status: " + currentAlert.getStatus()));
-            document.add(new Paragraph("Vet ID: VET-XXXX (placeholder)"));
-            document.add(new Paragraph("Diagnosis: To be confirmed by lab."));
+            document.add(new Paragraph(" "));
 
-            document.close();
+            // two-column table like other controllers
+            Table table = new Table(2);
+
+            table.addCell("Alert ID");
+            table.addCell(currentAlert.getAlertId());
+
+            table.addCell("Batch ID");
+            table.addCell(currentAlert.getBatchId());
+
+            table.addCell("Number Affected");
+            table.addCell(String.valueOf(currentAlert.getNumberAffected()));
+
+            table.addCell("Symptoms");
+            table.addCell(currentAlert.getSymptoms());
+
+            table.addCell("Onset Date");
+            table.addCell(currentAlert.getOnsetDate());
+
+            table.addCell("Priority");
+            table.addCell(currentAlert.getPriority());
+
+            table.addCell("Samples Collected");
+            table.addCell(currentAlert.isSamplesCollected() ? "Yes" : "No");
+
+            table.addCell("Status");
+            table.addCell(currentAlert.getStatus());
+
+            table.addCell("Vet ID");
+            table.addCell("VET-XXXX (placeholder)");
+
+            table.addCell("Diagnosis");
+            table.addCell("To be confirmed by lab.");
+
+            document.add(table);
 
             reportGenerateMessageLabel.setStyle("-fx-text-fill: green;");
             reportGenerateMessageLabel.setText("Report Generated Successfully!");
 
-        } catch (Exception e) {
+        } catch (DocumentException | IOException e) {
             e.printStackTrace();
             reportGenerateMessageLabel.setStyle("-fx-text-fill: red;");
             reportGenerateMessageLabel.setText("Error generating report.");
+        } finally {
+            document.close();
         }
     }
 

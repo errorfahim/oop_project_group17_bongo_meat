@@ -5,7 +5,6 @@ module com.group17.oop_project_group17_bongo_meat {
     requires javafx.graphics;
     requires javafx.base;
     requires com.github.librepdf.openpdf;
-    requires itextpdf;
 
 
     // Main package
