@@ -22,11 +22,11 @@ public class LoginController
     private TextField emailOrPhoneNoTextField;
     @javafx.fxml.FXML
     private ComboBox<String> userTypeCB;
-    public static String loggedInEmail;  // store currently logged-in customer email
+    public static String loggedInEmail;  // this is for logged in customer email
 
 
     // ArrayList to store credentials
-    private ArrayList<Login> users = new ArrayList<>();
+    private ArrayList<Login> users = new ArrayList<>();//store 8 users
     private ArrayList<User> customers = new ArrayList<>();
 
 
@@ -44,7 +44,7 @@ public class LoginController
         users.add(new Login("logisticManager@gmail.com", "9870", "Logistic Manager"));
         users.add(new Login("veterinaryOfficer@gmail.com", "6540", "Veterinary Officer"));
         users.add(new Login("qaofficer@gmail.com", "007", "QAOfficer"));
-        loadCustomersFromFile();
+        loadCustomersFromFile();//for multiple customers
     }
 
     private void loadCustomersFromFile() {
@@ -120,9 +120,17 @@ public class LoginController
     }
 
 
-    private void showAlert(Alert.AlertType alertType, String error, String s) {
 
-    }
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+            Alert alert = new Alert(alertType);
+            alert.setTitle(title);
+            alert.setHeaderText(null);  // removes the annoying default header
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+
+
+
 
     @javafx.fxml.FXML
     public void forgetPasswordButton(ActionEvent actionEvent) {
