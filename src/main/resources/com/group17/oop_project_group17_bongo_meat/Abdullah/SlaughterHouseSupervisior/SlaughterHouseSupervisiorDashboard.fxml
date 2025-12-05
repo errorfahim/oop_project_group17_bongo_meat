@@ -13,13 +13,13 @@
     <Label layoutX="38.0" layoutY="60.0" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Welcome back," />
 
 
-    <Button layoutX="38.0" layoutY="163.0" onAction="#confirmFarmDeliveriesButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Confirm Farm Deliveries" />
+    <Button layoutX="95.0" layoutY="163.0" onAction="#farmDeliveryButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Farm Delivery" />
 
     <Button layoutX="38.0" layoutY="221.0" onAction="#incomingLivestockVetInspectionRequestButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Incoming Livestock Vet Inspection Request" />
 
     <Button layoutX="330.0" layoutY="221.0" onAction="#requestQAForIncomingLivestockButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Request QA For Incoming Livestock" />
 
-    <Button layoutX="291.0" layoutY="163.0" onAction="#recordIncomingLivestockButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Record Incoming Livestock" />
+    <Button layoutX="247.0" layoutY="163.0" onAction="#recordIncomingLivestockButton" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Record Incoming Livestock" />
 
     <Button layoutX="191.0" layoutY="263.0" onAction="#assignLivestockForSlaughterButton" prefHeight="25.0" prefWidth="199.0" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 12px;" text="Assign Livestock For Slaughter" />
 

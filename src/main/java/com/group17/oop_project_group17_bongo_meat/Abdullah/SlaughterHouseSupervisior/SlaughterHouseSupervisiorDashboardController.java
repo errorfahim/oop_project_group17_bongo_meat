@@ -24,11 +24,6 @@ public class SlaughterHouseSupervisiorDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void confirmFarmDeliveriesButton(ActionEvent actionEvent) throws Exception {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/ConfirmFarmDeliveries.fxml", actionEvent);
-    }
-
-    @javafx.fxml.FXML
     public void requestQAForIncomingLivestockButton(ActionEvent actionEvent) throws Exception {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/RequestQAForIncomingLivestock.fxml", actionEvent);
     }
@@ -56,5 +51,10 @@ public class SlaughterHouseSupervisiorDashboardController {
     @javafx.fxml.FXML
     public void meatTransferRequestButton(ActionEvent actionEvent) throws IOException {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/MeatTransferRequest.fxml", actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void farmDeliveryButton(ActionEvent actionEvent) throws IOException {
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/FarmDelivery.fxml", actionEvent);
     }
 }
