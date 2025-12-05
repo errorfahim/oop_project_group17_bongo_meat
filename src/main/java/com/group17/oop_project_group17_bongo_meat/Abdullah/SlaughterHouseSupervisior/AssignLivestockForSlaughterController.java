@@ -104,7 +104,7 @@ public class AssignLivestockForSlaughterController {
                                     new AssignLivestockForSlaughter(v.getBatchId(), v.getType(), v.getQuantity());
 
                             livestock.setVetApproved("Approved");
-                            livestock.setQaApproved("Pending");
+                            livestock.setQaApproved("");
                             livestock.setAssignedTime("");
                             livestock.setStaffName("");
                             livestock.setSlaughterAmount(0);

@@ -44,10 +44,6 @@ public class QAOfficerDashboardController {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/VeterinaryDocumentVerification.fxml", actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void nextButton(ActionEvent actionEvent) throws IOException {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/NextScene.fxml", actionEvent);
-    }
 
     @javafx.fxml.FXML
     public void logOutButton(ActionEvent actionEvent) throws IOException {
@@ -61,10 +57,6 @@ public class QAOfficerDashboardController {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/QAOfficer/IncomingQARequest.fxml", actionEvent);  // Added /Abdullah/QAOfficer/
     }
 
-    @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
-
-    }
 
     @javafx.fxml.FXML
     public void overseeMeatQualityTestingButton(ActionEvent actionEvent) throws IOException {

@@ -88,7 +88,7 @@ public class SlaughterDailyReportController {
                                 rec.getTotalQuantity(),
                                 rec.getRemainingQuantity(),
                                 rec.getStaffName(),
-                                "Awaiting For delivery"
+                                "Delivered"
                         );
 
                         data.add(report);

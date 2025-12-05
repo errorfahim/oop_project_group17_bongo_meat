@@ -64,7 +64,7 @@ public class RequestQAForIncomingLivestockController {
         requestList.clear();
 
         for (RecordIncomingLivestock r : livestockList) {
-            String status = "Pending";
+            String status = "Request Sent";
             String note = "";
 
             // Check if QA already processed this batch
@@ -142,7 +142,7 @@ public class RequestQAForIncomingLivestockController {
                     selected.getType(),
                     selected.getQuantity(),
                     note,
-                    "Pending"
+                    "Request Sent"
             );
 
             qaRequests.add(request);
