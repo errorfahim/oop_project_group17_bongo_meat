@@ -85,7 +85,7 @@ public class MeatTransferRequestController {
                     s.getBatchId(),
                     s.getType(),
                     s.getWeight(),
-                    observation, // slaughter time or observation
+                    s.getSlaughterTime(),
                     status,
                     observation
             );

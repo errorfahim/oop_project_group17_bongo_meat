@@ -1,5 +1,6 @@
 package com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior;
 
+import com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer.PreSlaughterInspectionRecord;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,6 +25,7 @@ public class IncomingLivestockVetInspectionRequestController {
 
     private final String LIVESTOCK_FILE = "incomingLivestock.dat";
     private final String VET_REQUEST_FILE = "incomingVetRequests.dat";
+    private final String VET_APPROVED_FILE = "preSlaughterInspectionRecords.dat";
 
     @FXML
     public void initialize() {
@@ -35,26 +37,68 @@ public class IncomingLivestockVetInspectionRequestController {
         batchTableView.setItems(requestList);
     }
 
+    // ---------------- SHOW LIVESTOCK AND STATUS ----------------
     @FXML
     public void showButtonClicked(ActionEvent event) {
-        File file = new File(LIVESTOCK_FILE);
-        if (!file.exists()) {
+        requestList.clear();
+
+        ArrayList<String> approvedBatchIds = new ArrayList<>();
+
+        // Load vet-approved records if exists
+        File vetApprovedFile = new File(VET_APPROVED_FILE);
+        if (vetApprovedFile.exists()) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(vetApprovedFile))) {
+                ArrayList<PreSlaughterInspectionRecord> approvedList =
+                        (ArrayList<PreSlaughterInspectionRecord>) ois.readObject();
+                for (PreSlaughterInspectionRecord rec : approvedList) {
+                    approvedBatchIds.add(rec.getBatchId());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Load incoming livestock
+        File livestockFile = new File(LIVESTOCK_FILE);
+        if (!livestockFile.exists()) {
             new Alert(Alert.AlertType.ERROR, "No livestock records found.").show();
             return;
         }
 
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(livestockFile))) {
             ArrayList<RecordIncomingLivestock> list =
                     (ArrayList<RecordIncomingLivestock>) ois.readObject();
 
             ArrayList<IncomingLivestockVetInspectionRequest> vetList = new ArrayList<>();
             for (RecordIncomingLivestock r : list) {
+                String status = "Pending";
+
+                // Check if vet already sent request
+                File vetRequestFile = new File(VET_REQUEST_FILE);
+                if (vetRequestFile.exists()) {
+                    try (ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream(vetRequestFile))) {
+                        ArrayList<IncomingLivestockVetInspectionRequest> existingRequests =
+                                (ArrayList<IncomingLivestockVetInspectionRequest>) ois2.readObject();
+                        for (IncomingLivestockVetInspectionRequest req : existingRequests) {
+                            if (req.getBatchId().equals(r.getBatchID())) {
+                                status = req.getVetRequestStatus();
+                                break;
+                            }
+                        }
+                    } catch (Exception ignored) {}
+                }
+
+                // Override status if approved by vet
+                if (approvedBatchIds.contains(r.getBatchID())) {
+                    status = "Approved";
+                }
+
                 IncomingLivestockVetInspectionRequest req = new IncomingLivestockVetInspectionRequest(
                         r.getBatchID(),
                         r.getType(),
                         r.getQuantity(),
-                        "",            // default note empty
-                        "Pending"      // default status
+                        "",  // note
+                        status
                 );
                 vetList.add(req);
             }
@@ -67,6 +111,7 @@ public class IncomingLivestockVetInspectionRequestController {
         }
     }
 
+    // ---------------- SEND VET REQUEST ----------------
     @FXML
     public void sendVetRequest(ActionEvent event) {
         IncomingLivestockVetInspectionRequest selected =
@@ -77,12 +122,17 @@ public class IncomingLivestockVetInspectionRequestController {
             return;
         }
 
+        if (selected.getVetRequestStatus().equals("Approved")) {
+            new Alert(Alert.AlertType.INFORMATION, "This batch is already approved!").show();
+            return;
+        }
+
         String note = noteTextField.getText().trim();
 
         ArrayList<IncomingLivestockVetInspectionRequest> vetRequests = new ArrayList<>();
 
         try {
-            // Load existing requests if file exists
+            // Load existing requests
             File file = new File(VET_REQUEST_FILE);
             if (file.exists()) {
                 try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
@@ -90,16 +140,26 @@ public class IncomingLivestockVetInspectionRequestController {
                 }
             }
 
-            // Add new request
-            IncomingLivestockVetInspectionRequest request = new IncomingLivestockVetInspectionRequest(
-                    selected.getBatchId(),
-                    selected.getType(),
-                    selected.getQuantity(),
-                    note,
-                    "Pending"
-            );
-
-            vetRequests.add(request);
+            // Add/update request
+            boolean updated = false;
+            for (IncomingLivestockVetInspectionRequest req : vetRequests) {
+                if (req.getBatchId().equals(selected.getBatchId())) {
+                    req.setNote(note);
+                    req.setVetRequestStatus("Request Sent");
+                    updated = true;
+                    break;
+                }
+            }
+            if (!updated) {
+                IncomingLivestockVetInspectionRequest newReq = new IncomingLivestockVetInspectionRequest(
+                        selected.getBatchId(),
+                        selected.getType(),
+                        selected.getQuantity(),
+                        note,
+                        "Request Sent"
+                );
+                vetRequests.add(newReq);
+            }
 
             // Save back to file
             try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(VET_REQUEST_FILE))) {
@@ -108,6 +168,7 @@ public class IncomingLivestockVetInspectionRequestController {
 
             new Alert(Alert.AlertType.INFORMATION, "Vet Request Sent!").show();
             noteTextField.clear();
+            showButtonClicked(new ActionEvent()); // refresh table
 
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -115,6 +176,7 @@ public class IncomingLivestockVetInspectionRequestController {
         }
     }
 
+    // ---------------- BACK BUTTON ----------------
     @FXML
     public void backButton(ActionEvent event) throws Exception {
         switchTo("/com/group17/oop_project_group17_bongo_meat/Abdullah/SlaughterHouseSupervisior/SlaughterHouseSupervisiorDashboard.fxml", event);

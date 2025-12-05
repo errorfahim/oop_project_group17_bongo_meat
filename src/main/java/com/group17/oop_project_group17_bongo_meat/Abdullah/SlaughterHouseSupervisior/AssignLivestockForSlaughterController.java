@@ -47,7 +47,7 @@ public class AssignLivestockForSlaughterController {
         colSlaughterAmount.setCellValueFactory(x -> new javafx.beans.property.SimpleIntegerProperty(x.getValue().getSlaughterAmount()).asObject());
         colRemaining.setCellValueFactory(x -> new javafx.beans.property.SimpleIntegerProperty(x.getValue().getRemainingQuantity()).asObject());
 
-        cbStaff.setItems(FXCollections.observableArrayList("Ali", "Karim", "Rahim", "Faruk", "Ayesha"));
+        cbStaff.setItems(FXCollections.observableArrayList("A", "B", "C", "D", "E"));
         tableView.setItems(data);
 
         tableView.setOnMouseClicked((MouseEvent event) -> {
