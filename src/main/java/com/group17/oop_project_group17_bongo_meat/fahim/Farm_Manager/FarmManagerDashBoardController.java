@@ -18,7 +18,8 @@ public class FarmManagerDashBoardController
     }
 
     @javafx.fxml.FXML
-    public void generateFarmProductionReportButton(ActionEvent actionEvent){
+    public void generateFarmProductionReportButton(ActionEvent actionEvent)throws IOException{
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/GenerateFarmProductionReport.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
