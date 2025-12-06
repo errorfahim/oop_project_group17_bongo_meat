@@ -22,7 +22,8 @@ public class FarmManagerDashBoardController
     }
 
     @javafx.fxml.FXML
-    public void requestVeterinaryInspectionButton(ActionEvent actionEvent) {
+    public void requestVeterinaryInspectionButton(ActionEvent actionEvent) throws IOException{
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/RequestVeterinaryInspection.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
