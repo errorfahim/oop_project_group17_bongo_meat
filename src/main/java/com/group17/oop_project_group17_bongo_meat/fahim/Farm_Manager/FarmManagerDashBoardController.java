@@ -2,14 +2,69 @@ package com.group17.oop_project_group17_bongo_meat.fahim.Farm_Manager;
 
 import com.group17.oop_project_group17_bongo_meat.SceneSwitcher;
 
+import com.group17.oop_project_group17_bongo_meat.fahim.Admin.SystemAlert;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextArea;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.io.IOException;
 import static com.group17.oop_project_group17_bongo_meat.SceneSwitcher.switchTo;
 
 public class FarmManagerDashBoardController
 {
     @javafx.fxml.FXML
+    private TextArea alertMessage;
+
+    private final String FILE_PATH = "alerts.bin";
+
+    @javafx.fxml.FXML
     public void initialize() {
+        loadAlertsToTextArea();
+    }
+
+    // -------------------------------------------------------
+    // READ alerts from alerts.bin and show inside TextArea
+    // -------------------------------------------------------
+    private void loadAlertsToTextArea() {
+
+        File file = new File(FILE_PATH);
+
+        if (!file.exists()) {
+            alertMessage.setText("No system alerts available.");
+            return;
+        }
+
+        List<SystemAlert> alertList = new ArrayList<>();
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+
+            alertList = (List<SystemAlert>) ois.readObject();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            alertMessage.setText("Error loading system alerts.");
+            return;
+        }
+
+        // Format & display alerts
+        StringBuilder builder = new StringBuilder();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        for (SystemAlert alert : alertList) {
+            builder.append("Date: ")
+                    .append(alert.getDate().format(formatter))
+                    .append("\nMessage: ")
+                    .append(alert.getMessage())
+                    .append("\n\n");
+        }
+
+        alertMessage.setText(builder.toString());
+
     }
 
     @javafx.fxml.FXML
