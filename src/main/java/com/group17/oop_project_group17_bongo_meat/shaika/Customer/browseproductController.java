@@ -22,7 +22,7 @@ import static com.group17.oop_project_group17_bongo_meat.SceneSwitcher.switchTo;
 
 public class browseproductController implements Initializable {
 
-    // --------------------- PRODUCT VIEW -----------------------
+    //viewing products
     @FXML private TableView<ProductDetails> productTable;
     @FXML private TableColumn<ProductDetails, String> nameCol;
     @FXML private TableColumn<ProductDetails, String> categoryCol;
@@ -32,11 +32,11 @@ public class browseproductController implements Initializable {
     @FXML private ComboBox<String> filterCategoryCB;
     @FXML private TextField maxPriceTF;
 
-    // ---------------------- ADD TO CART -----------------------
+    //Adding to cart
     @FXML private TextField productNameTF;
     @FXML private TextField quantityTF;
 
-    // ---------------------- CART TABLE ------------------------
+    //for cart table
     @FXML private TableView<CartItem> cartTable;
     @FXML private TableColumn<CartItem, String> cartNameCol;
     @FXML private TableColumn<CartItem, Integer> cartQtyCol;
@@ -52,18 +52,18 @@ public class browseproductController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        // ========== Load products from file ==========
+        //loading products from file
         ArrayList<ProductDetails> loaded = ProductService.loadProducts();
         productList = FXCollections.observableArrayList(loaded);
         productTable.setItems(productList);
 
-        // ========== Setup Product Table ==========
+        //for product table
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         categoryCol.setCellValueFactory(new PropertyValueFactory<>("category"));
         priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
         stockCol.setCellValueFactory(new PropertyValueFactory<>("stock"));
 
-        // ========== Setup Cart Table ==========
+        //for cart table
         cartNameCol.setCellValueFactory(data ->
                 new javafx.beans.property.SimpleStringProperty(data.getValue().getProduct().getName())
         );
@@ -72,14 +72,14 @@ public class browseproductController implements Initializable {
 
         cartTable.setItems(cartList);
 
-        // ========== Setup Category Filter ==========
+        //combobox
         filterCategoryCB.getItems().addAll("All", "Beef", "Chicken", "Mutton", "Fish");
         filterCategoryCB.setValue("All");
 
         updateSubtotal();
     }
 
-    // =================== APPLY FILTER BUTTON ======================
+    //filter
     @FXML
     void applyFilter(ActionEvent event) {
 
@@ -120,7 +120,7 @@ public class browseproductController implements Initializable {
         String productName = productNameTF.getText().trim();
         int qty;
 
-        // Validate quantity input
+        //validation
         try {
             qty = Integer.parseInt(quantityTF.getText());
         } catch (NumberFormatException e) {
@@ -133,7 +133,7 @@ public class browseproductController implements Initializable {
             return;
         }
 
-        // Find the product in the productTable by name
+        //Finding product
         ProductDetails selectedProduct = null;
         for (ProductDetails p : productTable.getItems()) {
             if (p.getName().equalsIgnoreCase(productName)) {
@@ -147,15 +147,15 @@ public class browseproductController implements Initializable {
             return;
         }
 
-        // Add to Cart
+        //adding to the cart
         CartItem item = new CartItem(selectedProduct, qty);
         Cart.addItem(item);
 
-        // Update cartTable
+        // Updating cartTable
         ObservableList<CartItem> cartItems = FXCollections.observableArrayList(Cart.getCartItems());
         cartTable.setItems(cartItems);
 
-        // Set cartTable columns if not set yet
+        // Setting the cartTable columns if not set yet
         cartNameCol.setCellValueFactory(cellData -> new javafx.beans.property.SimpleStringProperty(
                 cellData.getValue().getProduct().getName()));
         cartQtyCol.setCellValueFactory(cellData -> new javafx.beans.property.SimpleIntegerProperty(
@@ -175,7 +175,7 @@ public class browseproductController implements Initializable {
         quantityTF.clear();
     }
 
-    // ========================= CHECKOUT ===========================
+    //for checkout
     @FXML
     void checkout(ActionEvent actionEvent) throws IOException {
         switchTo("/com/group17/oop_project_group17_bongo_meat/shaika/Customer/PlaceOrder.fxml", actionEvent);

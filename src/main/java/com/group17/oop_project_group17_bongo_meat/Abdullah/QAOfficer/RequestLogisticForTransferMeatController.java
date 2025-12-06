@@ -68,33 +68,37 @@ public class RequestLogisticForTransferMeatController {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
         for (ExportBatch e : exportList) {
-            String requestStatus = "Pending";
-            LocalDate requestDate = null;
 
-            for (LogisticMeatRequest lr : previousRequests) {
-                if (lr.getBatchId().equals(e.getBatchId())) {
-                    requestStatus = lr.getRequestStatus();
-                    requestDate = lr.getRequestDate();
-                    break;
-                }
-            }
+            LogisticMeatRequest existing = previousRequests.stream()
+                    .filter(r -> r.getBatchId().equals(e.getBatchId()))
+                    .findFirst()
+                    .orElse(null);
 
             double weightValue = 0.0;
-            try { weightValue = Double.parseDouble(e.getWeight()); } catch (NumberFormatException ignored) {}
+            try { weightValue = Double.parseDouble(e.getWeight()); }
+            catch (Exception ignored) {}
 
-            String slaughterTime = LocalDateTime.now().format(formatter);
+            String slaughterTime = existing != null
+                    ? existing.getSlaughterTime()
+                    : LocalDateTime.now().format(formatter);
 
-            LogisticMeatRequest merged = new LogisticMeatRequest(
-                    e.getBatchId(),
-                    e.getType(),
-                    weightValue,
-                    slaughterTime,
-                    e.getQaStatus(),
-                    e.getVetStatus(),
-                    e.getExportStatus(),
-                    requestStatus,
-                    requestDate
-            );
+            LogisticMeatRequest merged;
+
+            if (existing != null) {
+                merged = existing;   // <-- THIS PRESERVES "Request Sent"
+            } else {
+                merged = new LogisticMeatRequest(
+                        e.getBatchId(),
+                        e.getType(),
+                        weightValue,
+                        slaughterTime,
+                        e.getQaStatus(),
+                        e.getVetStatus(),
+                        e.getExportStatus(),
+                        "Pending",
+                        null
+                );
+            }
 
             data.add(merged);
         }
