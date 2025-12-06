@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.RequestLogisticForTransferMeatController">
+
+    <!-- BACK BUTTON -->
+    <Button fx:id="btnBack" layoutX="10" layoutY="10" onAction="#handleBack" style="-fx-background-color: transparent; -fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic; -fx-font-size: 16;" text="Back" />
+
+    <!-- TITLE -->
+    <Label layoutX="250" layoutY="10" style="-fx-text-fill: #dc942f; -fx-font-size: 22; -fx-font-weight: bold; -fx-font-style: italic;" text="Request Logistics for Meat Transfer" />
+
+    <!-- TABLEVIEW -->
+    <TableView fx:id="transferTable" layoutX="10.0" layoutY="60.0" prefHeight="300" prefWidth="880">
+        <columns>
+            <TableColumn fx:id="colBatch" prefWidth="100" text="Batch ID" />
+            <TableColumn fx:id="colType" prefWidth="100" text="Meat Type" />
+            <TableColumn fx:id="colWeight" prefWidth="90" text="Weight (kg)" />
+            <TableColumn fx:id="colSlaughter" prefWidth="140" text="Slaughter Time" />
+            <TableColumn fx:id="colQA" prefWidth="100" text="QA Status" />
+            <TableColumn fx:id="colVet" prefWidth="100" text="Vet Status" />
+            <TableColumn fx:id="colExport" prefWidth="110" text="Export Status" />
+            <TableColumn fx:id="colStatus" prefWidth="130" text="Request Status" />
+            <TableColumn fx:id="colDate" prefWidth="120" text="Request Date" />
+        </columns>
+    </TableView>
+
+    <!-- ACTION BUTTONS -->
+    <Button layoutX="180.0" layoutY="380.0" onAction="#handleShow" style="-fx-background-color: transparent; -fx-text-fill:#dc942f; -fx-font-weight:bold; -fx-font-style:italic;" text="Show All" />
+    <Button layoutX="579.0" layoutY="380.0" onAction="#handleSave" style="-fx-background-color: transparent; -fx-text-fill:#dc942f; -fx-font-weight:bold; -fx-font-style:italic;" text="Save Request" />
+    <Button layoutX="355.0" layoutY="435.0" onAction="#handleSend" style="-fx-background-color: transparent; -fx-text-fill:#dc942f; -fx-font-weight:bold; -fx-font-style:italic;" text="Send to Logistics" />
+
+    <!-- MESSAGE LABEL -->
+    <Label fx:id="lblMessage" layoutX="10" layoutY="530" style="-fx-text-fill:#dc942f; -fx-font-size:14; -fx-font-weight:bold; -fx-font-style:italic;" />
+</AnchorPane>

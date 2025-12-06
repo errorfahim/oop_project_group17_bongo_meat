@@ -97,7 +97,6 @@ public class TrackLivestockInventoryController {
 
     @SuppressWarnings("unchecked")
     private void loadLivestockDataFromText() {
-        // Alternative method if binary serialization fails - use text file
         File file = new File("livestock_data.txt");
         if (file.exists()) {
             try (BufferedReader reader = new BufferedReader(new FileReader("livestock_data.txt"))) {

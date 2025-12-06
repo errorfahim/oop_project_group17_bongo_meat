@@ -1,44 +1,59 @@
 module com.group17.oop_project_group17_bongo_meat {
+
+    // JavaFX
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.desktop;
     requires javafx.graphics;
     requires javafx.base;
+
+    // Desktop + File Chooser
+    requires java.desktop;
+
+    // Apache POI (Excel)
+    requires org.apache.poi.ooxml;
+    requires org.apache.poi.poi;
+
+    // Log4j (REQUIRED by Apache POI)
+   // requires org.apache.logging.log4j;
+    //requires org.apache.logging.log4j.core;
+
+    // PDF libraries
+    requires itextpdf;
     requires com.github.librepdf.openpdf;
 
-
-    // Main package
+    // MAIN PACKAGE
     opens com.group17.oop_project_group17_bongo_meat to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat;
 
-    // Farm Manager
+    // FARM MANAGER
     opens com.group17.oop_project_group17_bongo_meat.fahim.Farm_Manager to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.fahim.Farm_Manager;
 
-    // Admin
+    // ADMIN
     opens com.group17.oop_project_group17_bongo_meat.fahim.Admin to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.fahim.Admin;
 
-    // Customer
+    // CUSTOMER
     opens com.group17.oop_project_group17_bongo_meat.shaika.Customer to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.shaika.Customer;
 
-    // Delivery Staff
+    // DELIVERY STAFF
     opens com.group17.oop_project_group17_bongo_meat.shaika.DeliveryStaff to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.shaika.DeliveryStaff;
-    // Slaughterhousesupervisior
+
+    // SLAUGHTERHOUSE SUPERVISOR
     opens com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior;
-    //QA officer
+
+    // QA OFFICER
     opens com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer;
 
-    //logistic manager
+    // LOGISTIC MANAGER
     opens com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager;
 
-    //veterinary officer
+    // VETERINARY OFFICER
     opens com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer to javafx.fxml;
     exports com.group17.oop_project_group17_bongo_meat.Zainab.VeterinaryOfficer;
-
 }

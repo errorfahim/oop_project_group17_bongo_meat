@@ -12,22 +12,22 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="41.0" layoutY="115.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Manage User Accounts">
+      <Button layoutX="41.0" layoutY="115.0" mnemonicParsing="false" onAction="#manageUserAccountsButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Manage User Accounts">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="379.0" layoutY="115.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Approve Supplier Requests">
+      <Button layoutX="379.0" layoutY="115.0" mnemonicParsing="false" onAction="#approveSupplierReqButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Approve Supplier Requests">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="41.0" layoutY="232.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Generate System-Wide Performance Reports">
+      <Button layoutX="41.0" layoutY="232.0" mnemonicParsing="false" onAction="#generateReportButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Generate System-Wide Performance Reports">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="379.0" layoutY="232.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Monitor and Resolve System Alerts">
+      <Button layoutX="379.0" layoutY="232.0" mnemonicParsing="false" onAction="#monitoreandResolveButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Monitor and Resolve System Alerts">
          <font>
             <Font size="18.0" />
          </font>
@@ -37,17 +37,17 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="378.0" layoutY="348.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Oversee Financial Transactions and Invoicing">
+      <Button layoutX="378.0" layoutY="348.0" mnemonicParsing="false" onAction="#financialTransactionButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Oversee Financial Transactions and Invoicing">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="41.0" layoutY="456.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Configure System Settings and Workflows">
+      <Button layoutX="41.0" layoutY="456.0" mnemonicParsing="false" onAction="#configSystemSettingsButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Configure System Settings and Workflows">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="378.0" layoutY="456.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Audit System Logs and User Activities">
+      <Button layoutX="378.0" layoutY="456.0" mnemonicParsing="false" onAction="#auditSystemLogButton" prefHeight="72.0" prefWidth="278.0" style="-fx-background-color: #dc942f;" text="Audit System Logs and User Activities">
          <font>
             <Font size="18.0" />
          </font>

@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.fahim.Admin.ManageUserAccountsController"
-            prefHeight="580.0" prefWidth="700.0">
 
+<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.fahim.Admin.ManageUserAccountsController">
+   <children>
+      <Label layoutX="14.0" layoutY="49.0" prefHeight="18.0" prefWidth="119.0" text="User ID:" />
+      <Label layoutX="14.0" layoutY="88.0" prefHeight="18.0" prefWidth="119.0" text="User Name :" />
+      <Label layoutX="211.0" layoutY="14.0" prefHeight="35.0" prefWidth="294.0" text="User Management Panel" textFill="#dc942f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="298.0" layoutY="49.0" prefHeight="18.0" prefWidth="119.0" text="User Role:" />
+      <Label layoutX="298.0" layoutY="88.0" prefHeight="18.0" prefWidth="119.0" text="User Status:" />
+      <Label layoutX="14.0" layoutY="124.0" prefHeight="18.0" prefWidth="119.0" text="Password:" />
+      <Button layoutX="14.0" layoutY="164.0" mnemonicParsing="false" onAction="#addUserButton" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #dc942f;" text="Add User">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="357.0" layoutY="133.0" prefHeight="18.0" prefWidth="119.0" text="Filter" />
+      <Label layoutX="357.0" layoutY="167.0" prefHeight="18.0" prefWidth="119.0" text="User Role:" />
+      <Label layoutX="357.0" layoutY="211.0" prefHeight="18.0" prefWidth="119.0" text="User Status:" />
+      <TableView fx:id="userTableView" layoutX="21.0" layoutY="290.0" prefHeight="200.0" prefWidth="661.0">
+        <columns>
+          <TableColumn fx:id="userIdCol" prefWidth="86.40002250671387" text="User ID" />
+          <TableColumn fx:id="userNameCol" prefWidth="130.39997100830078" text="User Name" />
+            <TableColumn fx:id="userRoleCol" prefWidth="144.0" text="User Role" />
+            <TableColumn fx:id="userStatusCol" prefWidth="131.19998168945312" text="User Status" />
+            <TableColumn fx:id="passwordCol" prefWidth="167.99996948242188" text="Password" />
+        </columns>
+      </TableView>
+      <Button layoutX="21.0" layoutY="517.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #dc942f;" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="505.0" layoutY="517.0" mnemonicParsing="false" onAction="#nextButton" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #dc942f;" text="Next">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="label" layoutX="21.0" layoutY="208.0" prefHeight="70.0" prefWidth="250.0" text="Label" />
+      <TextField fx:id="userId" layoutX="101.0" layoutY="46.0" />
+      <TextField fx:id="userName" layoutX="101.0" layoutY="84.0" />
+      <TextField fx:id="password" layoutX="101.0" layoutY="120.0" />
+      <ComboBox fx:id="userRoleCB" layoutX="368.0" layoutY="46.0" prefWidth="150.0" />
+      <ComboBox fx:id="userStatusCB" layoutX="368.0" layoutY="85.0" prefWidth="150.0" />
+      <ComboBox fx:id="userRoleCBFilter" layoutX="430.0" layoutY="164.0" prefWidth="150.0" />
+      <ComboBox fx:id="userStatusCBFilter" layoutX="429.0" layoutY="207.0" prefWidth="150.0" />
+      <Button layoutX="431.0" layoutY="243.0" mnemonicParsing="false" onAction="#filterButton" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #dc942f;" text="Filter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

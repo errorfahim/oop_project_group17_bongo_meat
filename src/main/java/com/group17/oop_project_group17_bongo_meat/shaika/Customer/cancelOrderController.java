@@ -67,7 +67,7 @@ public class cancelOrderController {
             return new javafx.beans.property.SimpleDoubleProperty(totalPrice).asObject();
         });
 
-        // Load only THIS customer's orders
+        // Load only logged in customer's orders
         loadOrders();
 
         // Update orderItemCB when an order is selected

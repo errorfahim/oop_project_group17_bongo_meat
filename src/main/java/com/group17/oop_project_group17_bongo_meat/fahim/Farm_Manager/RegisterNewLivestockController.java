@@ -60,24 +60,22 @@ public class RegisterNewLivestockController
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Initialize ComboBox values
+
         animalTypeCB.getItems().addAll("Cow", "Sheep", "Goat", "Chicken", "Duck", "Turkey");
         sourceCB.getItems().addAll("Purchase", "Birth", "Donation", "Transfer");
         availabilityCB.getItems().addAll("Available", "Sold", "Deceased", "Transferred");
         healthStatusCB.getItems().addAll("Healthy", "Sick", "Under Treatment", "Recovering");
 
-        // Initialize table columns (if using TableView to display data)
         initializeTableColumns();
 
-        // Load existing data from file
+
         loadLivestockData();
 
-        // Display loaded data in table
+
         updateTableView();
 
     }
     private void initializeTableColumns() {
-        // Set cell value factories for table columns
         animalIdCol.setCellValueFactory(new PropertyValueFactory<>("animalId"));
         animalTypeCol.setCellValueFactory(new PropertyValueFactory<>("animalType"));
         weightCol.setCellValueFactory(new PropertyValueFactory<>("weightKg"));
@@ -257,7 +255,6 @@ public class RegisterNewLivestockController
     }
 
     private void updateTableView() {
-        // Clear existing items and add all livestock
         animalInfoTableView.getItems().clear();
         animalInfoTableView.getItems().addAll(livestockList);
     }

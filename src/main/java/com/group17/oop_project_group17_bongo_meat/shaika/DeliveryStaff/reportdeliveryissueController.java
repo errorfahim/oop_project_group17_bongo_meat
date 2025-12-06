@@ -41,7 +41,8 @@ public class reportdeliveryissueController {
         deliveryidListview.getItems().clear();
 
         for (DeliveryAssignment da : list) {
-            if ("Delivered".equalsIgnoreCase(da.getStatus())){
+            if (da.getStatus().equalsIgnoreCase("Accepted") ||
+                    da.getStatus().equalsIgnoreCase("Out for Delivery")||da.getStatus().equalsIgnoreCase("Delivered")){
                 deliveryidListview.getItems().add(da.getDeliveryId());
             }
         }

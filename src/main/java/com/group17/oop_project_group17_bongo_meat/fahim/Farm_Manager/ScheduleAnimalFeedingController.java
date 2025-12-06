@@ -57,17 +57,16 @@ public class ScheduleAnimalFeedingController
     @javafx.fxml.FXML
     public void initialize() {
 
-        // Dummy stock for checking
         feedStock.put("Hay", 100.0);
         feedStock.put("Grass", 200.0);
         feedStock.put("Corn", 150.0);
         feedStock.put("Pellet", 80.0);
 
-        // Setting combo box dummy data
+
         animalTypeCB.setItems(FXCollections.observableArrayList("Cow", "Goat", "Sheep"));
         feedTypeCB.setItems(FXCollections.observableArrayList("Hay", "Grass", "Corn", "Pellet"));
 
-        // Bind table columns
+
         animalIdCol.setCellValueFactory(new PropertyValueFactory<>("animalId"));
         animalTypeCol.setCellValueFactory(new PropertyValueFactory<>("animalType"));
         feedTypeCol.setCellValueFactory(new PropertyValueFactory<>("feedType"));
@@ -75,7 +74,7 @@ public class ScheduleAnimalFeedingController
         feedingDateCol.setCellValueFactory(new PropertyValueFactory<>("feedingDate"));
         feedingTimeCol.setCellValueFactory(new PropertyValueFactory<>("feedingTime"));
 
-        // Load previous data
+
         loadData();
 
         feedingTableView.setItems(FXCollections.observableArrayList(feedingList));
@@ -100,7 +99,7 @@ public class ScheduleAnimalFeedingController
                 return;
             }
 
-            // Check stock one more time
+
             if (qty > feedStock.getOrDefault(feed, 0.0)) {
                 confirmMessage.setText("Insufficient stock! Cannot save.");
                 return;

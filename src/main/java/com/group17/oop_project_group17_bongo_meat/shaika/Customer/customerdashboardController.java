@@ -57,7 +57,5 @@ public class customerdashboardController
         switchTo("/com/group17/oop_project_group17_bongo_meat/shaika/Customer/RateDeliveryStaff.fxml", actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void gobackOA(ActionEvent actionEvent) {
-    }
+
 }

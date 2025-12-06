@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.QAScheduleCheckController">
+
+    <TableView fx:id="tableSchedule" layoutX="20" layoutY="20" prefHeight="260" prefWidth="710">
+
+        <columns>
+            <TableColumn fx:id="colBatchId" prefWidth="100" text="Batch ID" />
+            <TableColumn fx:id="colStatus" prefWidth="120" text="Status" />
+            <TableColumn fx:id="colProcessingArea" prefWidth="150" text="Processing Area" visible="false" />
+            <TableColumn fx:id="colRequiredTest" prefWidth="150" text="Required Test" visible="false" />
+            <TableColumn fx:id="colPriority" prefWidth="100" text="Priority" visible="false" />
+            <TableColumn fx:id="colSubmissionDate" prefWidth="100" text="Date" visible="false" />
+        </columns>
+
+    </TableView>
+
+    <!-- Input Fields -->
+    <Label layoutX="20" layoutY="300" text="Processing Area:" />
+    <TextField fx:id="txtProcessingArea" layoutX="150" layoutY="295" prefWidth="200" />
+
+    <Label layoutX="20" layoutY="340" text="Required Test:" />
+    <TextField fx:id="txtRequiredTest" layoutX="150" layoutY="335" prefWidth="200" />
+
+    <Label layoutX="20" layoutY="380" text="Priority:" />
+    <TextField fx:id="txtPriority" layoutX="150" layoutY="375" prefWidth="200">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></TextField>
+
+    <Label layoutX="370" layoutY="300" text="Evaluation Notes:" />
+    <TextArea fx:id="txtEvaluationNotes" layoutX="480" layoutY="295" prefHeight="110" prefWidth="250">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></TextArea>
+
+    <!-- Buttons -->
+    <Button fx:id="btnShow" layoutX="20" layoutY="430" onAction="#handleShow" prefWidth="120" text="Show" textFill="#dc942f">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+    <Button fx:id="btnApprove" layoutX="160" layoutY="430" onAction="#handleApprove" prefWidth="120" text="Approve" textFill="#dc942f">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+    <Button fx:id="btnReject" layoutX="300" layoutY="430" onAction="#handleReject" prefWidth="120" text="Reject" textFill="#dc942f">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+
+    <Label fx:id="lblMessage" layoutX="20" layoutY="470" prefWidth="700" style="-fx-text-fill:red;" />
+   <Button layoutX="462.0" layoutY="430.0" mnemonicParsing="false" onAction="#backButton" prefHeight="25.0" prefWidth="110.0" text="Back" textFill="#dc942f">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font>
+   </Button>
+
+</AnchorPane>

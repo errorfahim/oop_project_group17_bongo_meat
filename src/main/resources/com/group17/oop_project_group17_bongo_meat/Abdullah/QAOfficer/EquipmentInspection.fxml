@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.EquipmentInspectionController"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <VBox spacing="10" layoutX="20" layoutY="20">
+
+        <Label text="Equipment Inspection" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+
+        <HBox spacing="10">
+            <ComboBox fx:id="cbDepartment" promptText="Select Department" prefWidth="150"/>
+            <ComboBox fx:id="cbEquipment" promptText="Select Equipment" prefWidth="150"/>
+            <ComboBox fx:id="cbStatus" promptText="Select Status" prefWidth="150"/>
+        </HBox>
+
+        <TextArea fx:id="txtNotes" promptText="Enter Notes..." prefHeight="60" />
+
+        <HBox spacing="10">
+            <Button text="Submit" onAction="#handleSubmit" style="-fx-background-color: #dc942f; -fx-text-fill: white;" />
+            <Button text="Back" onAction="#handleBack" style="-fx-background-color: #dc942f; -fx-text-fill: white;" />
+            <Label fx:id="lblMessage" style="-fx-text-fill: green;" />
+        </HBox>
+
+        <TableView fx:id="tableInspections" prefHeight="250" prefWidth="760">
+            <columns>
+                <TableColumn fx:id="colDate" text="Date" prefWidth="100"/>
+                <TableColumn fx:id="colDept" text="Department" prefWidth="120"/>
+                <TableColumn fx:id="colEquip" text="Equipment" prefWidth="150"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="120"/>
+                <TableColumn fx:id="colNotes" text="Notes" prefWidth="250"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+</AnchorPane>
