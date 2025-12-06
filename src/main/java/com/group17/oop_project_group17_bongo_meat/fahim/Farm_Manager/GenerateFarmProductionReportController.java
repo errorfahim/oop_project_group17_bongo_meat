@@ -37,17 +37,17 @@ public class GenerateFarmProductionReportController {
     @FXML
     public void initialize() {
 
-        // ComboBox Setup
+
         animalTypeCB.getItems().addAll("Cow", "Goat", "Sheep", "All");
         monthCB.getItems().addAll("January", "February", "March", "April");
 
-        // Dummy Data
+
         dummyData.put("January", new ProductionData(120, 250, 310));
         dummyData.put("February", new ProductionData(90, 270, 290));
         dummyData.put("March", new ProductionData(130, 300, 400));
         dummyData.put("April", new ProductionData(100, 200, 250));
 
-        // Table Column Setup
+
         meatCol.setCellValueFactory(c -> new javafx.beans.property.SimpleIntegerProperty(c.getValue().getMeat()).asObject());
         milkCol.setCellValueFactory(c -> new javafx.beans.property.SimpleIntegerProperty(c.getValue().getMilk()).asObject());
         eggCol.setCellValueFactory(c -> new javafx.beans.property.SimpleIntegerProperty(c.getValue().getEgg()).asObject());
@@ -66,13 +66,13 @@ public class GenerateFarmProductionReportController {
             return;
         }
 
-        // Get dummy data
+
         ProductionData data = dummyData.get(month);
 
         productionList.clear();
         productionList.add(data);
 
-        // Update PieChart
+
         pieChart.getData().clear();
         pieChart.getData().add(new PieChart.Data("Meat", data.getMeat()));
         pieChart.getData().add(new PieChart.Data("Milk", data.getMilk()));

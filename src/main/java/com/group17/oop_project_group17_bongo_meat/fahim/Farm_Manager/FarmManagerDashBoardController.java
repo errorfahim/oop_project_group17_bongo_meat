@@ -27,9 +27,7 @@ public class FarmManagerDashBoardController
         loadAlertsToTextArea();
     }
 
-    // -------------------------------------------------------
-    // READ alerts from alerts.bin and show inside TextArea
-    // -------------------------------------------------------
+
     private void loadAlertsToTextArea() {
 
         File file = new File(FILE_PATH);
@@ -51,7 +49,7 @@ public class FarmManagerDashBoardController
             return;
         }
 
-        // Format & display alerts
+
         StringBuilder builder = new StringBuilder();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 

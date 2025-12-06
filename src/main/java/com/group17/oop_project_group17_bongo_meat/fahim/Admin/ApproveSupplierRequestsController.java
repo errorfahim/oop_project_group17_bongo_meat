@@ -60,8 +60,6 @@ public class ApproveSupplierRequestsController
         loadDummyData();
         supplierTableView.setItems(supplierData);
     }
-
-    // Add 4 dummy supplier requests
     private void loadDummyData() {
         supplierData.clear();
 
@@ -93,7 +91,7 @@ public class ApproveSupplierRequestsController
             return;
         }
 
-        selected.set(6, "Accepted");  // Change status
+        selected.set(6, "Accepted");
 
         supplierTableView.refresh();
         label.setText("Selected request Approved.");
@@ -131,17 +129,15 @@ public class ApproveSupplierRequestsController
 
             boolean match = true;
 
-            // Supplier ID filter
             if (!idFilter.isEmpty() && !row.get(0).toString().equalsIgnoreCase(idFilter)) {
                 match = false;
             }
 
-            // Status filter
             if (!selectedStatus.equals("All") && !row.get(6).toString().equalsIgnoreCase(selectedStatus)) {
                 match = false;
             }
 
-            // Date filter
+
             if (selectedDate != null && !row.get(5).toString().equals(selectedDate.toString())) {
                 match = false;
             }

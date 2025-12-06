@@ -34,10 +34,9 @@ public class RequestVeterinaryInspectionController {
     @FXML
     public void initialize() {
 
-        // ComboBox values
         animalTypeCB.getItems().addAll("Cow", "Goat", "Sheep", "Buffalo");
 
-        // Correct property binding for TableView
+
         animalIdCol.setCellValueFactory(new PropertyValueFactory<>("animalId"));
         animalTypeCol.setCellValueFactory(new PropertyValueFactory<>("animalType"));
         laastInspectionDateCol.setCellValueFactory(new PropertyValueFactory<>("lastInspectionDate"));

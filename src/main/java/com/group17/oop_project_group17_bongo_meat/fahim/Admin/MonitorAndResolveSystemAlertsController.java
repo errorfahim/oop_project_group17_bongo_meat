@@ -15,12 +15,12 @@ import static com.group17.oop_project_group17_bongo_meat.SceneSwitcher.switchTo;
 
 public class MonitorAndResolveSystemAlertsController {
 
-    private final String FILE_PATH = "alerts.bin";   // binary file
+    private final String FILE_PATH = "alerts.bin";
 
-    // We keep a normal List for actual storage
+
     private List<SystemAlert> alertDataList = new ArrayList<>();
 
-    // TableView works using ObservableList
+
     private ObservableList<SystemAlert> alertObservableList = FXCollections.observableArrayList();
 
     @FXML
@@ -38,9 +38,7 @@ public class MonitorAndResolveSystemAlertsController {
     @FXML
     private DatePicker alertDate;
 
-    // -------------------------------------------------------
-    // INITIALIZE
-    // -------------------------------------------------------
+
     @FXML
     public void initialize() {
         // Bind Table Columns
@@ -55,9 +53,7 @@ public class MonitorAndResolveSystemAlertsController {
         alertTableView.setItems(alertObservableList);
     }
 
-    // -------------------------------------------------------
-    // LOAD FROM FILE
-    // -------------------------------------------------------
+
     private void loadFromFile() {
         File file = new File(FILE_PATH);
 
@@ -74,9 +70,7 @@ public class MonitorAndResolveSystemAlertsController {
         }
     }
 
-    // -------------------------------------------------------
-    // SAVE TO FILE
-    // -------------------------------------------------------
+
     private void saveToFile() {
 
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
@@ -88,9 +82,7 @@ public class MonitorAndResolveSystemAlertsController {
         }
     }
 
-    // -------------------------------------------------------
-    // SHOW ALERT BUTTON
-    // -------------------------------------------------------
+
     @FXML
     public void showAlertButton(ActionEvent actionEvent) {
 

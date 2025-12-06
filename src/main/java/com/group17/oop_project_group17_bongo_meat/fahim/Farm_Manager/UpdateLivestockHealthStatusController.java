@@ -62,10 +62,9 @@ public class UpdateLivestockHealthStatusController
         statusCol.setCellValueFactory(new PropertyValueFactory<>("healthStatus"));
 
 
-        // load existing binary file
+
         loadData();
 
-        // show data in table
         animalInfoTableView.setItems(FXCollections.observableArrayList(recordList));
     }
 
@@ -96,22 +95,19 @@ public class UpdateLivestockHealthStatusController
             String vac = vaccinationCB.getValue().toString();
             String status = healthStatus.getValue().toString();
 
-            // validation
+
             if (type == null || vac == null || status == null || sym.isEmpty()) {
                 label.setText("Please fill all fields properly.");
                 return;
             }
 
-            // create new record
+
             HealthStatus record = new HealthStatus(id, type, temp, sym, vac, status);
 
-            // add to arraylist
             recordList.add(record);
 
-            // save to binary file
             saveData();
 
-            // refresh table
             animalInfoTableView.setItems(FXCollections.observableArrayList(recordList));
 
             label.setText("Health status updated successfully!");

@@ -45,9 +45,7 @@ public class GenerateSystemWidePerformanceReportsController
     @javafx.fxml.FXML
     private PieChart pieChart;
 
-    // ---------------------------
-    // Model Class For Table Data
-    // ---------------------------
+
     public static class ReportData {
         private double revenue;
         private double expenses;
@@ -102,7 +100,7 @@ public class GenerateSystemWidePerformanceReportsController
 
         label.setText("Showing report for: " + month + " " + year);
 
-        // Dummy Random Data
+
         double revenue = 12000 + Math.random() * 4000;
         double expenses = 5000 + Math.random() * 3000;
 
@@ -110,7 +108,7 @@ public class GenerateSystemWidePerformanceReportsController
 
         reportTableView.setItems(FXCollections.observableArrayList(data));
 
-        // Update PieChart
+
         pieChart.setData(FXCollections.observableArrayList(
                 new PieChart.Data("Revenue", revenue),
                 new PieChart.Data("Expenses", expenses),
@@ -127,19 +125,18 @@ public class GenerateSystemWidePerformanceReportsController
 
         try {
 
-            // Allow user to choose where to save
+
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Save Report as PDF");
 
-            // Default file name
             fileChooser.setInitialFileName("SystemWidePerformanceReport.pdf");
 
-            // Only PDF allowed
+
             fileChooser.getExtensionFilters().add(
                     new FileChooser.ExtensionFilter("PDF Files (*.pdf)", "*.pdf")
             );
 
-            // Show save dialog
+
             File file = fileChooser.showSaveDialog(reportTableView.getScene().getWindow());
 
             if (file == null) {

@@ -39,22 +39,22 @@ public class AuditSystemLogsAndUserActivitiesController {
     @FXML
     public void initialize() {
 
-        // Year ComboBox
+
         yearCB.setItems(FXCollections.observableArrayList("2025", "2024"));
 
-        // Month ComboBox
+
         monthCB.setItems(FXCollections.observableArrayList(
                 "January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"
         ));
 
-        // User Type ComboBox
+
         userTypeCB.setItems(FXCollections.observableArrayList(
                 "All", "Customer", "Deliveryman", "Admin", "Farm Manager",
                 "Vet Officer", "Slaughter House Manager", "Logistics Officer"
         ));
 
-        // Map column keys
+
         timeCol.setCellValueFactory(new MapValueFactory<>("time"));
         userCol.setCellValueFactory(new MapValueFactory<>("user"));
         actionCol.setCellValueFactory(new MapValueFactory<>("action"));
@@ -66,21 +66,21 @@ public class AuditSystemLogsAndUserActivitiesController {
 
         ObservableList<Map<String, String>> data = FXCollections.observableArrayList();
 
-        // Dummy log row #1
+
         Map<String, String> log1 = new HashMap<>();
         log1.put("time", "2025-01-12 10:34 AM");
         log1.put("user", "Admin");
         log1.put("action", "Logged In");
         log1.put("details", "Admin accessed the system dashboard");
 
-        // Dummy log row #2
+
         Map<String, String> log2 = new HashMap<>();
         log2.put("time", "2025-01-12 11:00 AM");
         log2.put("user", "Customer");
         log2.put("action", "Placed Order");
         log2.put("details", "Order ID #BM-1122 placed successfully");
 
-        // Dummy log row #3
+
         Map<String, String> log3 = new HashMap<>();
         log3.put("time", "2025-01-13 09:12 AM");
         log3.put("user", "Deliveryman");
@@ -89,13 +89,13 @@ public class AuditSystemLogsAndUserActivitiesController {
 
         data.addAll(log1, log2, log3);
 
-        // Load dummy data into table
+
         logInfoTableView.setItems(data);
     }
 
     @FXML
     public void nextButton(ActionEvent actionEvent) {
-        // Navigation code here if needed
+
     }
 
     @FXML

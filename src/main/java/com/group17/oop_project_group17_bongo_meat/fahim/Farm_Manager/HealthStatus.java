@@ -2,11 +2,11 @@ package com.group17.oop_project_group17_bongo_meat.fahim.Farm_Manager;
 import java.io.Serializable;
 
 public class HealthStatus implements  Serializable{
-    private int animalId;            // Animal ID (numeric in most systems)
-    private String animalType;       // Example: Cow, Goat, Sheep
-    private double temperature;      // Body temperature (decimal)
-    private String symptoms;         // Free-text symptoms
-    private String vaccination;      // Example: Yes / No / Pending
+    private int animalId;
+    private String animalType;
+    private double temperature;
+    private String symptoms;
+    private String vaccination;
     private String healthStatus;
 
     public int getAnimalId() {

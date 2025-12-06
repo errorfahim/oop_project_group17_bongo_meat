@@ -65,12 +65,11 @@ public class ManageUserAccountsController
         userStatusCol.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("userStatus"));
         passwordCol.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("password"));
 
-        // Load previous saved data
+
         loadData();
         userTableView.setItems(FXCollections.observableArrayList(userList));
     }
 
-    // Generate Random User ID
     private String generateUserId() {
         return "U-" + UUID.randomUUID().toString().substring(0, 8);
     }
