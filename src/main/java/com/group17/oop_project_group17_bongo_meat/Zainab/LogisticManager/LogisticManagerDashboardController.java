@@ -1,13 +1,7 @@
 package com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager;
-import com.group17.oop_project_group17_bongo_meat.HelloApplication;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.*;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -54,7 +48,7 @@ public class LogisticManagerDashboardController {
 
     @javafx.fxml.FXML
     public void packagingCoordinationButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/packagingCoordinationForm.fxml", actionEvent);
+        switchTo("/com/group17/oop_project_group17_bongo_meat/Zainab/LogisticManager/packagingBatchForm.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML

@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager.TransportScheduleFormController">
+<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager.TransportScheduleFormController">
    <children>
       <Label layoutX="238.0" layoutY="23.0" prefHeight="35.0" prefWidth="224.0" text="Transport Schedule" textFill="#dc942f" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="238.79999999999995" AnchorPane.topAnchor="20.0">
          <font>
@@ -23,11 +23,10 @@
       <TableView fx:id="pendingShipmentsTableView" layoutX="37.0" layoutY="87.0" prefHeight="82.0" prefWidth="626.0">
         <columns>
           <TableColumn fx:id="batchIDCol" prefWidth="88.00006866455078" style="fxBackground: #dc942f;" text="Batch ID" />
-          <TableColumn fx:id="destinationCol" prefWidth="88.7999267578125" text="Destination" />
-            <TableColumn fx:id="meatTypeCol" prefWidth="89.5999755859375" text="Meat Type" />
-            <TableColumn fx:id="volumnCol" prefWidth="70.4000244140625" text="Volumn" />
-            <TableColumn fx:id="requiredTemperatureCol" prefWidth="133.60000610351562" text="Required Temperature" />
-            <TableColumn fx:id="deliveryPriorityCol" prefWidth="160.800048828125" text="Delivery Priority" />
+          <TableColumn fx:id="destinationCol" prefWidth="125.59998321533203" text="Destination" />
+            <TableColumn fx:id="meatTypeCol" prefWidth="92.0" text="Meat Type" />
+            <TableColumn fx:id="volumnCol" prefWidth="116.0" text="Volumn" />
+            <TableColumn fx:id="deliveryPriorityCol" prefWidth="203.99996948242188" text="Delivery Priority" />
         </columns>
       </TableView>
       <Label fx:id="selectedBatchLabel" alignment="CENTER" layoutX="40.0" layoutY="179.0" prefHeight="26.0" prefWidth="618.0" text="Selected Batch" />

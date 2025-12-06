@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager.WarehouseDispatchViewController">
+<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Zainab.LogisticManager.PackagingBatchFormController">
    <children>
-      <AnchorPane layoutX="8.0" layoutY="5.0" prefHeight="580.0" prefWidth="700.0">
+      <AnchorPane layoutX="18.0" layoutY="15.0" prefHeight="580.0" prefWidth="700.0">
          <children>
-            <Label layoutX="238.0" layoutY="23.0" prefHeight="35.0" prefWidth="254.0" text="Warehouse Dispatch" textFill="#dc942f" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="208.0" AnchorPane.topAnchor="20.0">
+            <Label layoutX="238.0" layoutY="23.0" prefHeight="35.0" prefWidth="195.0" text="Packaging Batch " textFill="#dc942f" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="267.0" AnchorPane.topAnchor="20.0">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

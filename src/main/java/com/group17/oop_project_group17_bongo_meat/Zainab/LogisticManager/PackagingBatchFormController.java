@@ -3,21 +3,7 @@ import javafx.scene.control.*;
 import javafx.event.*;
 import javafx.scene.layout.VBox;
 
-public class ExportClearanceFormController {
-    @javafx.fxml.FXML
-    private ComboBox vehicleIDComboBox;
-    @javafx.fxml.FXML
-    private TableColumn requiredTemperatureCol;
-    @javafx.fxml.FXML
-    private TextField batchIDTextField;
-    @javafx.fxml.FXML
-    private VBox assignVehicleVBox;
-    @javafx.fxml.FXML
-    private TextField shipmentIDTextField;
-    @javafx.fxml.FXML
-    private TextField arrivalTimeTextField;
-    @javafx.fxml.FXML
-    private ComboBox vehicleTypeComboBox;
+public class PackagingBatchFormController {
     @javafx.fxml.FXML
     private Label selectedBatchLabel;
     @javafx.fxml.FXML
@@ -27,25 +13,19 @@ public class ExportClearanceFormController {
     @javafx.fxml.FXML
     private TableColumn batchIDCol;
     @javafx.fxml.FXML
-    private TableColumn deliveryPriorityCol;
-    @javafx.fxml.FXML
     private TableColumn meatTypeCol;
-    @javafx.fxml.FXML
-    private ComboBox driverIDComboBox;
-    @javafx.fxml.FXML
-    private TableColumn volumnCol;
-    @javafx.fxml.FXML
-    private DatePicker departureTimeDatePicker;
-    @javafx.fxml.FXML
-    private TextArea routeTextField;
-    @javafx.fxml.FXML
-    private Label deliveryIDLabel;
-    @javafx.fxml.FXML
-    private TableColumn destinationCol;
     @javafx.fxml.FXML
     private Label validationMessageLabel;
     @javafx.fxml.FXML
     private Label saveAndGenerateSuccessfulMessageLabel;
+    @javafx.fxml.FXML
+    private TableColumn packagingStatusCol;
+    @javafx.fxml.FXML
+    private Label verificationSuccessLabel;
+    @javafx.fxml.FXML
+    private TableColumn quantityCol;
+    @javafx.fxml.FXML
+    private TableColumn qaStatusCol;
 
     @javafx.fxml.FXML
     public void generateDeliveryIDButtonOnAction(ActionEvent actionEvent) {
@@ -67,11 +47,23 @@ public class ExportClearanceFormController {
     public void backButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void saveTransportPlanButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void assignVehicleButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void labelsVerifyCheckerBox(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void selectLabeltempButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void packagingVerifyCheckerBox(ActionEvent actionEvent) {
     }
 }
