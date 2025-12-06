@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.MultiDepartmentAuditController"
-            prefHeight="500.0" prefWidth="650.0">
+<AnchorPane prefHeight="500.0" prefWidth="650.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.QAOfficer.MultiDepartmentAuditController">
 
     <children>
-        <VBox spacing="12" layoutX="30" layoutY="25" prefWidth="590">
+        <VBox layoutX="30" layoutY="25" prefWidth="590" spacing="12">
 
             <!-- TITLE -->
-            <Label text="Multi-Department Quality Audit"
-                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-font-style: italic; -fx-text-fill: #dc942f;" />
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-font-style: italic; -fx-text-fill: #dc942f;"
+                   text="Multi-Department Quality Audit" />
 
             <!-- DATE RANGE -->
-            <Label text="Select Date Range:"
-                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" text="Select Date Range:" />
             <HBox spacing="10">
                 <DatePicker fx:id="startDate" promptText="Start Date" />
                 <DatePicker fx:id="endDate" promptText="End Date" />
             </HBox>
 
             <!-- DEPARTMENT SELECTION -->
-            <Label text="Select Departments:"
-                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" text="Select Departments:" />
             <VBox spacing="5">
                 <CheckBox fx:id="farmDept" text="Farm" />
                 <CheckBox fx:id="slaughterDept" text="Slaughterhouse" />
@@ -36,37 +34,24 @@
             </VBox>
 
             <!-- AUDIT TYPE -->
-            <Label text="Audit Type:"
-                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" text="Audit Type:" />
             <ComboBox fx:id="auditTypeCombo" promptText="Select audit type" />
 
-            <!-- GENERATE REPORT BUTTON -->
-            <Button fx:id="generateReportBtn"
-                    text="Generate Audit Report"
-                    style="-fx-background-color: #dc942f; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-style: italic;"
-                    prefWidth="200" />
-
-            <!-- CHART PLACEHOLDER -->
-            <Label text="Audit Performance Chart:"
-                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
-            <Pane fx:id="chartPane"
-                  prefHeight="200"
-                  style="-fx-border-color: #dc942f; -fx-border-width: 1;" />
+            <!-- BUTTONS -->
+            <HBox spacing="10">
+                <Button fx:id="backButton" text="Back" onAction="#handleBack" prefWidth="120"/>
+                <Button fx:id="generateReportBtn" text="Generate Audit Report" onAction="#handleGenerateReport" prefWidth="180"
+                        style="-fx-background-color: #dc942f; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-style: italic;" />
+                <Button fx:id="submitReportBtn" text="Submit Report to Admin" onAction="#handleSubmitReport" prefWidth="180"
+                        style="-fx-background-color: #dc942f; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-style: italic;" />
+            </HBox>
 
             <!-- OBSERVATIONS -->
-            <Label text="Officer Observations:"
-                   style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" />
+            <Label style="-fx-font-weight: bold; -fx-text-fill: #dc942f;" text="Officer Observations:" />
             <TextArea fx:id="observationArea" prefHeight="100" />
 
-            <!-- SUBMIT BUTTON -->
-            <Button fx:id="submitReportBtn"
-                    text="Submit Report to Admin"
-                    style="-fx-background-color: #dc942f; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-style: italic;"
-                    prefWidth="220" />
-
             <!-- STATUS LABEL -->
-            <Label fx:id="statusLabel"
-                   style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic;" />
+            <Label fx:id="statusLabel" style="-fx-text-fill: #dc942f; -fx-font-weight: bold; -fx-font-style: italic;" />
 
         </VBox>
     </children>

@@ -81,17 +81,21 @@ public class MeatTransferRequestController {
                 }
             }
 
+            // Set slaughter time as CURRENT DATE automatically
+            String currentTime = java.time.LocalDate.now().toString();
+
             MeatTransferRequest request = new MeatTransferRequest(
                     s.getBatchId(),
                     s.getType(),
                     s.getWeight(),
-                    s.getSlaughterTime(),
+                    currentTime,   // <-- CURRENT DATE
                     status,
                     observation
             );
 
             data.add(request);
         }
+
 
         transferTable.setItems(data);
         transferTable.refresh();
@@ -120,7 +124,7 @@ public class MeatTransferRequestController {
         saveRequestToFile(selected);
 
         observationTextField.clear();
-        messageLabel.setText("Request sent successfully!");
+        messageLabel.setText("Request sent successfully to QA Officer!");
     }
 
     private void saveRequestToFile(MeatTransferRequest request) {

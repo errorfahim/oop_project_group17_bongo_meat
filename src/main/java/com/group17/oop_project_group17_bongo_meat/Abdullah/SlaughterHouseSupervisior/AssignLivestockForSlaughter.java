@@ -24,8 +24,8 @@ public class AssignLivestockForSlaughter implements Serializable {
         this.totalQuantity = totalQuantity;
         this.remainingQuantity = totalQuantity;
 
-        this.vetApproved = "Pending";
-        this.qaApproved = "Pending";
+        this.vetApproved = "Approved";
+        this.qaApproved = "Approved";
 
         this.assignedTime = "";
         this.staffName = "";
@@ -74,6 +74,3 @@ public class AssignLivestockForSlaughter implements Serializable {
                 ", Slaughter: " + slaughterAmount + ", Remaining: " + remainingQuantity;
     }
 }
-
-
-

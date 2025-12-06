@@ -30,9 +30,9 @@
                 <TableColumn fx:id="colSlaughterAmount" prefWidth="110.0" text="Slaughter Amount" />
                 <TableColumn fx:id="colRemaining" prefWidth="134.6666259765625" text="Remaining Qty" />
             </columns>
-         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
 
         </TableView>
 
@@ -62,11 +62,11 @@
 
         <!-- Message Label -->
         <Label fx:id="lblMessage" layoutX="20" layoutY="480" prefWidth="860" style="-fx-font-style: italic; -fx-text-fill: #dc942f;" />
-      <Button layoutX="791.0" layoutY="22.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
-         <font>
-            <Font name="System Bold Italic" size="14.0" />
-         </font>
-      </Button>
+        <Button layoutX="791.0" layoutY="22.0" mnemonicParsing="false" onAction="#backButton" text="Back" textFill="#dc942f">
+            <font>
+                <Font name="System Bold Italic" size="14.0" />
+            </font>
+        </Button>
 
     </children>
 

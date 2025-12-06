@@ -84,7 +84,8 @@ public class SlaughterDailyReportController {
                         SlaughterDailyReport report = new SlaughterDailyReport(
                                 rec.getBatchId(),
                                 rec.getType(),
-                                rec.getAssignedTime(),
+                                rec.getAssignedTime() != null ? rec.getAssignedTime().toString() : "",
+
                                 rec.getTotalQuantity(),
                                 rec.getRemainingQuantity(),
                                 rec.getStaffName(),

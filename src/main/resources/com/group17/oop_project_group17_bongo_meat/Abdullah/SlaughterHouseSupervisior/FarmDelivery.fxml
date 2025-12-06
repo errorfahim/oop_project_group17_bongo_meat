@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #fff3e0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.FarmDeliveryController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.Abdullah.SlaughterHouseSupervisior.FarmDeliveryController">
 
     <children>
 
@@ -24,8 +24,7 @@
 
                 <TableColumn fx:id="colType" prefWidth="100" style="-fx-font-weight: bold; -fx-font-style: italic;" text="Type" />
 
-                <TableColumn fx:id="colBreed" text="Breed" prefWidth="130"
-                             style="-fx-font-weight: bold; -fx-font-style: italic;" />
+                <TableColumn fx:id="colBreed" prefWidth="130" style="-fx-font-weight: bold; -fx-font-style: italic;" text="Breed" />
 
                 <TableColumn fx:id="colHealth" prefWidth="120" style="-fx-font-weight: bold; -fx-font-style: italic;" text="Health Cert." />
 
