@@ -13,7 +13,8 @@ public class FarmManagerDashBoardController
     }
 
     @javafx.fxml.FXML
-    public void approveLivestockTransferButton(ActionEvent actionEvent){
+    public void approveLivestockTransferButton(ActionEvent actionEvent) throws IOException{
+        switchTo("/com/group17/oop_project_group17_bongo_meat/fahim/Farm_Manager/ApproveLivestockTransfertoSlaughterhouse.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML

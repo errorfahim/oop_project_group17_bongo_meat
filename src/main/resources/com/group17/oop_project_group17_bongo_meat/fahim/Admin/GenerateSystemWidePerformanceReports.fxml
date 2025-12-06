@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group17.oop_project_group17_bongo_meat.fahim.Admin.GenerateSystemWidePerformanceReportsController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="580.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group17.oop_project_group17_bongo_meat.fahim.Admin.GenerateSystemWidePerformanceReportsController">
+   <children>
+      <Label layoutX="162.0" layoutY="10.0" prefHeight="35.0" prefWidth="425.0" text="Generate System Wide Performance" textFill="#dc942f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="45.0" prefHeight="18.0" prefWidth="73.0" text="Year:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="80.0" prefHeight="18.0" prefWidth="73.0" text="Month:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="yearCB" layoutX="76.0" layoutY="42.0" prefWidth="150.0" />
+      <ComboBox fx:id="monthCB" layoutX="76.0" layoutY="77.0" prefWidth="150.0" />
+      <Button layoutX="21.0" layoutY="124.0" mnemonicParsing="false" onAction="#generateReportButtom" prefHeight="26.0" prefWidth="233.0" style="-fx-background-color: #dc942f;" text="Generate Report">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="reportTableView" layoutX="17.0" layoutY="221.0" prefHeight="200.0" prefWidth="290.0">
+        <columns>
+          <TableColumn fx:id="revenueCol" prefWidth="85.60003471374512" text="Revenue" />
+          <TableColumn fx:id="expensesCol" prefWidth="87.99994659423828" text="Expenses" />
+            <TableColumn fx:id="profitCol" prefWidth="116.79998779296875" text="Profit" />
+        </columns>
+      </TableView>
+      <PieChart fx:id="pieChart" layoutX="335.0" layoutY="177.0" prefHeight="244.0" prefWidth="337.0" />
+      <Label fx:id="label" layoutX="21.0" layoutY="169.0" prefHeight="44.0" prefWidth="270.0" text="Label" />
+      <Button layoutX="21.0" layoutY="450.0" mnemonicParsing="false" onAction="#exportPDFButton" prefHeight="26.0" prefWidth="233.0" style="-fx-background-color: #dc942f;" text="Export PDF">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="28.0" layoutY="519.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #dc942f;" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="504.0" layoutY="519.0" mnemonicParsing="false" onAction="#nextButton" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: #dc942f;" text="Next">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
